@@ -1,11 +1,18 @@
-import React, {Component} from 'react'
+import React from 'react'
+import Ann from './Ann'
 
-class AnnouncementLists extends Component{
-    render(){
+const AnnouncementLists = ({ann})=>{
         return (
-            <p>history</p>
+            <div>
+                <p>history</p>
+                {
+                    ann.map(a => (
+                    <Ann key={a.id} txt={a.body}/>
+                    ))
+                }
+            
+            </div>
         )
-    }
 
 }
 
