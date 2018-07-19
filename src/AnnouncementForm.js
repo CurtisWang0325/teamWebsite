@@ -22,11 +22,7 @@ class AnnouncementForm extends Component {
       //  className={`AnnouncementForm ${css(styles.form)}`}
         onSubmit={this.handleSubmit}
       >
-        <div 
-        //className={css(styles.icon)}
-        >
-          <i className="fas fa-comment-alt"></i>
-        </div>
+        
         <input
           type="text"
           name="body"

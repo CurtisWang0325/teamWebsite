@@ -18,7 +18,7 @@ class Ann extends Component {
             {this.props.txt}
         </p>
         <button onClick={this.removeMe}>
-          delete
+          <i class="fas fa-minus" title='delete'></i>
         </button>
       </span>
       : null
