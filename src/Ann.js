@@ -1,15 +1,33 @@
-import React from 'react'
+import React, {Component} from 'react'
 
 
-const Ann = ({ txt }) => {
-  return (
-      <div>
+class Ann extends Component {
+  state={
+    deleted : false,
+  }
+  
+  removeMe = (ev) => {
+    this.setState({deleted:true})
+  }
+
+  render(){
+    return (
+      !this.state.deleted ? 
+      <span>
         <p>
-            {txt}
+            {this.props.txt}
         </p>
-      </div>
+        <button onClick={this.removeMe}>
+          delete
+        </button>
+      </span>
+      : null
   )
+  }
+  
 }
+
+
 
 
 

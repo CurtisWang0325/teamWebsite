@@ -30,7 +30,7 @@ class AnnouncementForm extends Component {
         <input
           type="text"
           name="body"
-          placeholder="Type a message..."
+          placeholder="Type a new annoucement..."
           value={this.state.body}
           onChange={this.handleChange}
           autoFocus

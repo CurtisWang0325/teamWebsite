@@ -6,7 +6,8 @@ const AnnouncementLists = ({ann})=>{
             <div>
                 <p>history</p>
                 {
-                    ann.map(a => (
+                    ann
+                    .map(a => (
                     <Ann key={a.id} txt={a.body}/>
                     ))
                 }
