@@ -13,6 +13,7 @@ class Ann extends Component {
   render(){
     return (
       !this.state.deleted ? 
+      (
       <span>
         <p>
             {this.props.txt}
@@ -20,7 +21,9 @@ class Ann extends Component {
         <button onClick={this.removeMe}>
           <i class="fas fa-minus" title='delete'></i>
         </button>
+        <hr/>
       </span>
+      )
       : null
   )
   }
