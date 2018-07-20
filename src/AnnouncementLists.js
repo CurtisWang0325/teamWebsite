@@ -1,20 +1,23 @@
-import React from 'react'
+import React, {Component} from 'react'
 import Ann from './Ann'
 
-const AnnouncementLists = ({ann})=>{
+class AnnouncementLists extends Component{
+    render(){
+
         return (
             <div>
                 <p>history</p>
                 {
-                    ann
+                    this.props.ann
                     .map(a => (
-                    <Ann key={a.id} txt={a.body}/>
+                        <Ann t={a.t} txt={a.body} deleteAnnouncement={this.props.deleteAnnouncement}/>
                     ))
                 }
             
             </div>
         )
-
+    }
+        
 }
 
 export default AnnouncementLists

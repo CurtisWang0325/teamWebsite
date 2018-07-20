@@ -2,30 +2,25 @@ import React, {Component} from 'react'
 
 
 class Ann extends Component {
-  state={
-    deleted : false,
-  }
-  
-  removeMe = (ev) => {
-    this.setState({deleted:true})
-  }
+  handleDelete = (ev)=>{
+    ev.preventDefault()
+    this.props.deleteAnnouncement(this.props.t)
+  }            
 
   render(){
     return (
-      !this.state.deleted ? 
-      (
+     
       <span>
         <p>
             {this.props.txt}
         </p>
-        <button onClick={this.removeMe}>
+        <button onClick={this.handleDelete}>
           <i class="fas fa-minus" title='delete'></i>
         </button>
         <hr/>
       </span>
-      )
-      : null
-  )
+    
+    )
   }
   
 }

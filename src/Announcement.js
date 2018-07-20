@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import AnnouncementLists from './AnnouncementLists'
 import AnnouncementForm from './AnnouncementForm'
-//import base from './base'
+import base from './base'
 
 
 class Announcement extends Component {
@@ -14,15 +14,29 @@ class Announcement extends Component {
         }
       }
 
+      componentWillMount(){
+        base.syncState('announcements',{
+          context:this,
+          state:'announcements',
+          asArray: true,
+        })
+      }
+
       addAnnouncement = (body) => {
         const announcements = [...this.state.announcements]
         announcements.push({
-          id: Date.now(),
-          user: this.props.user,
+          t: Date.now(),
+         // user: this.props.user,
           body,
         })
     
         this.setState({ announcements })
+      }
+
+      deleteAnnouncement =(t) =>{
+        const announcements = [...this.state.announcements]
+        announcements.splice(announcements.indexOf(announcements.find((a)=>a.t==t)),1)
+        this.setState({announcements})
       }
 
       
@@ -45,6 +59,7 @@ class Announcement extends Component {
             </button>
             <AnnouncementLists
               ann={this.state.announcements}
+              deleteAnnouncement={this.deleteAnnouncement}
             />
             <AnnouncementForm addAnnouncement={this.addAnnouncement} changeForm={this.changeForm} show={this.state.form}/>
           </div>
