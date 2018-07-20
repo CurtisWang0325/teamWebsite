@@ -8,7 +8,10 @@ class Main extends Component {
     render(){
         return (
             <div className="Main">
-            <Heading/>
+            <Heading
+                user={this.props.user}
+                signOut={this.props.signOut}
+            />
             <hr/>
             <Announcement/>
             <hr/>
