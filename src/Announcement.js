@@ -54,7 +54,7 @@ class Announcement extends Component {
           
           <div className="Announcements">
             <h4>announcements</h4>
-            <button onClick={this.changeForm} title='show/hide the form'>
+            <button type='button' onClick={this.changeForm} title='show/hide the form'>
               <i class="fas fa-plus"></i>
             </button>
             <AnnouncementLists

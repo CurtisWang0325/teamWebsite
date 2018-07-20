@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import {auth, googleProvider} from './base'
 
 class Heading extends Component {
     render(){
