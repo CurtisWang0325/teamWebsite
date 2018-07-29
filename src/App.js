@@ -4,6 +4,7 @@ import './App.css';
 import Main from './Main'
 import { auth } from './base'
 //import Heading from './Heading'
+import { Route, Switch} from  'react-router-dom'
 
 
 
@@ -61,19 +62,25 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <Switch>
+          <Route path="/myAccount" render={()=> <h1>myAccount!!!</h1>}/>
+          <Route
+            render={()=>(
+              <Main 
+              user={this.state.user}
+              signOut={this.signOut}
+              signedIn={this.signedIn}
+              />
+              
+            )}
+          />
+          
+
+          
+        </Switch>
+
+
         
-        <Main 
-        user={this.state.user}
-        signOut={this.signOut}
-        signedIn={this.signedIn}
-        />
-        {/* <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p> */}
       </div>
     );
   }
