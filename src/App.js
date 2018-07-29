@@ -3,8 +3,9 @@ import React, { Component } from 'react';
 import './App.css';
 import Main from './Main'
 import { auth } from './base'
-//import Heading from './Heading'
+import Heading from './Heading'
 import { Route, Switch} from  'react-router-dom'
+import MyAccount from './MyAccount'
 
 
 
@@ -62,16 +63,18 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <Heading
+          user={this.state.user}
+          signOut={this.signOut}
+          signedIn={this.signedIn}
+        />
+        <hr/>
+
         <Switch>
-          <Route path="/myAccount" render={()=> <h1>myAccount!!!</h1>}/>
+          <Route path="/myAccount" component={MyAccount}/>
           <Route
             render={()=>(
-              <Main 
-              user={this.state.user}
-              signOut={this.signOut}
-              signedIn={this.signedIn}
-              />
-              
+              <Main/>
             )}
           />
           
