@@ -1,17 +1,24 @@
-import React from 'react'
+import React, {Component} from 'react'
 import SignOut from './SignOut'
 
-const UserInfo = ({ user, signOut }) => {
-  return (
-    <div
+class UserInfo extends Component{
+  render(){
+    return (
+      <div
       className="UserInfo"
-    >
+      >
       <div className="user">
-        {user.displayName}
+        <span 
+          //contentEditable='false'
+        >
+          {this.props.user.displayName}
+
+        </span>
       </div>
-       <SignOut signOut={signOut} />
+       <SignOut signOut={this.props.signOut} />
     </div>
-  )
+    )
+  }
 }
 
 
