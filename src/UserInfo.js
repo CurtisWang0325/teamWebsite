@@ -13,7 +13,7 @@ class UserInfo extends Component{
             {this.props.user.displayName}
           </span>
         </div>
-            <NavLink to="/myAccount"><button>My Account</button></NavLink>
+            <NavLink to="/myAccountPage"><button>My Account</button></NavLink>
           
         <SignOut signOut={this.props.signOut} />
       </div>

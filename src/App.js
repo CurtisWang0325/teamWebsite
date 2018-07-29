@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 //import logo from './logo.svg';
 import './App.css';
-import Main from './Main'
+import MainPage from './MainPage'
 import { auth } from './base'
 import Heading from './Heading'
 import { Route, Switch} from  'react-router-dom'
-import MyAccount from './MyAccount'
+import MyAccountPage from './MyAccountPage'
 
 
 
@@ -71,10 +71,10 @@ class App extends Component {
         <hr/>
 
         <Switch>
-          <Route path="/myAccount" component={MyAccount}/>
+          <Route path="/myAccountPage" component={MyAccountPage}/>
           <Route
             render={()=>(
-              <Main/>
+              <MainPage/>
             )}
           />
           

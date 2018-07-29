@@ -4,10 +4,10 @@ import Schedule from './Schedule'
 import Announcement from './Announcement'
 //import Heading from './Heading'
 
-class Main extends Component {
+class MainPage extends Component {
     render(){
         return (
-            <div className="Main">
+            <div className="MainPage">
             
             <Announcement/>
             <hr/>
@@ -19,4 +19,4 @@ class Main extends Component {
         )
     }
 }
-export default Main
+export default MainPage

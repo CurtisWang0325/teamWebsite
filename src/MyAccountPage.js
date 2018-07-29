@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 
-class MyAccount extends Component {
+class MyAccountPage extends Component {
     render() {
         return (
             <h1>My Account Page!</h1>
@@ -8,4 +8,4 @@ class MyAccount extends Component {
     }
 }
 
-export default MyAccount
+export default MyAccountPage
