@@ -13,15 +13,19 @@ class Heading extends Component {
             <div>
 
                 <h1>RHIT LOL</h1>
-               
+                {!this.props.signedIn()?
+                (
                 <button
                 type="button"
                 onClick={this.authenticate}
                 >
                 Sign in with Google
                 </button>
-                <UserInfo user={this.props.user} signOut={this.props.signOut} />
 
+                )
+                :
+                <UserInfo user={this.props.user} signOut={this.props.signOut} />
+                }
             </div>
         )
     }

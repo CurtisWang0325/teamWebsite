@@ -35,7 +35,7 @@ class Announcement extends Component {
 
       deleteAnnouncement =(t) =>{
         const announcements = [...this.state.announcements]
-        announcements.splice(announcements.indexOf(announcements.find((a)=>a.t==t)),1)
+        announcements.splice(announcements.indexOf(announcements.find((a)=>a.t===t)),1)
         this.setState({announcements})
       }
 
@@ -55,7 +55,7 @@ class Announcement extends Component {
           <div className="Announcements">
             <h4>announcements</h4>
             <button type='button' onClick={this.changeForm} title='show/hide the form'>
-              <i class="fas fa-plus"></i>
+              <i className="fas fa-plus"></i>
             </button>
             <AnnouncementLists
               ann={this.state.announcements}

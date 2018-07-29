@@ -10,10 +10,10 @@ class AnnouncementLists extends Component{
                 {
                     this.props.ann
                     .map(a => (
-                        <Ann t={a.t} txt={a.body} deleteAnnouncement={this.props.deleteAnnouncement}/>
+                        <Ann t={a.t} txt={a.body} deleteAnnouncement={this.props.deleteAnnouncement} key={a.t}/>
                     ))
                 }
-            
+             
             </div>
         )
     }

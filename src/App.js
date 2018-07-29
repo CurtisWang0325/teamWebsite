@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+//import logo from './logo.svg';
 import './App.css';
 import Main from './Main'
 import { auth } from './base'
-import Heading from './Heading'
+//import Heading from './Heading'
 
 
 
@@ -53,6 +53,7 @@ class App extends Component {
   
   signOut = () => {
     auth.signOut()
+
   }
     
 
@@ -64,6 +65,7 @@ class App extends Component {
         <Main 
         user={this.state.user}
         signOut={this.signOut}
+        signedIn={this.signedIn}
         />
         {/* <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />

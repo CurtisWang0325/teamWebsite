@@ -11,6 +11,7 @@ class Main extends Component {
             <Heading
                 user={this.props.user}
                 signOut={this.props.signOut}
+                signedIn={this.props.signedIn}
             />
             <hr/>
             <Announcement/>

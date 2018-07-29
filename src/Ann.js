@@ -15,7 +15,7 @@ class Ann extends Component {
             {this.props.txt}
         </p>
         <button type='button' onClick={this.handleDelete}>
-          <i class="fas fa-minus" title='delete'></i>
+          <i className="fas fa-minus" title='delete'></i>
         </button>
         <hr/>
       </span>
