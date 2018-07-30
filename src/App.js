@@ -6,6 +6,7 @@ import { auth } from './base'
 import Heading from './Heading'
 import { Route, Switch} from  'react-router-dom'
 import MyAccountPage from './MyAccountPage'
+import Announcement  from './Announcement'
 
 
 
@@ -72,6 +73,8 @@ class App extends Component {
 
         <Switch>
           <Route path="/myAccountPage" component={MyAccountPage}/>
+          <Route path="/Announcement" component={Announcement}/>
+
           <Route
             render={()=>(
               <MainPage/>
