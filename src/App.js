@@ -9,6 +9,7 @@ import MyAccountPage from './MyAccountPage'
 import Announcement  from './Announcement'
 import Forum from './Forum'
 import Schedule  from './Schedule'
+import Account from './Account'
 
 
 
@@ -67,11 +68,13 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Heading
+        <Account
           user={this.state.user}
           signOut={this.signOut}
           signedIn={this.signedIn}
         />
+        <hr/>
+        <Heading/>
         <hr/>
 
         <Switch>
