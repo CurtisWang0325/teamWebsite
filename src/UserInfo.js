@@ -7,9 +7,7 @@ class UserInfo extends Component{
     return (
       <div className="UserInfo">
         <div className="user">
-          <span 
-            //contentEditable='false'
-          >
+          <span>
             {this.props.user.googleName}
           </span>
         </div>

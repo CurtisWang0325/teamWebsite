@@ -1,19 +1,21 @@
 import React, {Component} from 'react'
+import {NavLink, Route} from 'react-router-dom'
+import AccountInfo from './AccountInfo'
 
 class MyAccountPage extends Component {
     constructor() {
         super()
     
         this.state = {
-            editMode:"false",
+            // editMode:"false",
             tempName:"",
             name:"",
         }
       }
 
-    editModeOn = ()=>{
-        this.setState({editMode:"true"})
-    }
+    // editModeOn = ()=>{
+    //     this.setState({editMode:"true"})
+    // }
 
     handleChange = (ev) => {
         this.setState({tempName:ev.target.value})
@@ -22,13 +24,14 @@ class MyAccountPage extends Component {
     handleSubmit = (ev) =>{
         ev.preventDefault()
         this.setState({name:this.state.tempName})
-        console.log(ev.target)
     }
 
     render() {
         return (
             <span>
-                <button onClick={this.editModeOn}>Edit</button>
+                <NavLink to="/MyAccountPage/editMode">
+                    <button>Edit</button>
+                </NavLink>
                 
                 <h1>{`Name: ${this.state.name?this.state.name:this.props.user.googleName}`}</h1>
 
@@ -42,7 +45,10 @@ class MyAccountPage extends Component {
                             />
                     </div>
                 </form>
+                <Route path="/MyAccountPage/editMode" component={AccountInfo}/>
             </span>
+
+
         )
     }
 }
