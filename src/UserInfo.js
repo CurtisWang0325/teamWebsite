@@ -10,7 +10,7 @@ class UserInfo extends Component{
           <span 
             //contentEditable='false'
           >
-            {this.props.user.displayName}
+            {this.props.user.googleName}
           </span>
         </div>
             <NavLink to="/myAccountPage"><button>My Account</button></NavLink>

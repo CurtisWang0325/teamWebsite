@@ -45,7 +45,7 @@ class App extends Component {
   handleAuth = (oauthUser) => {
     const user = {
       uid: oauthUser.uid,
-      displayName: oauthUser.displayName,
+      googleName: oauthUser.displayName,
       email: oauthUser.email,
       photoUrl: oauthUser.photoURL,
     }
@@ -78,7 +78,13 @@ class App extends Component {
         <hr/>
 
         <Switch>
-          <Route path="/myAccountPage" component={MyAccountPage}/>
+          <Route path="/myAccountPage" 
+            render={prop => (
+              <MyAccountPage
+                user={this.state.user}
+              />
+            )}
+          />
           <Route path="/Announcement" component={Announcement}/>
           <Route path="/Forum" component={Forum}/>
           <Route path="/Sche  dule" component={Schedule}/>
