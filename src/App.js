@@ -7,6 +7,9 @@ import Heading from './Heading'
 import { Route, Switch} from  'react-router-dom'
 import MyAccountPage from './MyAccountPage'
 import Announcement  from './Announcement'
+import Forum from './Forum'
+import Schedule  from './Schedule'
+
 
 
 
@@ -74,6 +77,8 @@ class App extends Component {
         <Switch>
           <Route path="/myAccountPage" component={MyAccountPage}/>
           <Route path="/Announcement" component={Announcement}/>
+          <Route path="/Forum" component={Forum}/>
+          <Route path="/Schedule" component={Schedule}/>
 
           <Route
             render={()=>(

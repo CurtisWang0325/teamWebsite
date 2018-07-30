@@ -14,9 +14,15 @@ class MainPage extends Component {
             </NavLink>
             {/* <Announcement/> */}
             <hr/>
-            <Forum/>
+            <NavLink to="/Forum">
+                <p>Forum Placeholder</p>
+            </NavLink>
+            {/* <Forum/> */}
             <hr/>
-            <Schedule/>
+            <NavLink to="/Schedule">
+                <p>Schedule Placeholder</p>
+            </NavLink>
+            {/* <Schedule/> */}
             </div>
             
         )
