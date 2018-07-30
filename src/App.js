@@ -81,7 +81,7 @@ class App extends Component {
           <Route path="/myAccountPage" component={MyAccountPage}/>
           <Route path="/Announcement" component={Announcement}/>
           <Route path="/Forum" component={Forum}/>
-          <Route path="/Schedule" component={Schedule}/>
+          <Route path="/Sche  dule" component={Schedule}/>
 
           <Route
             render={()=>(

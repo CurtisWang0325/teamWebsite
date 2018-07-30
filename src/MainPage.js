@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import Forum from './Forum'
-import Schedule from './Schedule'
+// import Forum from './Forum'
+// import Schedule from './Schedule'
 import { NavLink} from  'react-router-dom'
 //import Announcement from './Announcement'
 //import Heading from './Heading'
