@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
-import {NavLink, Route} from 'react-router-dom'
-import AccountInfo from './AccountInfo'
+import {NavLink, Route,} from 'react-router-dom'
+// import AccountInfo from './AccountInfo'
 
 class MyAccountPage extends Component {
     constructor() {
@@ -22,7 +22,7 @@ class MyAccountPage extends Component {
     }
 
     handleSubmit = (ev) =>{
-        ev.preventDefault()
+        // ev.preventDefault()
         this.setState({name:this.state.tempName})
     }
 
@@ -33,19 +33,31 @@ class MyAccountPage extends Component {
                     <button>Edit</button>
                 </NavLink>
                 
-                <h1>{`Name: ${this.state.name?this.state.name:this.props.user.googleName}`}</h1>
-
-                <form onSubmit={this.handleSubmit}>
-                    <div>
-                        <input 
-                            type="text"
-                            placeholder="Enter new name"
-                            value={this.state.tempName}
-                            onChange={this.handleChange}
-                            />
-                    </div>
-                </form>
-                <Route path="/MyAccountPage/editMode" component={AccountInfo}/>
+                <Route exact path="/MyAccountPage"
+                    render={prop => (
+                        <h1>{`Name: ${this.state.name?this.state.name:this.props.user.googleName}`}</h1>
+                      )}
+                />
+               
+                
+                <Route path="/MyAccountPage/editMode"
+                    render={prop => (
+                        <form onSubmit={(ev)=>ev.preventDefault()}>
+                            <div>
+                                <p>Prefered Name:</p>
+                                <input 
+                                    type="text"
+                                    placeholder={`${this.state.name?this.state.name:this.props.user.googleName}`}
+                                    value={this.state.tempName}
+                                    onChange={this.handleChange}
+                                />
+                                <NavLink to="/MyAccountPage">
+                                    <button type="button" onClick={this.handleSubmit}>Save Change</button>
+                                </NavLink>
+                            </div>
+                        </form>
+                      )}
+                />
             </span>
 
 
