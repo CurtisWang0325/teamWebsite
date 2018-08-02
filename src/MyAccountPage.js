@@ -1,29 +1,29 @@
-import React, {Component} from 'react'
-import {NavLink, Route,} from 'react-router-dom'
+import React, { Component } from 'react'
+import { NavLink, Route, } from 'react-router-dom'
 // import AccountInfo from './AccountInfo'
 
 class MyAccountPage extends Component {
     constructor() {
         super()
-    
+
         this.state = {
             // editMode:"false",
-            tempName:"",
-            name:"",
+            tempName: "",
+            name: "",
         }
-      }
+    }
 
     // editModeOn = ()=>{
     //     this.setState({editMode:"true"})
     // }
 
     handleChange = (ev) => {
-        this.setState({tempName:ev.target.value})
+        this.setState({ tempName: ev.target.value })
     }
 
-    handleSubmit = (ev) =>{
+    handleSubmit = (ev) => {
         // ev.preventDefault()
-        this.setState({name:this.state.tempName})
+        this.setState({ name: this.state.tempName })
     }
 
     render() {
@@ -32,22 +32,22 @@ class MyAccountPage extends Component {
                 <NavLink to="/MyAccountPage/editMode">
                     <button>Edit</button>
                 </NavLink>
-                
+
                 <Route exact path="/MyAccountPage"
                     render={prop => (
-                        <h1>{`Name: ${this.state.name?this.state.name:this.props.user.googleName}`}</h1>
-                      )}
+                        <h1>{`Name: ${this.state.name ? this.state.name : this.props.user.googleName}`}</h1>
+                    )}
                 />
-               
-                
+
+
                 <Route path="/MyAccountPage/editMode"
                     render={prop => (
-                        <form onSubmit={(ev)=>ev.preventDefault()}>
+                        <form onSubmit={(ev) => ev.preventDefault()}>
                             <div>
                                 <p>Prefered Name:</p>
-                                <input 
+                                <input
                                     type="text"
-                                    placeholder={`${this.state.name?this.state.name:this.props.user.googleName}`}
+                                    placeholder={`${this.state.name ? this.state.name : this.props.user.googleName}`}
                                     value={this.state.tempName}
                                     onChange={this.handleChange}
                                 />
@@ -56,7 +56,7 @@ class MyAccountPage extends Component {
                                 </NavLink>
                             </div>
                         </form>
-                      )}
+                    )}
                 />
             </span>
 

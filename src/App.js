@@ -4,11 +4,11 @@ import './App.css';
 import MainPage from './MainPage'
 import { auth } from './base'
 import Heading from './Heading'
-import { Route, Switch} from  'react-router-dom'
+import { Route, Switch } from 'react-router-dom'
 import MyAccountPage from './MyAccountPage'
-import Announcement  from './Announcement'
+import Announcement from './Announcement'
 import Forum from './Forum'
-import Schedule  from './Schedule'
+import Schedule from './Schedule'
 import Account from './Account'
 
 
@@ -57,14 +57,14 @@ class App extends Component {
     this.setState({ user: {} })
     localStorage.removeItem('user')
   }
-  
+
   signOut = () => {
     auth.signOut()
 
   }
-    
 
-    
+
+
   render() {
     return (
       <div className="App">
@@ -73,34 +73,34 @@ class App extends Component {
           signOut={this.signOut}
           signedIn={this.signedIn}
         />
-        <hr/>
-        <Heading/>
-        <hr/>
+        <hr />
+        <Heading />
+        <hr />
 
         <Switch>
-          <Route path="/myAccountPage" 
+          <Route path="/myAccountPage"
             render={prop => (
               <MyAccountPage
                 user={this.state.user}
               />
             )}
           />
-          <Route path="/Announcement" component={Announcement}/>
-          <Route path="/Forum" component={Forum}/>
-          <Route path="/Sche  dule" component={Schedule}/>
+          <Route path="/Announcement" component={Announcement} />
+          <Route path="/Forum" component={Forum} />
+          <Route path="/Sche  dule" component={Schedule} />
 
           <Route
-            render={()=>(
-              <MainPage/>
+            render={() => (
+              <MainPage />
             )}
           />
-          
 
-          
+
+
         </Switch>
 
 
-        
+
       </div>
     );
   }

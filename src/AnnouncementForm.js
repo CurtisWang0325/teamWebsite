@@ -2,14 +2,14 @@ import React, { Component } from 'react'
 //import { StyleSheet, css } from 'aphrodite'
 
 class AnnouncementForm extends Component {
-  
+
   constructor() {
     super()
     this.state = {
       body: '',
     }
   }
-  
+
 
   handleSubmit = (ev) => {
     ev.preventDefault()
@@ -24,28 +24,28 @@ class AnnouncementForm extends Component {
 
   render() {
     return (
-      this.props.show?
-      <form
-      //  className={`AnnouncementForm ${css(styles.form)}`}
-        onSubmit={this.handleSubmit}
-      >
-        
-        <input
-          type="text"
-          name="body"
-          placeholder="Type a new annoucement..."
-          value={this.state.body}
-          onChange={this.handleChange}
-          autoFocus
-          //className={css(styles.input)}
-        />
-        <button type="submit" 
-        //className={css(styles.button)}
+      this.props.show ?
+        <form
+          //  className={`AnnouncementForm ${css(styles.form)}`}
+          onSubmit={this.handleSubmit}
         >
-          <i className="far fa-paper-plane" title="Send"></i>
-        </button>
-      </form>
-      :null
+
+          <input
+            type="text"
+            name="body"
+            placeholder="Type a new annoucement..."
+            value={this.state.body}
+            onChange={this.handleChange}
+            autoFocus
+          //className={css(styles.input)}
+          />
+          <button type="submit"
+          //className={css(styles.button)}
+          >
+            <i className="far fa-paper-plane" title="Send"></i>
+          </button>
+        </form>
+        : null
     )
   }
 }

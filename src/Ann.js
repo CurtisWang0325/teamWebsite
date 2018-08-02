@@ -1,28 +1,28 @@
-import React, {Component} from 'react'
+import React, { Component } from 'react'
 
 
 class Ann extends Component {
-  handleDelete = (ev)=>{
+  handleDelete = (ev) => {
     ev.preventDefault()
     this.props.deleteAnnouncement(this.props.t)
-  }            
+  }
 
-  render(){
+  render() {
     return (
-     
+
       <span>
         <p>
-            {this.props.txt}
+          {this.props.txt}
         </p>
         <button type='button' onClick={this.handleDelete}>
           <i className="fas fa-minus" title='delete'></i>
         </button>
-        <hr/>
+        <hr />
       </span>
-    
+
     )
   }
-  
+
 }
 
 

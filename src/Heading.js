@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
-import { NavLink} from  'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
 class Heading extends Component {
-    
-    render(){
+
+    render() {
         return (
             <div>
                 <h1>RHIT LOL</h1>
@@ -20,8 +20,8 @@ class Heading extends Component {
                     <button>Schedule</button>
                 </NavLink>
 
-                
-                
+
+
             </div>
         )
     }

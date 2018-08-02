@@ -1,9 +1,9 @@
-import React, {Component} from 'react'
+import React, { Component } from 'react'
 import SignOut from './SignOut'
-import { NavLink} from  'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
-class UserInfo extends Component{
-  render(){
+class UserInfo extends Component {
+  render() {
     return (
       <div className="UserInfo">
         <div className="user">
@@ -11,8 +11,8 @@ class UserInfo extends Component{
             {this.props.user.googleName}
           </span>
         </div>
-            <NavLink to="/myAccountPage"><button>My Account</button></NavLink>
-          
+        <NavLink to="/myAccountPage"><button>My Account</button></NavLink>
+
         <SignOut signOut={this.props.signOut} />
       </div>
     )

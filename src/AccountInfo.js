@@ -1,13 +1,13 @@
-import React, {Component} from 'react'
+import React, { Component } from 'react'
 
 
 class AccountInfo extends Component {
-    render(){
+    render() {
         return (
             <p>hey</p>
         )
     }
-  
+
 }
 
 
