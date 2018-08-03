@@ -54,8 +54,8 @@ class App extends Component {
       context:this, 
       state:'user',
     })
-    this.setState({ user:googleUser })
-    localStorage.setItem('user', JSON.stringify(googleUser))
+    //this.setState({ user:googleUser })
+    localStorage.setItem('user', JSON.stringify(this.state.user))
   }
 
   handleUnauth = () => {
@@ -68,7 +68,12 @@ class App extends Component {
     base.removeBinding(this.ref)
   }
 
+  changeName =(newName) => {
+    const user=this.state.user
+    user.name=newName
 
+    this.setState({user})
+  }
 
   render() {
     return (
@@ -87,6 +92,7 @@ class App extends Component {
             render={prop => (
               <MyAccountPage
                 user={this.state.user}
+                changeName={this.changeName}
               />
             )}
           />

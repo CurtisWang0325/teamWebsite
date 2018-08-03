@@ -10,7 +10,7 @@ class MyAccountPage extends Component {
         this.state = {
             // editMode:"false",
             tempName: "",
-            name: "",
+            // name: "",
         }
     }
 
@@ -25,7 +25,8 @@ class MyAccountPage extends Component {
 
     handleSubmit = (ev) => {
         // ev.preventDefault()
-        this.setState({ name: this.state.tempName })
+        // this.setState({ name: this.state.tempName })
+        this.props.changeName(this.state.tempName)
     }
 
     render() {
@@ -39,7 +40,7 @@ class MyAccountPage extends Component {
 
                 <Route exact path="/MyAccountPage"
                     render={prop => (
-                        <p>{`${this.state.name ? this.state.name : this.props.user.googleName}`}</p>
+                        <p>{`${this.props.user.name ? this.props.user.name : this.props.user.googleName}`}</p>
                     )}
                 />
 
@@ -51,7 +52,7 @@ class MyAccountPage extends Component {
                                 {/* <p>Prefered Name:</p> */}
                                 <input
                                     type="text"
-                                    placeholder={`${this.state.name ? this.state.name : this.props.user.googleName}`}
+                                    placeholder={`${this.props.user.name ? this.props.user.name : this.props.user.googleName}`}
                                     value={this.state.tempName}
                                     onChange={this.handleChange}
                                 />
