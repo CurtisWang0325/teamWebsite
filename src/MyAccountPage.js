@@ -33,9 +33,11 @@ class MyAccountPage extends Component {
                     <button>Edit</button>
                 </NavLink>
 
+                <h1>Name: </h1>
+
                 <Route exact path="/MyAccountPage"
                     render={prop => (
-                        <h1>{`Name: ${this.state.name ? this.state.name : this.props.user.googleName}`}</h1>
+                        <p>{`${this.state.name ? this.state.name : this.props.user.googleName}`}</p>
                     )}
                 />
 
@@ -44,7 +46,7 @@ class MyAccountPage extends Component {
                     render={prop => (
                         <form onSubmit={(ev) => ev.preventDefault()}>
                             <div>
-                                <p>Prefered Name:</p>
+                                {/* <p>Prefered Name:</p> */}
                                 <input
                                     type="text"
                                     placeholder={`${this.state.name ? this.state.name : this.props.user.googleName}`}
