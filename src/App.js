@@ -16,9 +16,9 @@ import base from './base'
 
 
 class App extends Component {
-  state = {
-    user: {},
-  }
+    state = {
+      user: {},
+    }
 
   componentDidMount() {
     const user = JSON.parse(localStorage.getItem('user'))
@@ -38,6 +38,7 @@ class App extends Component {
       }
     )
   }
+  
 
   signedIn = () => {
     return this.state.user.uid
@@ -68,11 +69,8 @@ class App extends Component {
     base.removeBinding(this.ref)
   }
 
-  changeName =(newName) => {
-    const user=this.state.user
-    user.name=newName
-
-    this.setState({user})
+  changeAccountInfo =(newUser) => {
+    this.setState({user:newUser})
   }
 
   render() {
@@ -86,31 +84,24 @@ class App extends Component {
         <hr />
         <Heading />
         <hr />
-
         <Switch>
           <Route path="/myAccountPage"
             render={prop => (
               <MyAccountPage
                 user={this.state.user}
-                changeName={this.changeName}
+                changeAccountInfo={this.changeAccountInfo}
               />
             )}
           />
           <Route path="/Announcement" component={Announcement} />
           <Route path="/Forum" component={Forum} />
           <Route path="/Sche  dule" component={Schedule} />
-
           <Route
             render={() => (
               <MainPage />
             )}
           />
-
-
-
         </Switch>
-
-
 
       </div>
     );

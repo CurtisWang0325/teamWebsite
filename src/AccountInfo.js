@@ -4,7 +4,7 @@ import React, { Component } from 'react'
 class AccountInfo extends Component {
     render() {
         return (
-            <p>hey</p>
+            <h1>{`${this.props.title}`} </h1>
         )
     }
 

@@ -14,7 +14,7 @@ class Announcement extends Component {
     }
   }
 
-  componentWillMount() {
+  componentDidMount() {
     base.syncState('announcements', {
       context: this,
       state: 'announcements',
