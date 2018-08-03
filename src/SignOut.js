@@ -1,12 +1,15 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 
 const SignOut = ({ signOut }) => {
   return (
-    <button
-      onClick={signOut}
-    >
-      <i className="fas fa-sign-out-alt"></i>
-    </button>
+    <NavLink to="">
+      <button
+        onClick={signOut}
+      >
+        <i className="fas fa-sign-out-alt"></i>
+      </button>
+    </NavLink>
   )
 }
 
