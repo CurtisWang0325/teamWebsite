@@ -10,6 +10,7 @@ import Announcement from './Announcement'
 import Forum from './Forum'
 import Schedule from './Schedule'
 import Account from './Account'
+import base from './base'
 
 
 
@@ -43,14 +44,18 @@ class App extends Component {
   }
 
   handleAuth = (oauthUser) => {
-    const user = {
+    const googleUser = {
       uid: oauthUser.uid,
       googleName: oauthUser.displayName,
       email: oauthUser.email,
       photoUrl: oauthUser.photoURL,
     }
-    this.setState({ user })
-    localStorage.setItem('user', JSON.stringify(user))
+    this.ref=base.syncState(`${googleUser.uid}`,{
+      context:this, 
+      state:'user',
+    })
+    this.setState({ user:googleUser })
+    localStorage.setItem('user', JSON.stringify(googleUser))
   }
 
   handleUnauth = () => {
@@ -60,7 +65,7 @@ class App extends Component {
 
   signOut = () => {
     auth.signOut()
-
+    base.removeBinding(this.ref)
   }
 
 

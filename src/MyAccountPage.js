@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { NavLink, Route, } from 'react-router-dom'
+
 // import AccountInfo from './AccountInfo'
 
 class MyAccountPage extends Component {
@@ -16,6 +17,7 @@ class MyAccountPage extends Component {
     // editModeOn = ()=>{
     //     this.setState({editMode:"true"})
     // }
+
 
     handleChange = (ev) => {
         this.setState({ tempName: ev.target.value })
