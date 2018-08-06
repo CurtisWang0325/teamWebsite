@@ -27,7 +27,7 @@ class Message extends Component {
 
     return (
       <div className={`Message ${css(styles.message)}`}>
-        {/* <Avatar user={message.user} /> */}
+        <p>{message.user.name}</p>
         <div className={css(styles.details)}>
           <Metadata message={message} />
           <div className="body">
