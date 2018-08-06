@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import AnnouncementLists from './AnnouncementLists'
 import AnnouncementForm from './AnnouncementForm'
 import base from './base'
+import { NavLink, Route } from 'react-router-dom'
 
 
 class Announcement extends Component {
@@ -10,7 +11,7 @@ class Announcement extends Component {
 
     this.state = {
       announcements: [],
-      form: false,
+     // form: false,
     }
   }
 
@@ -40,11 +41,11 @@ class Announcement extends Component {
   }
 
 
-  changeForm = () => {
-    this.state.form ?
-      this.setState({ form: false }) :
-      this.setState({ form: true })
-  }
+  // changeForm = () => {
+  //   this.state.form ?
+  //     this.setState({ form: false }) :
+  //     this.setState({ form: true })
+  // }
 
 
 
@@ -54,17 +55,24 @@ class Announcement extends Component {
 
       <div className="Announcements">
         <h4>announcements</h4>
-        <button type='button' onClick={this.changeForm} title='show/hide the form'>
-          <i className="fas fa-plus"></i>
-        </button>
+        <NavLink to="Announcement/new">
+          <button type='button' title='show/hide the form'>
+            <i className="fas fa-plus"></i>
+          </button>
+        </NavLink>
+
         <AnnouncementLists
           ann={this.state.announcements}
           deleteAnnouncement={this.deleteAnnouncement}
         />
-        <AnnouncementForm addAnnouncement={this.addAnnouncement} changeForm={this.changeForm} show={this.state.form} />
+        
+        <Route path="/Announcement/new"
+          render={prop=>(
+            <AnnouncementForm addAnnouncement={this.addAnnouncement} />
+          )}
+        />
+
       </div>
-
-
     )
   }
 }

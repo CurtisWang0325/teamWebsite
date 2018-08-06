@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 //import { StyleSheet, css } from 'aphrodite'
+import { NavLink, Redirect} from 'react-router-dom'
 
 class AnnouncementForm extends Component {
 
@@ -7,6 +8,7 @@ class AnnouncementForm extends Component {
     super()
     this.state = {
       body: '',
+      redirect: false,
     }
   }
 
@@ -14,8 +16,10 @@ class AnnouncementForm extends Component {
   handleSubmit = (ev) => {
     ev.preventDefault()
     this.props.addAnnouncement(this.state.body)
-    this.setState({ body: '' })
-    this.props.changeForm()
+    this.setState({ body: '',redirect:true })
+    
+    //this.props.changeForm()
+    
   }
 
   handleChange = (ev) => {
@@ -23,8 +27,13 @@ class AnnouncementForm extends Component {
   }
 
   render() {
+
+     if (this.state.redirect) {
+        this.setState({ redirect:false })
+
+        return <Redirect to='/Announcement'/>;
+     }
     return (
-      this.props.show ?
         <form
           //  className={`AnnouncementForm ${css(styles.form)}`}
           onSubmit={this.handleSubmit}
@@ -39,13 +48,14 @@ class AnnouncementForm extends Component {
             autoFocus
           //className={css(styles.input)}
           />
+
           <button type="submit"
           //className={css(styles.button)}
           >
             <i className="far fa-paper-plane" title="Send"></i>
           </button>
+          
         </form>
-        : null
     )
   }
 }
