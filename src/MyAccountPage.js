@@ -16,7 +16,8 @@ class MyAccountPage extends Component {
     handleSubmit = (ev) => {
         const user=this.props.user
         //user.name=this.state.tempName
-        user.name=this.state.tempName
+        user.name=this.state.tempName||user.name
+        user.IGN=this.state.tempIGN||user.IGN
         this.props.changeAccountInfo(user)
     }
 
@@ -36,9 +37,14 @@ class MyAccountPage extends Component {
 
                 
                 <h1>Name: </h1>
+                <h1>IGN: </h1>
+                
                 <Route exact path="/MyAccountPage"
                     render={prop => (
-                        <p>{`${this.props.user.name ? this.props.user.name : this.props.user.googleName}`}</p>
+                        <div>
+                            <p>{`${this.props.user.name ? this.props.user.name : this.props.user.googleName}`}</p>
+                            <p>{`${this.props.user.IGN}`}</p>
+                        </div>
                     )}
                 />
                 <Route path="/MyAccountPage/editMode"
@@ -53,6 +59,15 @@ class MyAccountPage extends Component {
                                     value={this.state.tempName}
                                     onChange={this.handleChange}
                                 />
+                                <hr/>
+                                <input
+                                    type="text"
+                                    name="tempIGN"
+                                    placeholder={`${this.props.user.IGN ? this.props.user.IGN : "Enter your in game name"}`}
+                                    value={this.state.tempIGN}
+                                    onChange={this.handleChange}
+                                />
+                                <hr/>
                                 <NavLink to="/MyAccountPage">
                                     <button type="button" onClick={this.handleSubmit}>Save Change</button>
                                 </NavLink>
