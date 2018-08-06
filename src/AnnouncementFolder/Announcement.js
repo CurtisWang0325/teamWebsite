@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import AnnouncementLists from './AnnouncementLists'
 import AnnouncementForm from './AnnouncementForm'
-import base from './base'
+import base from '../base'
 import { NavLink, Route } from 'react-router-dom'
 
 
@@ -55,11 +55,15 @@ class Announcement extends Component {
 
       <div className="Announcements">
         <h4>announcements</h4>
-        <NavLink to="Announcement/new">
-          <button type='button' title='show/hide the form'>
-            <i className="fas fa-plus"></i>
-          </button>
-        </NavLink>
+        <Route exact path="/Announcement"
+          render={prop=>(
+            <NavLink to="Announcement/new">
+              <button type='button' title='show/hide the form'>
+                <i className="fas fa-plus"></i>
+              </button>
+            </NavLink>
+          )}
+        />
 
         <AnnouncementLists
           ann={this.state.announcements}
