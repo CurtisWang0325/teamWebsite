@@ -13,7 +13,7 @@ class Heading extends Component {
                 <NavLink to="/Announcement">
                     <button>Announcement</button>
                 </NavLink>
-                <NavLink to="/Forum">
+                <NavLink to="/Forum/general">
                     <button>Forum</button>
                 </NavLink>
                 <NavLink to="/Schedule">

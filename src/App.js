@@ -7,7 +7,7 @@ import Heading from './Heading'
 import { Route, Switch } from 'react-router-dom'
 import MyAccountPage from './MyAccountPage'
 import Announcement from './AnnouncementFolder/Announcement'
-import Forum from './Forum'
+import Forum from './ForumFolder/Forum'
 import Schedule from './Schedule'
 import Account from './Account'
 import base from './base'
@@ -94,7 +94,14 @@ class App extends Component {
             )}
           />
           <Route path="/Announcement" component={Announcement} />
-          <Route path="/Forum" component={Forum} />
+          <Route path="/Forum" 
+            render={prop => (
+              <Forum
+                user={this.state.user}
+                
+              />
+            )}
+          />
           <Route path="/Sche  dule" component={Schedule} />
           <Route
             render={() => (
