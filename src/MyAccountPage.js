@@ -1,18 +1,21 @@
 import React, { Component } from 'react'
 import { NavLink, Route, } from 'react-router-dom'
-import AccountInfo from './AccountInfo'
+//import AccountInfo from './AccountInfo'
 
 class MyAccountPage extends Component {
     state = {
         tempName: "",
+        tempIGN:"",
     }
 
+
     handleChange = (ev) => {
-        this.setState({ tempName: ev.target.value })
+       this.setState({ [ev.target.name]: ev.target.value });
     }
 
     handleSubmit = (ev) => {
         const user=this.props.user
+        //user.name=this.state.tempName
         user.name=this.state.tempName
         this.props.changeAccountInfo(user)
     }
@@ -24,7 +27,14 @@ class MyAccountPage extends Component {
                     <button>Edit</button>
                 </NavLink>
 
-                <AccountInfo title="Name"/>
+                {/* <AccountInfo 
+                    title="IGN"
+                    user={this.props.user} 
+                    changeAccountInfo={this.props.changeAccountInfo}
+                    handleChange={this.handleChange}
+                /> */}
+
+                
                 <h1>Name: </h1>
                 <Route exact path="/MyAccountPage"
                     render={prop => (
@@ -38,6 +48,7 @@ class MyAccountPage extends Component {
                                 {/* <p>Prefered Name:</p> */}
                                 <input
                                     type="text"
+                                    name="tempName"
                                     placeholder={`${this.props.user.name ? this.props.user.name : this.props.user.googleName}`}
                                     value={this.state.tempName}
                                     onChange={this.handleChange}
