@@ -43,20 +43,13 @@ class Main extends Component {
     return Object.keys(this.state.rooms)
             .filter(roomName => {
               const room = this.state.rooms[roomName]
-              if (!room) return false
-              return room.public || this.includesCurrentUser(room)
+              return room
             })
   }
 
-  includesCurrentUser = (room) => {
-    const members = room.members || []
-    return members.find(
-      userOption => userOption.value === this.props.user.uid
-    )
-  }
 
   loadRoom = (roomName) => {
-    if (roomName === 'new' || roomName === 'new-direct-message') return null
+    if (roomName === 'new') return null
 
     const room = this.filteredRooms()
                      .find(room => room.name === roomName)
@@ -84,19 +77,6 @@ class Main extends Component {
 
     room.displayName = room.name
 
-    if (!room.public) {
-      room.members.push({
-        label: `${user.displayName} (${user.email})`,
-        value: user.uid,
-      })
-    }
-
-    if (room.dm) {
-      const memberNames = room.members.map(member => member.label.split(' ')[0])
-      room.displayName = memberNames.join(', ')
-      room.name = room.members.map(member => member.value).join('-')
-    }
-
     rooms[room.name] = room
     this.setState({ rooms })
   }
@@ -114,8 +94,6 @@ class Main extends Component {
       <div className="Main" style={styles}>
         <Sidebar
           user={this.props.user}
-          signOut={this.props.signOut}
-          users={this.props.users}
           rooms={this.filteredRooms()}
           addRoom={this.addRoom}
         />

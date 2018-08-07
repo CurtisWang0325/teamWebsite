@@ -2,19 +2,14 @@ import React from 'react'
 
 import RoomList from './RoomList'
 
-const Sidebar = ({ user, signOut, users, rooms, addRoom }) => {
+const Sidebar = ({ user, rooms, addRoom }) => {
   return (
     <aside
       className="Sidebar"
       style={styles.sidebar}
     >
-      {/* <UserInfo
-        user={user}
-        signOut={signOut}
-      /> */}
       <h1 style={styles.h1}>Forum</h1>
       <RoomList
-        users={users}
         user={user}
         rooms={rooms}
         addRoom={addRoom}

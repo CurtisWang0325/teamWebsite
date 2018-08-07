@@ -23,9 +23,7 @@ class MessageList extends Component {
             #{room.displayName}
           </h3>
           {
-            room.dm
-              ? <p>This is the very beginning of the direct message.</p>
-              : <p>This is the very beginning of the #{room.displayName} room.</p>
+            <p>This is the very beginning of the #{room.displayName} room.</p>
           }
         </div>
         {

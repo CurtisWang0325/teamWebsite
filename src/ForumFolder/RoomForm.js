@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { StyleSheet, css } from 'aphrodite'
-import Select from 'react-select'
+// import Select from 'react-select'
 // import 'react-select/dist/react-select.css'
 
 class RoomForm extends Component {
@@ -8,8 +8,6 @@ class RoomForm extends Component {
     room: {
         name: '',
         description: '',
-        members: [],
-        dm: false,
     },
   }
 
@@ -22,35 +20,21 @@ class RoomForm extends Component {
   handleChange = (ev) => {
     const room = {...this.state.room}
     const target = ev.target
-    const value = target.type === 'checkbox' ? target.checked : target.value
+    const value = target.value
 
     room[target.name] = value
     this.setState({ room })
   }
 
-  handleSelectChange = (selectedValue) => {
-    const room = {...this.state.room}
-    room.members = selectedValue
-    this.setState({ room })
+  // handleSelectChange = (selectedValue) => {
+  //   const room = {...this.state.room}
+  //   room.members = selectedValue
+  //   this.setState({ room })
 
-    console.log(selectedValue)
-  }
+  //   console.log(selectedValue)
+  // }
 
-  users = () => {
-    const { users } = this.props
-    delete users[this.props.user.uid]
-
-    return Object.keys(users).map(
-      uid => {
-        const user = this.props.users[uid]
-        return {
-          value: uid,
-          label: `${user.displayName} (${user.email})`,
-        }
-      }
-    )
-  }
-
+  
   render() {
     return (
       <div className={`RoomForm ${css(styles.roomForm)}`}>

@@ -102,7 +102,7 @@ class App extends Component {
               />
             )}
           />
-          <Route path="/Sche  dule" component={Schedule} />
+          <Route path="/Schedule" component={Schedule} />
           <Route
             render={() => (
               <MainPage />
