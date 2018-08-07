@@ -64,6 +64,7 @@ class Main extends Component {
   removeRoom = (room) => {
     const rooms = {...this.state.rooms}
     rooms[room.name] = null
+    // delete rooms[room.name]
 
     this.setState(
       { rooms },

@@ -49,7 +49,6 @@ class Announcement extends Component {
 
 
 
-
   render() {
     return (
 
@@ -71,8 +70,8 @@ class Announcement extends Component {
         />
         
         <Route path="/Announcement/new"
-          render={prop=>(
-            <AnnouncementForm addAnnouncement={this.addAnnouncement} />
+          render={props=>(
+            <AnnouncementForm addAnnouncement={this.addAnnouncement} {...props} />
           )}
         />
 

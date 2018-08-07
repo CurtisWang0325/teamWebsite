@@ -1,6 +1,4 @@
 import React, { Component } from 'react'
-//import { StyleSheet, css } from 'aphrodite'
-import { NavLink, Redirect} from 'react-router-dom'
 
 class AnnouncementForm extends Component {
 
@@ -8,7 +6,6 @@ class AnnouncementForm extends Component {
     super()
     this.state = {
       body: '',
-      redirect: false,
     }
   }
 
@@ -16,9 +13,8 @@ class AnnouncementForm extends Component {
   handleSubmit = (ev) => {
     ev.preventDefault()
     this.props.addAnnouncement(this.state.body)
-    this.setState({ body: '',redirect:true })
-    
-    //this.props.changeForm()
+    this.setState({ body: ''})
+    this.props.history.push('/Announcement')
     
   }
 
@@ -27,15 +23,8 @@ class AnnouncementForm extends Component {
   }
 
   render() {
-
-     if (this.state.redirect) {
-        this.setState({ redirect:false })
-
-        return <Redirect to='/Announcement'/>;
-     }
     return (
         <form
-          //  className={`AnnouncementForm ${css(styles.form)}`}
           onSubmit={this.handleSubmit}
         >
 
@@ -46,11 +35,9 @@ class AnnouncementForm extends Component {
             value={this.state.body}
             onChange={this.handleChange}
             autoFocus
-          //className={css(styles.input)}
           />
 
           <button type="submit"
-          //className={css(styles.button)}
           >
             <i className="far fa-paper-plane" title="Send"></i>
           </button>
@@ -60,48 +47,5 @@ class AnnouncementForm extends Component {
   }
 }
 
-// const styles = StyleSheet.create({
-//   form: {
-//     backgroundColor: 'white',
-//     height: '3rem',
-//     display: 'flex',
-//     alignItems: 'stretch',
-//     border: '2px solid #999',
-//     borderRadius: '0.5rem',
-//     margin: '0.25rem',
-//     padding: 0,
-//   },
-
-//   icon: {
-//     display: 'flex',
-//     borderRadius: '0.5rem',
-//     alignItems: 'center',
-//     backgroundColor: 'white',
-//     color: '#ccc',
-//     padding: '0 0.5rem',
-//     fontSize: '1.2rem',
-//   },
-
-//   input: {
-//     flex: 1,
-//     fontSize: '1.2rem',
-//     border: 0,
-
-//     ':focus': {
-//       outline: 0,
-//     },
-//   },
-
-//   button: {
-//     fontSize: '1.5rem',
-//     backgroundColor: '#1A8FE3',
-//     color: 'white',
-//     paddingLeft: '1rem',
-//     paddingRight: '1rem',
-//     borderTopRightRadius: '0.5rem',
-//     borderBottomRightRadius: '0.5rem',
-//     border: '1px solid white',
-//   },
-// })
 
 export default AnnouncementForm
