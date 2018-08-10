@@ -1,0 +1,58 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+#title{
+    width: 350px;
+    margin-top: 30px;
+    margin-left: 100px;
+}
+
+#icon{
+    height: 30px;
+    width: 30px;
+    display: inline-block;
+}
+
+.clear{clear:both;}/* clear float */
+
+.google {
+    border-radius: 5px;
+    background: #cf4332;
+    float: right;
+    margin-top: 50px;
+    margin-right: 30px;
+    height: 52px;
+    width: 300px;
+    transition: all 0.5s ease-out;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -ms-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+}
+
+
+.google lable{
+    border-left: 1px solid rgba(155, 38, 23, 0.46);
+    color: #fff;
+    padding: 14px 10px;
+    float: left;
+    font-size: 17px;
+    width: 61%;
+}
+.google a span{
+    background: url("../img/google_icon.png") no-repeat;
+    background-size: 45px 45px;
+    height: 45px;
+    width: 45px;
+    display: inline-block;
+    float: left;
+    margin: 3px 0px 0px 2px;
+}
+.google:hover{
+    background: #bb3828;
+}
+
+
+

@@ -6,7 +6,6 @@ class Heading extends Component {
     render() {
         return (
             <div>
-                <h1>RHIT LOL</h1>
                 <NavLink to="">
                     <button>Home</button>
                 </NavLink>
@@ -19,9 +18,6 @@ class Heading extends Component {
                 <NavLink to="/Schedule">
                     <button>Schedule</button>
                 </NavLink>
-
-
-
             </div>
         )
     }
