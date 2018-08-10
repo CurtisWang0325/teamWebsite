@@ -9,6 +9,14 @@
     margin-left: 100px;
 }
 
+body{
+    background: #999;
+}
+
+#top_bar{
+    background: #FFFFFF;
+}
+
 #icon{
     height: 30px;
     width: 30px;

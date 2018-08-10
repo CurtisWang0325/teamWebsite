@@ -13,7 +13,7 @@ class Account extends Component {
 
     render() {
         return (
-            <div>
+            <div id="top_bar">
                 <img src={title_pic} alt="RHITLOL" id="title"/>
                 {!this.props.signedIn() ?
                     (
