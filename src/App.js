@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 //import logo from './logo.svg';
-import './App.css';
+import './css/App.css';
 import MainPage from './MainPage'
 import { auth } from './base'
 import Heading from './Heading'
@@ -83,7 +83,7 @@ class App extends Component {
         />
         <hr />
         <Heading />
-        <hr />
+        <hr id="header_baseline"/>
         <Switch>
           <Route path="/myAccountPage"
             render={prop => (

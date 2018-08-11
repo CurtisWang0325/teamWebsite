@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import {NavLink} from 'react-router-dom'
+
 require('./css/Heading.css')
 
 class Heading extends Component {
@@ -17,6 +18,7 @@ class Heading extends Component {
                             </span>
                         </NavLink>
                     </li>
+                    |
                     <li>
                         <NavLink to="/Announcement" className="tooltip rotate">
                             Announcement
@@ -26,6 +28,7 @@ class Heading extends Component {
                             </span>
                         </NavLink>
                     </li>
+                    |
                     <li>
                         <NavLink to="/Forum/general" className="tooltip rotate">
                             Forum
@@ -35,6 +38,7 @@ class Heading extends Component {
                             </span>
                         </NavLink>
                     </li>
+                    |
                     <li>
                         <NavLink to="/calendar" className="tooltip rotate">
                             calendar
@@ -47,7 +51,7 @@ class Heading extends Component {
                 </ul>
             </div>
 
-    )
+        )
     }
 }
 
