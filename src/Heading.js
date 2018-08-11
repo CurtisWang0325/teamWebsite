@@ -1,28 +1,56 @@
-import React, { Component } from 'react'
-import { NavLink } from 'react-router-dom'
+import React, {Component} from 'react'
+import {NavLink} from 'react-router-dom'
+
+require('./css/Heading.css')
 
 class Heading extends Component {
 
     render() {
         return (
-            <div>
-                <h1>RHIT LOL</h1>
-                <NavLink to="">
-                    <button>Home</button>
-                </NavLink>
-                <NavLink to="/Announcement">
-                    <button>Announcement</button>
-                </NavLink>
-                <NavLink to="/Forum/general">
-                    <button>Forum</button>
-                </NavLink>
-                <NavLink to="/Schedule">
-                    <button>Schedule</button>
-                </NavLink>
-
-
-
+            <div className="nav">
+                <ul>
+                    <li>
+                        <NavLink to="" className="tooltip rotate">
+                            Home
+                            <span className="tooltip-content">
+                                <i className="fa fa-home fa-2x">
+                                </i>
+                            </span>
+                        </NavLink>
+                    </li>
+                    |
+                    <li>
+                        <NavLink to="/Announcement" className="tooltip rotate">
+                            Announcement
+                            <span className="tooltip-content">
+                                <i className="fa fa-podcast fa-2x">
+                                </i>
+                            </span>
+                        </NavLink>
+                    </li>
+                    |
+                    <li>
+                        <NavLink to="/Forum/general" className="tooltip rotate">
+                            Forum
+                            <span className="tooltip-content">
+                                <i className="fa fa-comments fa-2x">
+                                </i>
+                            </span>
+                        </NavLink>
+                    </li>
+                    |
+                    <li>
+                        <NavLink to="/calendar" className="tooltip rotate">
+                            calendar
+                            <span className="tooltip-content">
+                                <i className="fa fa-calendar fa-2x">
+                                </i>
+                            </span>
+                        </NavLink>
+                    </li>
+                </ul>
             </div>
+
         )
     }
 }
