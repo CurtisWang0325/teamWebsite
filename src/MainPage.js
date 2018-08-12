@@ -4,25 +4,29 @@ import React, { Component } from 'react'
 import { NavLink } from 'react-router-dom'
 //import Announcement from './Announcement'
 //import Heading from './Heading'
+require('./css/MainPage.css')
 
 class MainPage extends Component {
     render() {
         return (
             <div className="MainPage">
-                <NavLink to="/Announcement">
+
+                <NavLink to="/Forum" className="link" id="to_forum">
+                    <p>Forum Placeholder</p>
+                </NavLink>
+
+                {/* <Forum/> */}
+                <NavLink to="/Announcement" id="to_ann" className="link">
                     <p>Announcement Placeholder</p>
                 </NavLink>
                 {/* <Announcement/> */}
-                <hr />
-                <NavLink to="/Forum">
-                    <p>Forum Placeholder</p>
-                </NavLink>
-                {/* <Forum/> */}
-                <hr />
-                <NavLink to="/Schedule">
+                <NavLink to="/Schedule" className="link" id="to_schedule">
                     <p>Schedule Placeholder</p>
                 </NavLink>
                 {/* <Schedule/> */}
+
+                <div id="background"></div>
+
             </div>
 
         )

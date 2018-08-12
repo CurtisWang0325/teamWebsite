@@ -1,0 +1,95 @@
+#to_forum:hover ~ #background{
+    visibility: visible;
+    opacity: 1;
+    background: url(".././img/icon1.jpg");
+}
+
+#to_forum:after ~ #background{
+    visibility: hidden;
+    opacity: 0;
+}
+
+#to_forum{
+    background: url(".././img/small_icon1.png");
+}
+#to_forum:hover{
+    background:white;
+}
+
+#to_ann:hover ~ #background{
+    visibility: visible;
+    opacity: 1;
+    background: url(".././img/icon2.jpg");
+}
+
+#to_ann:after ~ #background{
+    visibility: hidden;
+    opacity: 0;
+}
+
+#to_ann{
+    background: url(".././img/small_icon2.png");
+}
+#to_ann:hover{
+    background:white;
+}
+
+#to_schedule:hover ~ #background{
+    visibility: visible;
+    opacity: 1;
+    background: url(".././img/icon3.jpg");
+}
+
+#to_schedule:after ~ #background{
+    visibility: hidden;
+    opacity: 0;
+}
+
+#to_schedule{
+    background: url(".././img/small_icon3.png");
+}
+#to_schedule:hover{
+    background:white;
+}
+
+.MainPage{
+    height: 100%;
+    background: black;
+}
+
+#background{
+    visibility: hidden;
+    opacity: 0;
+    background: black;
+    height: 100%;
+    width: 100%;
+    transition: all 1s linear;
+    -moz-transition:all 1s linear; /* Firefox 4 */
+    -webkit-transition:all 1s linear; /* Safari 和 Chrome */
+    -o-transition:all 1s linear; /* Opera */
+}
+
+.link{
+    position: absolute;
+    top: 230px;
+    z-index: 10000;
+    height: 400px;
+    width: 300px;
+    background: #FFFFFF;
+}
+
+#to_forum{
+    left: 480px;
+}
+
+#to_ann{
+    left: 810px;
+}
+
+#to_schedule{
+    left: 1140px;
+}
+
+.MainPage{
+    width: 1920px;
+}
