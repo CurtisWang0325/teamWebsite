@@ -30,8 +30,8 @@ class Announcement extends Component {
       // user: this.props.user,
       body,
     })
-
     this.setState({ announcements })
+    // window.alert('Announcement Added Successfully')
   }
 
   deleteAnnouncement = (t) => {

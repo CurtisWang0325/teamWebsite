@@ -21,9 +21,15 @@ class App extends Component {
     }
 
   componentDidMount() {
+    
     const user = JSON.parse(localStorage.getItem('user'))
     if (user) {
-      this.setState({ user })
+      this.ref=base.syncState(`users/${user.uid}`,{
+        context:this, 
+        state:'user',
+        defaultValue: `users/${user.uid}`,
+      })
+      // this.setState({ user })
     }
 
     auth.onAuthStateChanged(
@@ -45,18 +51,15 @@ class App extends Component {
   }
 
   handleAuth = (oauthUser) => {
-    const googleUser = {
+    
+    const user = {
       uid: oauthUser.uid,
       googleName: oauthUser.displayName,
       email: oauthUser.email,
       photoUrl: oauthUser.photoURL,
     }
-    this.ref=base.syncState(`${googleUser.uid}`,{
-      context:this, 
-      state:'user',
-    })
-    //this.setState({ user:googleUser })
-    localStorage.setItem('user', JSON.stringify(this.state.user))
+    this.setState({ user })
+    localStorage.setItem('user', JSON.stringify(user))
   }
 
   handleUnauth = () => {
