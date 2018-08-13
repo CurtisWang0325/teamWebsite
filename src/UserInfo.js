@@ -8,7 +8,7 @@ class UserInfo extends Component {
       <div className="UserInfo">
         <div className="user">
           <span>
-            {this.props.user.googleName}
+            {this.props.user.name||this.props.user.googleName}
           </span>
         </div>
         <NavLink to="/myAccountPage"><button>My Account</button></NavLink>
