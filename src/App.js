@@ -11,6 +11,7 @@ import Forum from './ForumFolder/Forum'
 import Schedule from './Schedule'
 import Account from './Account'
 import base from './base'
+// import { FirebaseDatabase } from '@firebase/database-types';
 
 
 
@@ -52,14 +53,25 @@ class App extends Component {
   }
 
   handleAuth = (oauthUser) => {
+    
+
     const user = {
       uid: oauthUser.uid,
       googleName: oauthUser.displayName,
       email: oauthUser.email,
-      photoUrl: oauthUser.photoURL,
-      IGN: '',
-      name: '',
+      // photoUrl: oauthUser.photoURL,
+      // IGN: '',
+      // name: '',
     }
+    
+    // const userRef=base.database().ref(`users/${user.uid}`)
+    // userRef.once("value")
+    // .then(function(snapshot){
+    //   this.name = snapshot.child("name").val()
+    // })
+    // console.log(this.name)
+    
+
     this.ref = base.syncState(`users/${user.uid}`, {
       context: this,
       state: 'user',
