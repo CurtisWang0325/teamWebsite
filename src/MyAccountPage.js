@@ -4,7 +4,7 @@ import { NavLink, Route, } from 'react-router-dom'
 
 class MyAccountPage extends Component {
     state = {
-        tempName: "",
+        tempName:"",
         tempIGN:"",
     }
 
@@ -15,7 +15,6 @@ class MyAccountPage extends Component {
 
     handleSubmit = (ev) => {
         const user=this.props.user
-        //user.name=this.state.tempName
         user.name=this.state.tempName||user.name
         user.IGN=this.state.tempIGN||user.IGN
         this.props.changeAccountInfo(user)
@@ -43,7 +42,7 @@ class MyAccountPage extends Component {
                     render={prop => (
                         <div>
                             <p>{`${this.props.user.name ? this.props.user.name : this.props.user.googleName}`}</p>
-                            <p>{`${this.props.user.IGN}`}</p>
+                            <p>{`${this.props.user.IGN?this.props.user.IGN:"not set yet"}`}</p>
                         </div>
                     )}
                 />
