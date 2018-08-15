@@ -1,0 +1,27 @@
+.UserInfo{
+    color: #000;
+    float: right;
+    margin-top: 50px;
+    margin-right: 30px;
+}
+
+.user span{
+    margin: 0 auto;
+    text-align: center;
+}
+
+#to_account{
+    color: #000;
+    display: inline-block;
+}
+
+#sign_out{
+    color: #000;
+    margin-right: 5px;
+    margin-left: 8px;
+    display: inline-block;
+}
+
+#to_account:hover,#sign_out:hover{
+    color: red;
+}

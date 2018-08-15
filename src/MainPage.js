@@ -12,16 +12,34 @@ class MainPage extends Component {
             <div className="MainPage">
 
                 <NavLink to="/Forum" className="link" id="to_forum">
-                    <p>Forum Placeholder</p>
+                    <div className="unhover">
+                    <h3>Forum</h3>
+                    <p></p>
+                    </div>
+                    <div className="hover">
+                        {/* 这个div放想展示的信息 比如最新一条信息啥的 后面两个同理*/}
+                    </div>
                 </NavLink>
 
                 {/* <Forum/> */}
                 <NavLink to="/Announcement" id="to_ann" className="link">
-                    <p>Announcement Placeholder</p>
+                    <div className="unhover">
+                        <h3>Announcement</h3>
+                        <p></p>
+                    </div>
+                    <div className="hover">
+
+                    </div>
                 </NavLink>
                 {/* <Announcement/> */}
                 <NavLink to="/Schedule" className="link" id="to_schedule">
-                    <p>Schedule Placeholder</p>
+                    <div className="unhover">
+                        <h3>Schedule</h3>
+                        <p>schdule a match with other team</p>
+                    </div>
+                    <div className="hover">
+                        、
+                    </div>
                 </NavLink>
                 {/* <Schedule/> */}
 

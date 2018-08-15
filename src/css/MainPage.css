@@ -1,4 +1,8 @@
 #to_forum:hover ~ #background{
+    transition: all 1s linear;
+    -moz-transition:all 1s linear; /* Firefox 4 */
+    -webkit-transition:all 1s linear; /* Safari 和 Chrome */
+    -o-transition:all 1s linear; /* Opera */
     visibility: visible;
     opacity: 1;
     background: url(".././img/icon1.jpg");
@@ -17,6 +21,10 @@
 }
 
 #to_ann:hover ~ #background{
+    transition: all 1s linear;
+    -moz-transition:all 1s linear; /* Firefox 4 */
+    -webkit-transition:all 1s linear; /* Safari 和 Chrome */
+    -o-transition:all 1s linear; /* Opera */
     visibility: visible;
     opacity: 1;
     background: url(".././img/icon2.jpg");
@@ -35,6 +43,10 @@
 }
 
 #to_schedule:hover ~ #background{
+    transition: all 1s linear;
+    -moz-transition:all 1s linear; /* Firefox 4 */
+    -webkit-transition:all 1s linear; /* Safari 和 Chrome */
+    -o-transition:all 1s linear; /* Opera */
     visibility: visible;
     opacity: 1;
     background: url(".././img/icon3.jpg");
@@ -54,7 +66,7 @@
 
 .MainPage{
     height: 100%;
-    background: black;
+    //background: black;
 }
 
 #background{
@@ -63,13 +75,11 @@
     background: black;
     height: 100%;
     width: 100%;
-    transition: all 1s linear;
-    -moz-transition:all 1s linear; /* Firefox 4 */
-    -webkit-transition:all 1s linear; /* Safari 和 Chrome */
-    -o-transition:all 1s linear; /* Opera */
+
 }
 
 .link{
+    border-radius: 5px;
     position: absolute;
     top: 230px;
     z-index: 10000;
@@ -90,6 +100,19 @@
     left: 1140px;
 }
 
-.MainPage{
+.MainPage {
     width: 1920px;
+    margin: 0 auto;
+}
+
+.unhover{
+    height: 300px;
+    width: 200px;
+    margin: 50px auto;
+    text-align: center;
+    color: #EDFFD5;
+}
+
+.hover{
+    display: none;
 }
