@@ -9,6 +9,7 @@ class MyAccountPage extends Component {
         tempPosition:"",
         tempYear:"",
         tempAboutMe:"",
+        tempLevel:"",
     }
 
 
@@ -20,10 +21,10 @@ class MyAccountPage extends Component {
         const user=this.props.user
         user.name=this.state.tempName||user.name
         user.IGN=this.state.tempIGN||user.IGN
-        user.position=this.state.tempPosition||null
-        user.year=this.state.tempYear||null
-        user.aboutMe=this.state.tempAboutMe||null
-
+        user.position=this.state.tempPosition||user.position
+        user.year=this.state.tempYear||user.year
+        user.aboutMe=this.state.tempAboutMe||user.aboutMe
+        user.level=this.state.tempLevel||user.level
         this.props.changeAccountInfo(user)
     }
 
@@ -41,7 +42,7 @@ class MyAccountPage extends Component {
                     handleChange={this.handleChange}
                 /> */}
 
-                
+                <h1>Level: </h1>
                 <h1>Name: </h1>
                 <h1>IGN: </h1>
                 <h1>Position: </h1>
@@ -51,6 +52,7 @@ class MyAccountPage extends Component {
                 <Route exact path="/MyAccountPage"
                     render={prop => (
                         <div>
+                            <p>{`${this.props.user.level ? this.props.user.level : "not set yet"}`}</p>
                             <p>{`${this.props.user.name ? this.props.user.name : this.props.user.googleName}`}</p>
                             <p>{`${this.props.user.IGN?this.props.user.IGN:"not set yet"}`}</p>
                             <p>{`${this.props.user.position?this.props.user.position:"not set yet"}`}</p>
@@ -64,7 +66,14 @@ class MyAccountPage extends Component {
                     render={prop => (
                         <form onSubmit={(ev) => ev.preventDefault()}>
                             <div>
-                                {/* <p>Prefered Name:</p> */}
+                                <input
+                                    type="number"
+                                    name="tempLevel"
+                                    placeholder={`${this.props.user.level ? this.props.user.level :  "Enter your level"}`}
+                                    value={this.state.tempLevel}
+                                    onChange={this.handleChange}
+                                />
+                                <hr/>
                                 <input
                                     type="text"
                                     name="tempName"
