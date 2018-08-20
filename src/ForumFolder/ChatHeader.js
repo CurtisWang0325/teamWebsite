@@ -1,11 +1,12 @@
 import React from 'react'
 
-const ChatHeader = ({ room, removeRoom }) => {
+const ChatHeader = ({ user, room, removeRoom }) => {
   const handleClick = (ev) => {
     if (window.confirm('Leave the room?')) {
       removeRoom(room)
     }
   }
+  
 
   return (
     <div className="ChatHeader" style={styles.header}>
@@ -17,12 +18,16 @@ const ChatHeader = ({ room, removeRoom }) => {
           {room.description}
         </p>
       </div>
-      <button
-        style={styles.button}
-        onClick={handleClick}
-      >
-        <i className="far fa-trash-alt"></i>
-      </button>
+      {
+        user.level==3
+        &&      
+        <button
+          style={styles.button}
+          onClick={handleClick}
+        >
+          <i className="far fa-trash-alt"></i>
+        </button>
+      }
     </div>
   )
 }

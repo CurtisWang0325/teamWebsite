@@ -8,7 +8,7 @@ import RoomForm from './RoomForm'
 class RoomList extends Component {
   render() {
     const rooms = this.props.rooms
-
+    const user=this.props.user
     return (
       <Switch>
         <Route
@@ -33,12 +33,18 @@ class RoomList extends Component {
                   <h2 className={css(styles.h2)}>
                     Rooms
                   </h2>
-                  <Link
-                    className={css(styles.button)}
-                    to="/Forum/new"
-                  >
-                    <i className="fas fa-plus-circle" title="Add room"></i>
-                  </Link>
+
+                  {/* only admin (lv3) can use the new room button */}
+                  {
+                    user.level==3
+                    &&
+                    <Link
+                      className={css(styles.button)}
+                      to="/Forum/new"
+                    >
+                      <i className="fas fa-plus-circle" title="Add room"></i>
+                    </Link>
+                  }
                 </div>
                 <ul className={css(styles.list)}>
                   {

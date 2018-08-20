@@ -69,9 +69,11 @@ class Chat extends Component {
   }
 
   render() {
+    const user= this.props.user
     return (
       <div className="Chat" style={styles}>
         <ChatHeader
+          user={this.props.user}
           room={this.props.room}
           removeRoom={this.props.removeRoom}
         />
@@ -80,7 +82,11 @@ class Chat extends Component {
           room={this.props.room}
           addReaction={this.addReaction}
         />
-        <MessageForm addMessage={this.addMessage} />
+        {
+          user.level>=1
+          &&
+          <MessageForm addMessage={this.addMessage} />
+        }
       </div>
     )
   }
