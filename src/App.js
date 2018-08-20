@@ -11,6 +11,7 @@ import Forum from './ForumFolder/Forum'
 import Schedule from './Schedule'
 import Account from './Account'
 import base from './base'
+import AnnouncementR from './AnnouncementFolder/AnnouncementR';
 // import { FirebaseDatabase } from '@firebase/database-types';
 
 
@@ -122,7 +123,14 @@ class App extends Component {
               />
             )}
           />
-          <Route path="/Announcement" component={Announcement} />
+          <Route path="/Announcement" 
+            render={prop => (
+              this.state.user.level==3?
+              <Announcement/>
+              :
+              <AnnouncementR/>
+            )} 
+          />
           <Route path="/Forum"
             render={prop => (
               <Forum
