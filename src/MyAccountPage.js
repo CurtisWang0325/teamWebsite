@@ -7,6 +7,8 @@ class MyAccountPage extends Component {
         tempName:"",
         tempIGN:"",
         tempPosition:"",
+        tempYear:"",
+        tempAboutMe:"",
     }
 
 
@@ -19,6 +21,9 @@ class MyAccountPage extends Component {
         user.name=this.state.tempName||user.name
         user.IGN=this.state.tempIGN||user.IGN
         user.position=this.state.tempPosition||null
+        user.year=this.state.tempYear||null
+        user.aboutMe=this.state.tempAboutMe||null
+
         this.props.changeAccountInfo(user)
     }
 
@@ -40,6 +45,8 @@ class MyAccountPage extends Component {
                 <h1>Name: </h1>
                 <h1>IGN: </h1>
                 <h1>Position: </h1>
+                <h1>Year: </h1>
+                <h1>About Me: </h1>
                 
                 <Route exact path="/MyAccountPage"
                     render={prop => (
@@ -47,6 +54,8 @@ class MyAccountPage extends Component {
                             <p>{`${this.props.user.name ? this.props.user.name : this.props.user.googleName}`}</p>
                             <p>{`${this.props.user.IGN?this.props.user.IGN:"not set yet"}`}</p>
                             <p>{`${this.props.user.position?this.props.user.position:"not set yet"}`}</p>
+                            <p>{`${this.props.user.year?this.props.user.year:"not set yet"}`}</p>
+                            <p>{`${this.props.user.aboutMe?this.props.user.aboutMe:"not set yet"}`}</p>
 
                         </div>
                     )}
@@ -77,6 +86,26 @@ class MyAccountPage extends Component {
                                     name="tempPosition"
                                     placeholder={`${this.props.user.position ? this.props.user.position : "Enter your position"}`}
                                     value={this.state.tempPosition}
+                                    onChange={this.handleChange}
+                                />
+                                <hr/>
+                                <input
+                                    type="number"
+                                    min="1"
+                                    max="6"
+                                    name="tempYear"
+                                    placeholder={`${this.props.user.year ? this.props.user.year : "Choose your Year"}`}
+                                    value={this.state.tempYear}
+                                    onChange={this.handleChange}
+                                />
+                                <hr/>
+                                {/* Need a larger space for input */}
+                                <textarea
+                                    name="tempAboutMe"
+                                    rows="5"
+                                    cols="50    "
+                                    placeholder={`${this.props.user.aboutMe ? this.props.user.aboutMe : "Say something about you"}`}
+                                    value={this.state.tempAboutMe}
                                     onChange={this.handleChange}
                                 />
                                 <hr/>
