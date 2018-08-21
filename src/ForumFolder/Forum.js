@@ -12,13 +12,12 @@ class Forum extends Component {
                 <Route
                     path="/Forum/:roomName"
                     render={navProps => (
-                        this.props.user.uid?
+                        
                         <Main
                         user={this.props.user}
                         {...navProps}
                         />
-                        :
-                        <h1>Sign in to view the forum</h1>
+                        
                     )}
                 />
             </div>

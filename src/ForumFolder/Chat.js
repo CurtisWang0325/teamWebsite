@@ -83,9 +83,12 @@ class Chat extends Component {
           addReaction={this.addReaction}
         />
         {
-          user.level>=1
-          &&
-          <MessageForm addMessage={this.addMessage} />
+          // user.level>=1
+          // &&
+          <MessageForm 
+            user={this.props.user}
+            addMessage={this.addMessage} 
+          />
         }
       </div>
     )

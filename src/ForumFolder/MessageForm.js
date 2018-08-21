@@ -8,7 +8,11 @@ class MessageForm extends Component {
 
   handleSubmit = (ev) => {
     ev.preventDefault()
+    // only signed in users can send message
+    this.props.user.level>=1?
     this.props.addMessage(this.state.body)
+    :
+    window.alert("Sign in to chat! ")
     this.setState({ body: '' })
   }
 
