@@ -11,7 +11,7 @@ class MainPage extends Component {
         return (
             <div className="MainPage">
 
-                <NavLink to="/Forum" className="link" id="to_forum">
+                <NavLink to="/Forum/general" className="link" id="to_forum">
                     <div className="unhover">
                     <h3>Forum</h3>
                     <p></p>
