@@ -40,8 +40,8 @@ class Heading extends Component {
                     </li>
                     |
                     <li>
-                        <NavLink to="/calendar" className="tooltip rotate">
-                            calendar
+                        <NavLink to="/Schedule" className="tooltip rotate">
+                            Schedule
                             <span className="tooltip-content">
                                 <i className="fa fa-calendar fa-2x">
                                 </i>
