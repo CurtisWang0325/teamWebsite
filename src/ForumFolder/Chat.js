@@ -32,7 +32,7 @@ class Chat extends Component {
     }
 
     const rebaseBinding = base.syncState(
-      `${this.props.room.name}/messages`,
+      `rooms/${this.props.room.name}/messages`,
       {
         context: this,
         state: 'messages',
