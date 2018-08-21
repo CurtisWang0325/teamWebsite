@@ -13,7 +13,11 @@ class Message extends Component {
   }
 
   togglePicker = () => {
+    this.props.user.level>=1?
     this.setState({ showPicker: !this.state.showPicker })
+    :
+    window.alert("Sign in to add emoji")
+    
   }
 
   handleEmojiSelect = (emoji) => {

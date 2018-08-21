@@ -56,16 +56,21 @@ class Chat extends Component {
   }
 
   addReaction = (message, emoji) => {
-    message.reactions = message.reactions || {}
-    message.reactions[emoji] = message.reactions[emoji] || []
-
-    message.reactions[emoji].push(this.props.user)
-
-    const messages = [...this.state.messages]
-    const i = messages.findIndex(msg => msg.id === message.id)
-    messages[i] = message
-
-    this.setState({ messages })
+    if (this.props.user.level>1){
+      message.reactions = message.reactions || {}
+      message.reactions[emoji] = message.reactions[emoji] || []
+  
+      message.reactions[emoji].push(this.props.user)
+  
+      const messages = [...this.state.messages]
+      const i = messages.findIndex(msg => msg.id === message.id)
+      messages[i] = message
+  
+      this.setState({ messages })
+    }
+    else{
+      window.alert("Sign in to add emoji")
+    }
   }
 
   render() {
@@ -78,6 +83,7 @@ class Chat extends Component {
           removeRoom={this.props.removeRoom}
         />
         <MessageList
+          user={this.props.user}
           messages={this.state.messages}
           room={this.props.room}
           addReaction={this.addReaction}
