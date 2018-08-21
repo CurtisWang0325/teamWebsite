@@ -6,7 +6,7 @@ class AnnouncementLists extends Component {
 
         return (
             <div>
-                <p>history</p>
+                {/* <p>history</p> */}
                 {
                     this.props.ann
                         .map(a => (

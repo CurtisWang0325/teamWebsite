@@ -8,7 +8,7 @@ import { Route, Switch } from 'react-router-dom'
 import MyAccountPage from './MyAccountPage'
 import Announcement from './AnnouncementFolder/Announcement'
 import Forum from './ForumFolder/Forum'
-import Schedule from './Schedule'
+import Schedule from './ScheduleFolder/Schedule'
 import Account from './Account'
 import base from './base'
 import AnnouncementR from './AnnouncementFolder/AnnouncementR';

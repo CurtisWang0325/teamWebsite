@@ -11,7 +11,6 @@ class Announcement extends Component {
 
     this.state = {
       announcements: [],
-     // form: false,
     }
   }
 
@@ -39,15 +38,6 @@ class Announcement extends Component {
     announcements.splice(announcements.indexOf(announcements.find((a) => a.t === t)), 1)
     this.setState({ announcements })
   }
-
-
-  // changeForm = () => {
-  //   this.state.form ?
-  //     this.setState({ form: false }) :
-  //     this.setState({ form: true })
-  // }
-
-
 
   render() {
     return (
