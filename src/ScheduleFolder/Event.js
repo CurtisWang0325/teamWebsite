@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-
+import PlayerList from './PlayerList'
 
 class Event extends Component {
   handleDelete = (ev) => {
@@ -12,8 +12,14 @@ class Event extends Component {
 
       <span>
         <p>
-          {this.props.txt}
+          Description:{this.props.txt}
         </p>
+        <p>
+          Time:{this.props.eventTime}
+        </p>
+        <PlayerList
+          user={this.props.user}
+        />
         <button type='button' onClick={this.handleDelete}>
           <i className="fas fa-minus" title='delete'></i>
         </button>

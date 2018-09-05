@@ -6,20 +6,27 @@ class EventForm extends Component {
     super()
     this.state = {
       body: '',
+      eventTime:'',
+
     }
   }
 
 
   handleSubmit = (ev) => {
     ev.preventDefault()
-    this.props.addEvent(this.state.body)
-    this.setState({ body: ''})
+    this.props.addEvent(this.state)
+    this.setState(
+      { body: '',
+        eventTime :'',  
+      }
+    )
     this.props.history.push('/Schedule')
     
   }
 
+  
   handleChange = (ev) => {
-    this.setState({ body: ev.target.value })
+    this.setState({ [ev.target.name]: ev.target.value });
   }
 
   render() {
@@ -35,6 +42,13 @@ class EventForm extends Component {
             value={this.state.body}
             onChange={this.handleChange}
             autoFocus
+          />
+          <input
+            type="text"
+            name="eventTime"
+            placeholder="Enter Event Time"
+            value={this.state.eventTime}
+            onChange={this.handleChange}
           />
 
           <button type="submit"

@@ -10,8 +10,10 @@ class EventList extends Component {
                     this.props.events
                         .map(a => (
                             <Event 
+                                user={this.props.user}
                                 t={a.t}
                                 txt={a.body}
+                                eventTime={a.eventTime}
                                 deleteEvent={this.props.deleteEvent} 
                                 key={a.t} 
                             />

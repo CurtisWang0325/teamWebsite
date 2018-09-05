@@ -139,7 +139,13 @@ class App extends Component {
               />
             )}
           />
-          <Route path="/Schedule" component={Schedule} />
+          <Route path="/Schedule"
+            render={prop => (
+              <Schedule
+                user={this.state.user}
+              />
+            )} 
+          />
           <Route
             render={() => (
               <MainPage />

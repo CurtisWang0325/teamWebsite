@@ -22,12 +22,9 @@ class Schedule extends Component {
     })
   }
 
-  addEvent = (body) => {
+  addEvent = (newEvent) => {
     const events = [...this.state.events]
-    events.push({
-      t: Date.now(),
-      body,
-    })
+    events.push(newEvent)
     this.setState({ events })
     // window.alert('Announcement Added Successfully')
   }
@@ -54,6 +51,7 @@ class Schedule extends Component {
         />
 
         <EventList
+          user={this.props.user}
           events={this.state.events}
           deleteEvent={this.deleteEvent}
         />
