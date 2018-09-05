@@ -1,11 +1,33 @@
 import React, { Component } from 'react'
 import PlayerList from './PlayerList'
+import base from '../base'
 
 class Event extends Component {
+  state = {
+    players:{},
+    eventTime:'',
+  }
+
   handleDelete = (ev) => {
     ev.preventDefault()
-    this.props.deleteEvent(this.props.t)
+    this.props.deleteEvent(this.props.key)
   }
+
+  handleAddPlayer = (pos,user) => {
+    const players=this.state.players
+    players[pos]={user};
+    this.setState({players})
+  }
+
+  componentDidMount() {
+    base.syncState(`events/${this.props.index}/players`,{
+      context:this,
+      state:'players',
+      asArray:true,
+    })
+  }
+
+
 
   render() {
     return (
@@ -18,7 +40,9 @@ class Event extends Component {
           Time:{this.props.eventTime}
         </p>
         <PlayerList
+          players={this.state.players}
           user={this.props.user}
+          handleAddPlayer={this.handleAddPlayer}
         />
         <button type='button' onClick={this.handleDelete}>
           <i className="fas fa-minus" title='delete'></i>

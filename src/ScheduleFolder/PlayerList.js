@@ -3,9 +3,9 @@ import React, { Component } from 'react'
 class PlayerList extends Component {
 
     handleClick = (ev) => {
-        console.log(this.props.user)
+        // console.log(this.props.user)
         // pos=[ev  .target.name]
-
+        this.props.handleAddPlayer(ev.target.name,this.props.user)
     }
 
     render() {
@@ -19,7 +19,7 @@ class PlayerList extends Component {
                         </button>
                     </li>
                     <li>
-                        <button type='button' onClick={this.handleClick}>
+                        <button type='jungle' onClick={this.handleClick}>
                             Jungle
                         </button>
                     </li>

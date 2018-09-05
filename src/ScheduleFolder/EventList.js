@@ -2,6 +2,11 @@ import React, { Component } from 'react'
 import Event from './Event'
 
 class EventList extends Component {
+
+    findEventIndex = (key) => {
+        const index = this.props.events.findIndex(evt => evt.key == key);
+        return index
+    }
     render() {
 
         return (
@@ -11,11 +16,13 @@ class EventList extends Component {
                         .map(a => (
                             <Event 
                                 user={this.props.user}
-                                t={a.t}
+                                // t={a.t}
                                 txt={a.body}
                                 eventTime={a.eventTime}
                                 deleteEvent={this.props.deleteEvent} 
-                                key={a.t} 
+                                key={a.key}
+                                index={this.findEventIndex(a.key)} 
+                                // players={this.props.players}
                             />
                         ))
                 }

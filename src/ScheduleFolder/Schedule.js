@@ -29,9 +29,9 @@ class Schedule extends Component {
     // window.alert('Announcement Added Successfully')
   }
 
-  deleteEvent = (t) => {
+  deleteEvent = (key) => {
     const events = [...this.state.events]
-    events.splice(events.indexOf(events.find((a) => a.t === t)), 1)
+    events.splice(events.indexOf(events.find((a) => a.key === key)), 1)
     this.setState({ events })
   }
 

@@ -7,17 +7,21 @@ class EventForm extends Component {
     this.state = {
       body: '',
       eventTime:'',
-
+      players:{},
+      key:Date.now(),
     }
   }
 
 
   handleSubmit = (ev) => {
     ev.preventDefault()
+    // this.setState({key:Date.now})
     this.props.addEvent(this.state)
     this.setState(
       { body: '',
         eventTime :'',  
+        players:{},
+        key:'',
       }
     )
     this.props.history.push('/Schedule')
