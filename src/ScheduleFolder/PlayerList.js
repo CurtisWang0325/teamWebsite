@@ -15,12 +15,27 @@ class PlayerList extends Component {
                 <ul>
                     <li>
                         <button name='top' type='button' onClick={this.handleClick}>
-                            Top
+                            TOP
                         </button>
                     </li>
                     <li>
-                        <button type='jungle' onClick={this.handleClick}>
-                            Jungle
+                        <button name= 'jungle' type='button' onClick={this.handleClick}>
+                            JUNGLE
+                        </button>
+                    </li>
+                    <li>
+                        <button name= 'mid' type='button' onClick={this.handleClick}>
+                            MID
+                        </button>
+                    </li>
+                    <li>
+                        <button name= 'adc' type='button' onClick={this.handleClick}>
+                            ADC
+                        </button>
+                    </li>
+                    <li>
+                        <button name= 'sup' type='button' onClick={this.handleClick}>
+                            SUP
                         </button>
                     </li>
                 </ul>
