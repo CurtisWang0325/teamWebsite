@@ -10,7 +10,7 @@ class Event extends Component {
 
   handleDelete = (ev) => {
     ev.preventDefault()
-    this.props.deleteEvent(this.props.key)
+    this.props.deleteEvent(this.props.index)
   }
 
   handleAddPlayer = (pos,user) => {
