@@ -14,6 +14,10 @@ class Event extends Component {
   }
 
   handleAddPlayer = (pos,user) => {
+    var result=window.confirm(`Join Event: ${this.props.txt} at ${this.props.eventTime}?`)
+    if (!result){
+      return
+    }
     const players=this.state.players
     players[pos]={user};
     this.setState({players})

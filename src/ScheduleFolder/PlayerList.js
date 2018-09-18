@@ -38,14 +38,14 @@ class PlayerList extends Component {
                 <p>Player:</p>
                 <ul>
                     <li>
+                        <h6>TOP:</h6> 
+                        {this.props.players.top?
+                        this.props.players.top.user.name
+                        :
                         <button name='top' type='button' onClick={this.handleClick}>
-                            TOP
+                        SIGN UP
                         </button>
-                            {this.props.players.top?
-                            this.props.players.top.user.name
-                            :
-                            "not yet"
-                            }
+                        }
                     </li>
                     <li>
                         <button name= 'jun' type='button' onClick={this.handleClick}>

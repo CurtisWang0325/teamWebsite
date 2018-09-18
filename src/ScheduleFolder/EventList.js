@@ -20,7 +20,7 @@ class EventList extends Component {
                                 txt={a.body}
                                 eventTime={a.eventTime}
                                 deleteEvent={this.props.deleteEvent} 
-                                key={a.key}
+                                // key={a.key}
                                 index={this.findEventIndex(a.key)} 
                                 // players={this.props.players}
                             />

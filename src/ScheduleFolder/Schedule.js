@@ -31,7 +31,6 @@ class Schedule extends Component {
 
   deleteEvent = (index) => {
     const events = [...this.state.events]
-    console.log(index)
     events.splice(index, 1)
     this.setState({ events })
   }
