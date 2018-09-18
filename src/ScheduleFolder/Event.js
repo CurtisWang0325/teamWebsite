@@ -40,9 +40,9 @@ class Event extends Component {
           Time:{this.props.eventTime}
         </p>
         <PlayerList
-          players={this.state.players}
           user={this.props.user}
           handleAddPlayer={this.handleAddPlayer}
+          players={this.state.players}
         />
         <button type='button' onClick={this.handleDelete}>
           <i className="fas fa-minus" title='delete'></i>
