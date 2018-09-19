@@ -6,6 +6,8 @@ class Event extends Component {
   state = {
     players:{},
     eventTime:'',
+    status:'open',
+    //status: passed, confirmed, opened, cancelled
   }
 
   handleDelete = (ev) => {
@@ -23,12 +25,15 @@ class Event extends Component {
     this.setState({players})
   }
 
+  
+
   componentDidMount() {
     base.syncState(`events/${this.props.index}/players`,{
       context:this,
       state:'players',
       // asArray:true,
     })
+   
   }
 
 
@@ -43,6 +48,7 @@ class Event extends Component {
         <p>
           Time:{this.props.eventTime}
         </p>
+        <p>Status:{this.props.status}</p>
         <PlayerList
           user={this.props.user}
           handleAddPlayer={this.handleAddPlayer}

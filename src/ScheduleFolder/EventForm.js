@@ -8,7 +8,8 @@ class EventForm extends Component {
       body: '',
       eventTime:'',
       players:{},
-      key:Date.now(),
+      // key:Date.now(),
+      status:'',
     }
   }
 
@@ -22,6 +23,7 @@ class EventForm extends Component {
         eventTime :'',  
         players:{},
         key:'',
+        status:'',
       }
     )
     this.props.history.push('/Schedule')
@@ -54,6 +56,16 @@ class EventForm extends Component {
             value={this.state.eventTime}
             onChange={this.handleChange}
           />
+          <select
+            name="status" 
+            value={this.state.status} 
+            onChange={this.handleChange}
+          >
+            <option value="opened">OPENED</option>
+            <option value="closed">CLOSED</option>
+            <option value="cancelled">CANCELLED</option>
+            <option value="confirmed">CONFIRMED</option>
+          </select>
 
           <button type="submit"
           >

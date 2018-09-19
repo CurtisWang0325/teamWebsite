@@ -16,7 +16,7 @@ class EventList extends Component {
                         .map(a => (
                             <Event 
                                 user={this.props.user}
-                                // t={a.t}
+                                status={a.status}
                                 txt={a.body}
                                 eventTime={a.eventTime}
                                 deleteEvent={this.props.deleteEvent} 
