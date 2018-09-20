@@ -25,12 +25,22 @@ class Event extends Component {
     this.setState({players})
   }
 
+  handleChangeStatus = (ev) => {
+    this.setState({ [ev.target.name]: ev.target.value });
+
+  }
+
   
 
   componentDidMount() {
     base.syncState(`events/${this.props.index}/players`,{
       context:this,
       state:'players',
+      // asArray:true,
+    })
+    base.syncState(`events/${this.props.index}/status`,{
+      context:this,
+      state:'status',
       // asArray:true,
     })
    
@@ -42,18 +52,37 @@ class Event extends Component {
     return (
 
       <span>
-        <p>
-          Description:{this.props.txt}
-        </p>
-        <p>
+        <h2>
+          {/* Title/Description*/}
+          {this.props.txt}
+        </h2>
+        <h4>
           Time:{this.props.eventTime}
-        </p>
-        <p>Status:{this.props.status}</p>
+        </h4>
+        <h4>Status:{this.props.status}</h4>
+
+
+        {/* StatusEditor */}
+        
+          <select
+            name="status" 
+            value={this.state.status} 
+            onChange={this.handleChangeStatus}
+          >
+            <option value="opened">OPENED</option>
+            <option value="closed">CLOSED</option>
+            <option value="cancelled">CANCELLED</option>
+            <option value="confirmed">CONFIRMED</option>
+          </select>
+
+
+
         <PlayerList
           user={this.props.user}
           handleAddPlayer={this.handleAddPlayer}
           players={this.state.players}
         />
+        
         <button type='button' onClick={this.handleDelete}>
           <i className="fas fa-minus" title='delete'></i>
         </button>

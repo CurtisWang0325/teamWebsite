@@ -2,9 +2,11 @@ import React, { Component } from 'react'
 
 class Player extends Component {
     render() {
+        const player=this.props.player
         return (
             <div>
-                {this.props.player.name}
+                {player.name}
+                {player.IGN}
 
             </div>
         )

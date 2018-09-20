@@ -35,12 +35,12 @@ class PlayerList extends Component {
  
         return (
             <div>
-                <p>Player:</p>
+                {/* <p>Player:</p> */}
                 <ul>
                     <li>
-                        <h6>TOP:</h6> 
+                        <h4>TOP:</h4> 
                         {this.props.players.top?
-                        this.props.players.top.user.name
+                        <Player player={this.props.players.top.user}/>
                         :
                         <button name='top' type='button' onClick={this.handleClick}>
                         SIGN UP
@@ -48,44 +48,44 @@ class PlayerList extends Component {
                         }
                     </li>
                     <li>
-                        <button name= 'jun' type='button' onClick={this.handleClick}>
-                            JUN
+                        <h4>JUN:</h4> 
+                        {this.props.players.jun?
+                        <Player player={this.props.players.top.user}/>
+                        :
+                        <button name='jun' type='button' onClick={this.handleClick}>
+                        SIGN UP
                         </button>
-                            {this.props.players.jun?
-                            this.props.players.jun.user.name
-                            :
-                            "not yet"
-                            }
+                        }
                     </li>
                     <li>
-                        <button name= 'mid' type='button' onClick={this.handleClick}>
-                            MID
+                        <h4>MID:</h4> 
+                        {this.props.players.mid?
+                        <Player player={this.props.players.top.user}/>
+                        :
+                        <button name='mid' type='button' onClick={this.handleClick}>
+                        SIGN UP
                         </button>
-                            {this.props.players.mid?
-                            this.props.players.mid.user.name
-                            :
-                            "not yet"
-                            }
+                        }
                     </li>
                     <li>
-                        <button name= 'adc' type='button' onClick={this.handleClick}>
-                            ADC
+                        <h4>ADC:</h4> 
+                        {this.props.players.adc?
+                        <Player player={this.props.players.top.user}/>
+                        :
+                        <button name='adc' type='button' onClick={this.handleClick}>
+                        SIGN UP
                         </button>
-                            {this.props.players.adc?
-                            this.props.players.adc.user.name
-                            :
-                            "not yet"
-                            }
+                        }
                     </li>
                     <li>
-                        <button name= 'sup' type='button' onClick={this.handleClick}>
-                            SUP
+                        <h4>SUP:</h4> 
+                        {this.props.players.sup?
+                        <Player player={this.props.players.top.user}/>
+                        :
+                        <button name='sup' type='button' onClick={this.handleClick}>
+                        SIGN UP
                         </button>
-                            {this.props.players.sup?
-                            this.props.players.sup.user.name
-                            :
-                            "not yet"
-                            }
+                        }
                     </li>
                 </ul>
             </div>
