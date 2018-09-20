@@ -9,7 +9,7 @@ class EventForm extends Component {
       eventTime:'',
       players:{},
       // key:Date.now(),
-      status:'',
+      status:'opened',
     }
   }
 

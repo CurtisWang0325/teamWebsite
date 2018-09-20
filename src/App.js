@@ -9,6 +9,7 @@ import MyAccountPage from './MyAccountPage'
 import Announcement from './AnnouncementFolder/Announcement'
 import Forum from './ForumFolder/Forum'
 import Schedule from './ScheduleFolder/Schedule'
+import ScheduleR from './ScheduleFolder/ScheduleR'
 import Account from './Account'
 import base from './base'
 import AnnouncementR from './AnnouncementFolder/AnnouncementR';
@@ -141,7 +142,12 @@ class App extends Component {
           />
           <Route path="/Schedule"
             render={prop => (
+              this.state.user.level==3?
               <Schedule
+                user={this.state.user}
+              />
+              :
+              <ScheduleR
                 user={this.state.user}
               />
             )} 
