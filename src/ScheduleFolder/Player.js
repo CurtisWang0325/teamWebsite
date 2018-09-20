@@ -6,6 +6,7 @@ class Player extends Component {
         return (
             <div>
                 {player.name}
+                
                 {player.IGN}
 
             </div>

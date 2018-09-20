@@ -3,7 +3,7 @@ import AnnouncementLists from './AnnouncementLists'
 import AnnouncementForm from './AnnouncementForm'
 import base from '../base'
 import { NavLink, Route } from 'react-router-dom'
-
+import moment from 'moment'
 
 class Announcement extends Component {
   constructor() {
@@ -25,7 +25,7 @@ class Announcement extends Component {
   addAnnouncement = (body) => {
     const announcements = [...this.state.announcements]
     announcements.push({
-      t: Date.now(),
+      t: moment().get('year')+" "+ (moment().get('month')+1) +"/"+ moment().get('date'),
       // user: this.props.user,
       body,
     })

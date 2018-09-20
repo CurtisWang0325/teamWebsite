@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+// import moment from 'moment'
 
 class AnnouncementForm extends Component {
 
@@ -6,6 +7,7 @@ class AnnouncementForm extends Component {
     super()
     this.state = {
       body: '',
+      // time:'',
     }
   }
 
@@ -13,7 +15,14 @@ class AnnouncementForm extends Component {
   handleSubmit = (ev) => {
     ev.preventDefault()
     this.props.addAnnouncement(this.state.body)
-    this.setState({ body: ''})
+    this.setState(
+      { body: '',
+        // time: moment.now().toString,
+        // time:'111',
+        // format('D MMM @ h:mm a'),
+      }
+    
+    )
     this.props.history.push('/Announcement')
     
   }

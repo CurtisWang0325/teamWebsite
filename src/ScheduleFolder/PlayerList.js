@@ -50,7 +50,7 @@ class PlayerList extends Component {
                     <li>
                         <h4>JUN:</h4> 
                         {this.props.players.jun?
-                        <Player player={this.props.players.top.user}/>
+                        <Player player={this.props.players.jun.user}/>
                         :
                         <button name='jun' type='button' onClick={this.handleClick}>
                         SIGN UP
@@ -60,7 +60,7 @@ class PlayerList extends Component {
                     <li>
                         <h4>MID:</h4> 
                         {this.props.players.mid?
-                        <Player player={this.props.players.top.user}/>
+                        <Player player={this.props.players.mid.user}/>
                         :
                         <button name='mid' type='button' onClick={this.handleClick}>
                         SIGN UP
@@ -70,7 +70,7 @@ class PlayerList extends Component {
                     <li>
                         <h4>ADC:</h4> 
                         {this.props.players.adc?
-                        <Player player={this.props.players.top.user}/>
+                        <Player player={this.props.players.adc.user}/>
                         :
                         <button name='adc' type='button' onClick={this.handleClick}>
                         SIGN UP
@@ -80,7 +80,7 @@ class PlayerList extends Component {
                     <li>
                         <h4>SUP:</h4> 
                         {this.props.players.sup?
-                        <Player player={this.props.players.top.user}/>
+                        <Player player={this.props.players.sup.user}/>
                         :
                         <button name='sup' type='button' onClick={this.handleClick}>
                         SIGN UP
