@@ -48,7 +48,7 @@ class Schedule extends Component {
           <br/>
           Please be on time if the event is confirmed!
           <br/>
-          The event will be cancelled due to lack of members or other reasons!
+          The event will be cancelled due to the lack of members or other reasons!
         </h2>
         <hr/>
         <Route exact path="/Schedule"
