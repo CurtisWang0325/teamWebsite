@@ -26,7 +26,7 @@ class TeamPage extends Component {
             <p>team page</p>
             {
                 this.state.users
-                    .filter(member=>member.level>=2)
+                    .filter(member=>member.level=='player'||member.level=='member'||member.level=='admin')
                     .map(member => (
                         <Member member={member}/>
                     ))

@@ -126,7 +126,7 @@ class App extends Component {
           />
           <Route path="/Announcement" 
             render={prop => (
-              this.state.user.level==3?
+              this.state.user.level=='admin'?
               <Announcement/>
               :
               <AnnouncementR/>
@@ -142,7 +142,7 @@ class App extends Component {
           />
           <Route path="/Schedule"
             render={prop => (
-              this.state.user.level==3?
+              this.state.user.level=='admin'?
               <Schedule
                 user={this.state.user}
               />
@@ -154,7 +154,7 @@ class App extends Component {
           />
            <Route path="/TeamPage"
             render={prop => (
-              this.state.user.level==3?
+              this.state.user.level=='admin'?
               <TeamPage
                 user={this.state.user}
               />

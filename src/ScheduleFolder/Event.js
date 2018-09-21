@@ -19,8 +19,12 @@ class Event extends Component {
       window.alert("This event is unavailable now!")
       return
     }
-    if (user.level<this.props.level){
-      window.alert("You have to be level "+this.props.level+" for this event! ")
+    if (this.props.level=='player'&&!(user.level=='member'||user.level=='admin'||user.level=='player')){
+      window.alert("You have to sign in to register for this event")
+      return
+    }
+    if (this.props.level=='member'&&!(user.level=='member'||user.level=='admin')){
+      window.alert("You have to be a team member for this event! ")
       return
     }
     var result=window.confirm(`Join event: ${this.props.txt} at ${this.props.eventTime}?`)

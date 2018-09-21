@@ -67,13 +67,16 @@ class EventForm extends Component {
             <option value="cancelled">CANCELLED</option>
             <option value="confirmed">CONFIRMED</option>
           </select>
-          <input
-            type="number"
-            name="level"
-            placeholder="Enter Required Level"
-            value={this.state.level}
-            onChange={this.handleChange}
-          />
+          <select
+              name="level" 
+              value={this.state.level} 
+              onChange={this.handleChange}
+          >
+              <option value="visitor">VISITOR</option>
+              <option value="player">PLAYER</option>
+              <option value="member">MEMBER</option>
+              <option value="admin">ADMIN</option>
+          </select>
 
           <button type="submit"
           >

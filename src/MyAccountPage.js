@@ -66,13 +66,19 @@ class MyAccountPage extends Component {
                     render={prop => (
                         <form onSubmit={(ev) => ev.preventDefault()}>
                             <div>
-                                <input
-                                    type="number"
-                                    name="tempLevel"
-                                    placeholder={`${this.props.user.level ? this.props.user.level :  "Enter your level"}`}
-                                    value={this.state.tempLevel}
+
+
+                                <select
+                                    name="tempLevel" 
+                                    value={this.state.tempLevel} 
                                     onChange={this.handleChange}
-                                />
+                                >
+                                    <option value="visitor">VISITOR</option>
+                                    <option value="player">PLAYER</option>
+                                    <option value="member">MEMBER</option>
+                                    <option value="admin">ADMIN</option>
+                                </select>
+                                
                                 <hr/>
                                 <input
                                     type="text"

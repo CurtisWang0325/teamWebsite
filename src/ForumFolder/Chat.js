@@ -56,7 +56,8 @@ class Chat extends Component {
   }
 
   addReaction = (message, emoji) => {
-    if (this.props.user.level>1){
+
+    if (this.props.user.level=='admin'||this.props.user.level=='member'||this.props.user.level=='player'){
       message.reactions = message.reactions || {}
       message.reactions[emoji] = message.reactions[emoji] || []
   
