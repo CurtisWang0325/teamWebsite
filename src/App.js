@@ -14,7 +14,7 @@ import Account from './Account'
 import base from './base'
 import AnnouncementR from './AnnouncementFolder/AnnouncementR';
 // import { FirebaseDatabase } from '@firebase/database-types';
-
+import TeamPage from './TeamFolder/TeamPage'
 
 
 
@@ -148,6 +148,18 @@ class App extends Component {
               />
               :
               <ScheduleR
+                user={this.state.user}
+              />
+            )} 
+          />
+           <Route path="/TeamPage"
+            render={prop => (
+              this.state.user.level==3?
+              <TeamPage
+                user={this.state.user}
+              />
+              :
+              <TeamPage
                 user={this.state.user}
               />
             )} 
