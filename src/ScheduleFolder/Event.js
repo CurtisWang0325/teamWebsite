@@ -5,10 +5,8 @@ import base from '../base'
 class Event extends Component {
   state = {
     players:{},
-    eventTime:'',
     status:'open',
     //status: passed, confirmed, opened, cancelled
-    level:'',
   }
 
   handleDelete = (ev) => {
@@ -17,10 +15,15 @@ class Event extends Component {
   }
 
   handleAddPlayer = (pos,user) => {
-    // if(user.level<2){
-    //   window.alert("")
-    // }
-    var result=window.confirm(`Join Event: ${this.props.txt} at ${this.props.eventTime}?`)
+    if (this.state.status!='opened'){
+      window.alert("This event is unavailable now!")
+      return
+    }
+    if (user.level<this.props.level){
+      window.alert("You have to be level "+this.props.level+" for this event! ")
+      return
+    }
+    var result=window.confirm(`Join event: ${this.props.txt} at ${this.props.eventTime}?`)
     if (!result){
       return
     }
