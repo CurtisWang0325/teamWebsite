@@ -17,7 +17,7 @@ class MainPage extends Component {
                     <p></p>
                     </div>
                     <div className="hover">
-                        {/* 这个div放想展示的信息 比如最新一条信息啥的 后面两个同理*/}
+                        <h2>Chat and share anything in the forum!</h2>
                     </div>
                 </NavLink>
 
@@ -28,17 +28,21 @@ class MainPage extends Component {
                         <p></p>
                     </div>
                     <div className="hover">
-
+                        <h2>Check important information here!</h2>
                     </div>
                 </NavLink>
                 {/* <Announcement/> */}
                 <NavLink to="/Schedule" className="link" id="to_schedule">
                     <div className="unhover">
                         <h3>Schedule</h3>
-                        <p>schdule a match with other team</p>
+                        {/* <p>schdule a match with other team</p> */}
                     </div>
                     <div className="hover">
-                        、
+                        <h2>Sign up for matches!
+
+                        </h2>
+                        
+                        <h2>Have fun and practice together</h2>
                     </div>
                 </NavLink>
                 {/* <Schedule/> */}
