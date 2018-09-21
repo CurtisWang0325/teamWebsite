@@ -38,11 +38,11 @@ class MainPage extends Component {
                         {/* <p>schdule a match with other team</p> */}
                     </div>
                     <div className="hover">
-                        <h2>Sign up for matches!
-
+                        <h2>
+                            Sign up for matches!
+                            <br/>
+                            Have fun and practice together
                         </h2>
-                        
-                        <h2>Have fun and practice together</h2>
                     </div>
                 </NavLink>
                 {/* <Schedule/> */}

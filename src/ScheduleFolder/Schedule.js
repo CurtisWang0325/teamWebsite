@@ -40,6 +40,17 @@ class Schedule extends Component {
 
       <div className="Schedule">
         <h4>Events</h4>
+        <hr/>
+        <h2>
+          Sign up the event 2 days before the event time!
+          <br/>
+          You can only sign up for one position!
+          <br/>
+          Please be on time if the event is confirmed!
+          <br/>
+          The event will be cancelled due to lack of members or other reasons!
+        </h2>
+        <hr/>
         <Route exact path="/Schedule"
           render={prop=>(
             <NavLink to="Schedule/new">

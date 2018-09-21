@@ -8,7 +8,7 @@ class Player extends Component {
                 {player.name}
                 
                 {player.IGN}
-
+                
             </div>
         )
     }

@@ -23,7 +23,7 @@ class TeamPage extends Component {
             <h1>This is the team description</h1>
             <hr/>
         
-            <p>team page</p>
+            
             {
                 this.state.users
                     .filter(member=>member.level=='player'||member.level=='member'||member.level=='admin')
