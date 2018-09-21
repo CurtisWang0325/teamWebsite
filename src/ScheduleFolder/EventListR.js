@@ -19,6 +19,7 @@ class EventListR extends Component {
                                 status={a.status}
                                 txt={a.body}
                                 eventTime={a.eventTime}
+                                level={a.level}
                                 index={this.findEventIndex(a.key)} 
                             />
                         ))

@@ -50,6 +50,7 @@ class Event extends Component {
           Time:{this.props.eventTime}
         </h4>
         <h4>Status:{this.props.status}</h4>
+        <h4>Level:{this.props.level}</h4>
 
         <PlayerList
           user={this.props.user}

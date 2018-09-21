@@ -8,7 +8,7 @@ class EventForm extends Component {
       body: '',
       eventTime:'',
       players:{},
-      // key:Date.now(),
+      level:'',
       status:'opened',
     }
   }
@@ -24,6 +24,7 @@ class EventForm extends Component {
         players:{},
         key:'',
         status:'',
+        level:'',
       }
     )
     this.props.history.push('/Schedule')
@@ -66,6 +67,13 @@ class EventForm extends Component {
             <option value="cancelled">CANCELLED</option>
             <option value="confirmed">CONFIRMED</option>
           </select>
+          <input
+            type="number"
+            name="level"
+            placeholder="Enter Required Level"
+            value={this.state.level}
+            onChange={this.handleChange}
+          />
 
           <button type="submit"
           >

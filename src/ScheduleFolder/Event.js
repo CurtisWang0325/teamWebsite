@@ -8,6 +8,7 @@ class Event extends Component {
     eventTime:'',
     status:'open',
     //status: passed, confirmed, opened, cancelled
+    level:'',
   }
 
   handleDelete = (ev) => {
@@ -16,6 +17,9 @@ class Event extends Component {
   }
 
   handleAddPlayer = (pos,user) => {
+    // if(user.level<2){
+    //   window.alert("")
+    // }
     var result=window.confirm(`Join Event: ${this.props.txt} at ${this.props.eventTime}?`)
     if (!result){
       return
@@ -60,7 +64,7 @@ class Event extends Component {
           Time:{this.props.eventTime}
         </h4>
         <h4>Status:{this.props.status}</h4>
-
+        <h4>Level:{this.props.level}</h4>
 
         {/* StatusEditor */}
         
