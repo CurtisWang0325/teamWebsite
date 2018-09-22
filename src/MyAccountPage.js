@@ -53,7 +53,7 @@ class MyAccountPage extends Component {
                     render={prop => (
                         <div>
                             <p>{`${this.props.user.level ? this.props.user.level : "not set yet"}`}</p>
-                            <p>{`${this.props.user.name ? this.props.user.name : this.props.user.googleName}`}</p>
+                            <p>{`${this.props.user.name}`}</p>
                             <p>{`${this.props.user.IGN?this.props.user.IGN:"not set yet"}`}</p>
                             <p>{`${this.props.user.position?this.props.user.position:"not set yet"}`}</p>
                             <p>{`${this.props.user.year?this.props.user.year:"not set yet"}`}</p>
@@ -83,7 +83,7 @@ class MyAccountPage extends Component {
                                 <input
                                     type="text"
                                     name="tempName"
-                                    placeholder={`${this.props.user.name ? this.props.user.name : this.props.user.googleName}`}
+                                    placeholder={`${this.props.user.name}`}
                                     value={this.state.tempName}
                                     onChange={this.handleChange}
                                 />

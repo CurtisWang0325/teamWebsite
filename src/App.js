@@ -79,6 +79,12 @@ class App extends Component {
       state: 'user',
       defaultValue: `users/${user.uid}`,
     })
+    if(!user.name){
+      user.name=user.googleName
+    }
+    if(!user.level){
+      user.level='visitor'
+    }
     this.setState({ user })
     // localStorage.setItem('user', JSON.stringify(user))
   }
