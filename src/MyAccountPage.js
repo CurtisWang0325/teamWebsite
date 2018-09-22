@@ -52,12 +52,12 @@ class MyAccountPage extends Component {
                 <Route exact path="/MyAccountPage"
                     render={prop => (
                         <div>
-                            <p>{`${this.props.user.level ? this.props.user.level : "not set yet"}`}</p>
+                            <p>{`${this.props.user.level}`}</p>
                             <p>{`${this.props.user.name}`}</p>
-                            <p>{`${this.props.user.IGN?this.props.user.IGN:"not set yet"}`}</p>
-                            <p>{`${this.props.user.position?this.props.user.position:"not set yet"}`}</p>
-                            <p>{`${this.props.user.year?this.props.user.year:"not set yet"}`}</p>
-                            <p>{`${this.props.user.aboutMe?this.props.user.aboutMe:"not set yet"}`}</p>
+                            <p>{`${this.props.user.IGN}`}</p>
+                            <p>{`${this.props.user.position}`}</p>
+                            <p>{`${this.props.user.year}`}</p>
+                            <p>{`${this.props.user.aboutMe}`}</p>
 
                         </div>
                     )}
@@ -91,7 +91,7 @@ class MyAccountPage extends Component {
                                 <input
                                     type="text"
                                     name="tempIGN"
-                                    placeholder={`${this.props.user.IGN ? this.props.user.IGN : "Enter your in game name"}`}
+                                    placeholder={`${this.props.user.IGN}`}
                                     value={this.state.tempIGN}
                                     onChange={this.handleChange}
                                 />
@@ -99,7 +99,7 @@ class MyAccountPage extends Component {
                                 <input
                                     type="text"
                                     name="tempPosition"
-                                    placeholder={`${this.props.user.position ? this.props.user.position : "Enter your position"}`}
+                                    placeholder={`${this.props.user.position}`}
                                     value={this.state.tempPosition}
                                     onChange={this.handleChange}
                                 />
@@ -109,7 +109,7 @@ class MyAccountPage extends Component {
                                     min="1"
                                     max="6"
                                     name="tempYear"
-                                    placeholder={`${this.props.user.year ? this.props.user.year : "Choose your Year"}`}
+                                    placeholder={`${this.props.user.year}`}
                                     value={this.state.tempYear}
                                     onChange={this.handleChange}
                                 />
@@ -119,7 +119,7 @@ class MyAccountPage extends Component {
                                     name="tempAboutMe"
                                     rows="5"
                                     cols="50    "
-                                    placeholder={`${this.props.user.aboutMe ? this.props.user.aboutMe : "Say something about you"}`}
+                                    placeholder={`${this.props.user.aboutMe}`}
                                     value={this.state.tempAboutMe}
                                     onChange={this.handleChange}
                                 />

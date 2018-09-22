@@ -79,12 +79,13 @@ class App extends Component {
       state: 'user',
       defaultValue: `users/${user.uid}`,
     })
-    if(!user.name){
-      user.name=user.googleName
-    }
-    if(!user.level){
-      user.level='visitor'
-    }
+    if(!user.name){user.name=user.googleName}
+    if(!user.level){user.level='player'}
+    if(!user.IGN){user.IGN='Not set yet'}
+    if(!user.position){user.position='Not set yet'}
+    if(!user.year){user.year='0'}
+    if(!user.aboutMe){user.aboutMe='Not set yet'}
+
     this.setState({ user })
     // localStorage.setItem('user', JSON.stringify(user))
   }
