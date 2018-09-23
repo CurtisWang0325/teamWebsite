@@ -35,6 +35,7 @@ const ChatHeader = ({ user, room, removeRoom }) => {
 const styles = {
   header: {
     backgroundColor: '#f3f3f3',
+    color: '#6B6B6B',
     borderBottom: '1px solid #ccc',
     height: '3rem',
     padding: '0 1rem',
@@ -45,12 +46,12 @@ const styles = {
 
   h2: {
     fontSize: '1.1rem',
-    margin: 0,
+    marginTop: '0.3rem',
   },
 
   p: {
-    color: '#999',
-    margin: 0,
+    color: '#6B6B6B',
+    marginTop: '0.3rem',
     fontSize: '0.8rem',
   },
 

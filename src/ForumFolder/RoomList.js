@@ -67,15 +67,16 @@ class RoomList extends Component {
 
 const styles = StyleSheet.create({
   nav: {
-    padding: '0 1rem',
+    padding: '1rem 1rem',
   },
 
   h2: {
-    fontSize: '1rem',
+    fontSize: '1.5rem',
   },
 
   list: {
     listStyle: 'none',
+    backgroundColor:'rgb(51, 51, 68)',
     marginLeft: 0,
     paddingLeft: 0,
   },

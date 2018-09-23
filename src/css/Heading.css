@@ -47,7 +47,7 @@ a:link, a:visited, a:focus {
 
 
 .nav {
-    width: 980px;
+    width: 1200px;
     height: 30px;
     margin: 15px auto 0 auto;
 }
@@ -59,7 +59,7 @@ a:link, a:visited, a:focus {
 .nav ul li {
     display: inline-block;
     position: relative;
-    margin: 0 3em;
+    margin: 0 2em;
     horiz-align: center;
 }
 

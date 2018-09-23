@@ -1,0 +1,12 @@
+.Message:nth-of-type(even){
+    color: #000;
+}
+
+.Message:nth-of-type(odd){
+    color: #000;
+    background-color: #E1E4DE;
+}
+
+.body{
+    margin-top: 1rem;
+}

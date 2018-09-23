@@ -2,10 +2,10 @@ import React, { Component } from 'react'
 import { StyleSheet, css } from 'aphrodite'
 import 'emoji-mart/css/emoji-mart.css'
 import { Picker } from 'emoji-mart'
-
 // import Avatar from './Avatar'
 import Metadata from './Metadata'
 import Reaction from './Reaction'
+require('../css/Forum.css')
 
 class Message extends Component {
   state = {
@@ -76,14 +76,10 @@ class Message extends Component {
 const styles = StyleSheet.create({
   message: {
     display: 'flex',
-    marginTop: '1rem',
-    padding: '1rem 1rem',
+    paddingTop: '1rem',
+    paddingLeft: '1rem',
     position: 'relative',
     zIndex: 1,
-
-    ':hover': {
-      backgroundColor: '#f6f6f6',
-    },
   },
 
   details: {

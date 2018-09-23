@@ -1,0 +1,84 @@
+.input {
+    width: 200px;
+    margin: 0 20px;
+    padding-left: 5px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 12px;
+    border: 1px solid #c9cacb;
+}
+
+select{
+    margin: 0 20px;
+    background:#fafdfe;
+    height:28px;
+    width:180px;
+    line-height:28px;
+    border:1px solid #9bc0dd;
+    -moz-border-radius:2px;
+    -webkit-border-radius:2px;
+    border-radius:2px;
+}
+
+#container h1, #container p{
+    display: inline-block;
+    font-size: x-large;
+    font-family: Microsoft YaHei;
+}
+
+#container p{
+    margin-left: 20px;
+}
+
+#container{
+    padding: 20px 0 50px 40px;
+    width:60%;
+    margin:50px auto;
+    height: 650px;
+    background-color: #5F5F5F;
+    border-radius: 15px;
+    -webkit-box-shadow: 10px 10px 77px 0px rgba(0,0,0,1);
+    -moz-box-shadow: 10px 10px 77px 0px rgba(0,0,0,1);
+    box-shadow: 10px 10px 77px 0px rgba(0,0,0,1);
+}
+
+hr{
+    height: 0;
+    width: 0;
+    border: 0;
+}
+
+.block{
+    vertical-align: bottom;
+    height: 50px;
+    margin-top: 10px;
+    line-height: 50px;
+}
+
+.textarea_block{
+    vertical-align: bottom;
+    height: 140px;
+    margin-top: 10px;
+    line-height: 50px;
+}
+
+textarea{
+    resize: none;
+}
+
+.block button {
+    width: 270px;
+    height: 40px;
+    border-width: 0px;
+    border-radius: 3px;
+    background: #1E90FF;
+    cursor: pointer;
+    outline: none;
+    font-family: Microsoft YaHei;
+    color: white;
+    font-size: 17px;
+}
+
+.block button:hover {
+    background: #5599FF;
+}

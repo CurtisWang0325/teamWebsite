@@ -48,11 +48,12 @@ class Heading extends Component {
                             </span>
                         </NavLink>
                     </li>
+                    |
                     <li>
                         <NavLink to="/TeamPage" className="tooltip rotate">
                             Team
                             <span className="tooltip-content">
-                                <i className="fa fa-calendar fa-2x">
+                                <i className="fa fa-users fa-2x">
                                 </i>
                             </span>
                         </NavLink>

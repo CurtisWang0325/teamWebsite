@@ -1,6 +1,7 @@
 import React from 'react'
 
 import RoomList from './RoomList'
+require('../css/Forum.css')
 
 const Sidebar = ({ user, rooms, addRoom }) => {
   return (
@@ -14,7 +15,7 @@ const Sidebar = ({ user, rooms, addRoom }) => {
         rooms={rooms}
         addRoom={addRoom}
       />
-      
+
     </aside>
   )
 }
@@ -31,9 +32,10 @@ const styles = {
 
   h1: {
     color: 'white',
-    fontSize: '1.2rem',
+    fontSize: '1.8rem',
     marginTop: 0,
     padding: '0 1rem',
+    borderBottom:'1px solid white',
   },
 }
 

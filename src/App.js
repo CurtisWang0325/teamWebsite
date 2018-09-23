@@ -159,7 +159,7 @@ class App extends Component {
               />
             )} 
           />
-           <Route path="/TeamPage"
+          <Route path="/TeamPage"
             render={prop => (
               this.state.user.level=='admin'?
               <TeamPage
