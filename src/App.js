@@ -22,10 +22,21 @@ import TeamPageR from './TeamFolder/TeamPageR'
 class App extends Component {
   state = {
     user: {},
+    rebaseBinding: null,
+
   }
   
   componentDidMount() {
-
+    // if(this.signedIn()){
+    //   var user=this.state.user
+    //   if(!user.name){user.name=user.googleName}
+    //   if(!user.level){user.level='player'}
+    //   if(!user.IGN){user.IGN='Not set yet'}
+    //   if(!user.position){user.position='Not set yet'}
+    //   if(!user.year){user.year='0'}
+    //   if(!user.aboutMe){user.aboutMe='Not set yet'}
+    //   this.setState({user})
+    // }
     // const user = JSON.parse(localStorage.getItem('user'))
     // if (user) {
     //   // this.setState({ user })
@@ -33,6 +44,7 @@ class App extends Component {
       
   
     // }
+
 
     auth.onAuthStateChanged(
       user => {
@@ -58,14 +70,14 @@ class App extends Component {
   handleAuth = (oauthUser) => {
     
 
-    const user = {
-      uid: oauthUser.uid,
-      googleName: oauthUser.displayName,
-      email: oauthUser.email,
-      // photoUrl: oauthUser.photoURL,
-      // IGN: '',
-      // name: '',
-    }
+    // const user = {
+    //   uid: oauthUser.uid,
+    //   googleName: oauthUser.displayName,
+    //   email: oauthUser.email,
+    //   // photoUrl: oauthUser.photoURL,
+    //   // IGN: '',
+    //   // name: '',
+    // }
     
     // const userRef=base.database().ref(`users/${user.uid}`)
     // userRef.once("value")
@@ -73,27 +85,35 @@ class App extends Component {
     //   this.name = snapshot.child("name").val()
     // })
     // console.log(this.name)
-    
-
-    this.ref = base.syncState(`users/${user.uid}`, {
+    console.log(oauthUser.uid)
+    const rebaseBinding  = base.syncState(`users/${oauthUser.uid}`, {
       context: this,
       state: 'user',
-      defaultValue: `users/${user.uid}`,
+      defaultValue: 
+        {
+          uid:oauthUser.uid,
+          name:oauthUser.displayName,
+          IGN:'Not set yet',
+          position:'Not set yet',
+          year:'0',
+          aboutMe:'Not set yet',
+          level:'player',
+        },
     })
-    if(!user.name){user.name=user.googleName}
-    if(!user.level){user.level='player'}
-    if(!user.IGN){user.IGN='Not set yet'}
-    if(!user.position){user.position='Not set yet'}
-    if(!user.year){user.year='0'}
-    if(!user.aboutMe){user.aboutMe='Not set yet'}
+    // if(!user.name){user.name=user.googleName}
+    // if(!user.level){user.level='player'}
+    // if(!user.IGN){user.IGN='Not set yet'}
+    // if(!user.position){user.position='Not set yet'}
+    // if(!user.year){user.year='0'}
+    // if(!user.aboutMe){user.aboutMe='Not set yet'}
 
-    this.setState({ user })
+    this.setState({ rebaseBinding })
     // localStorage.setItem('user', JSON.stringify(user))
   }
 
   handleUnauth = () => {
     // localStorage.removeItem('user')
-    base.removeBinding(this.ref)
+    base.removeBinding(this.state.rebaseBinding)
     this.setState({ user: {} })
   }
 

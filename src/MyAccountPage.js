@@ -18,7 +18,7 @@ class MyAccountPage extends Component {
     }
 
     handleSubmit = (ev) => {
-        const user=this.props.user
+        var user=this.props.user
         user.name=this.state.tempName||user.name
         user.IGN=this.state.tempIGN||user.IGN
         user.position=this.state.tempPosition||user.position
