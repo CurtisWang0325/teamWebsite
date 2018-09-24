@@ -15,8 +15,9 @@ class Member extends Component {
         this.setState({ [ev.target.name]: ev.target.value });
     }
 
-    handleSubmit(){
-        this.props.handleChangeLevel(this.state.level,this.props.member.uid)
+    handleSubmit=(ev)=>{
+        console.log('submit')
+        this.props.handleChangeLevel(this.props.member.uid,this.state.level)
     }
     render() {
         const user = this.props.member

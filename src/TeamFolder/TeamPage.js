@@ -25,18 +25,21 @@ class TeamPage extends Component {
         return users
     }
 
-    handleChangeLevel(uid,level){
-        var newUsers=this.state.users
+    handleChangeLevel=(uid,level)=>{
+        var newUsers=this.state.users;
+        console.log(newUsers)
         for (var user in newUsers){
-            console.log(user.uid)
-           if(user.uid===uid){
-                user.level=level
-                console.log(user)
-                break
+            
+           if(newUsers[user].uid==uid){
+               console.log('changing')
+               newUsers[user].level=level
+                // user.level=level
            }
+
         }
 
         this.setState({users:newUsers})
+        // console.log(this.state.users)
         return
     }
 
@@ -60,6 +63,16 @@ class TeamPage extends Component {
                 {
                     this.getUserArray()
                         .filter(member => member.level == 'member')
+                        .map(member => (
+                            <Member member={member} handleChangeLevel={this.handleChangeLevel}/>
+                        ))
+                }
+            <br />
+
+            <h3>Player:</h3>
+                {
+                    this.getUserArray()
+                        .filter(member => member.level == 'player')
                         .map(member => (
                             <Member member={member} handleChangeLevel={this.handleChangeLevel}/>
                         ))
