@@ -1,13 +1,11 @@
 import React, { Component } from 'react'
 import { StyleSheet, css } from 'aphrodite'
-// import Select from 'react-select'
-// import 'react-select/dist/react-select.css'
 
 class RoomForm extends Component {
   state = {
     room: {
-        name: '',
-        description: '',
+      name: '',
+      description: '',
     },
   }
 
@@ -18,7 +16,7 @@ class RoomForm extends Component {
   }
 
   handleChange = (ev) => {
-    const room = {...this.state.room}
+    const room = { ...this.state.room }
     const target = ev.target
     const value = target.value
 
@@ -26,15 +24,7 @@ class RoomForm extends Component {
     this.setState({ room })
   }
 
-  // handleSelectChange = (selectedValue) => {
-  //   const room = {...this.state.room}
-  //   room.members = selectedValue
-  //   this.setState({ room })
 
-  //   console.log(selectedValue)
-  // }
-
-  
   render() {
     return (
       <div className={`RoomForm ${css(styles.roomForm)}`}>
@@ -44,7 +34,7 @@ class RoomForm extends Component {
             className={css(styles.form)}
             onSubmit={this.handleSubmit}
           >
-           
+
             <p>
               <label htmlFor="name" className={css(styles.label)}>
                 Room Name
@@ -71,7 +61,7 @@ class RoomForm extends Component {
               />
             </p>
 
-         
+
             <div className={css(styles.buttonContainer)}>
               <button
                 type="button"

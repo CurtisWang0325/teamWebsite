@@ -14,13 +14,13 @@ class EventListR extends Component {
                 {
                     this.props.events
                         .map(a => (
-                            <EventR 
+                            <EventR
                                 user={this.props.user}
                                 status={a.status}
                                 txt={a.body}
                                 eventTime={a.eventTime}
                                 level={a.level}
-                                index={this.findEventIndex(a.key)} 
+                                index={this.findEventIndex(a.key)}
                             />
                         ))
                 }

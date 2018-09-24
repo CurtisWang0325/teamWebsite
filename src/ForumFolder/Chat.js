@@ -57,25 +57,25 @@ class Chat extends Component {
 
   addReaction = (message, emoji) => {
 
-    if (this.props.user.level=='admin'||this.props.user.level=='member'||this.props.user.level=='player'){
+    if (this.props.user.level == 'admin' || this.props.user.level == 'member' || this.props.user.level == 'player') {
       message.reactions = message.reactions || {}
       message.reactions[emoji] = message.reactions[emoji] || []
-  
+
       message.reactions[emoji].push(this.props.user)
-  
+
       const messages = [...this.state.messages]
       const i = messages.findIndex(msg => msg.id === message.id)
       messages[i] = message
-  
+
       this.setState({ messages })
     }
-    else{
+    else {
       window.alert("Sign in to add emoji")
     }
   }
 
   render() {
-    const user= this.props.user
+    const user = this.props.user
     return (
       <div className="Chat" style={styles}>
         <ChatHeader
@@ -90,11 +90,9 @@ class Chat extends Component {
           addReaction={this.addReaction}
         />
         {
-          // user.level>=1
-          // &&
-          <MessageForm 
+          <MessageForm
             user={this.props.user}
-            addMessage={this.addMessage} 
+            addMessage={this.addMessage}
           />
         }
       </div>

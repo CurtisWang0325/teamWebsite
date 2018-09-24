@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import { StyleSheet, css } from 'aphrodite'
 import 'emoji-mart/css/emoji-mart.css'
 import { Picker } from 'emoji-mart'
-// import Avatar from './Avatar'
 import Metadata from './Metadata'
 import Reaction from './Reaction'
 require('../css/Forum.css')
@@ -15,15 +14,15 @@ class Message extends Component {
 
   togglePicker = () => {
 
-    (this.props.user.level=='admin'||this.props.user.level=='member'||this.props.user.level=='player')?
-    this.setState({ showPicker: !this.state.showPicker })
-    :
-    window.alert("Sign in to add emoji")
-    
+    (this.props.user.level == 'admin' || this.props.user.level == 'member' || this.props.user.level == 'player') ?
+      this.setState({ showPicker: !this.state.showPicker })
+      :
+      window.alert("Sign in to add emoji")
+
   }
 
   handleEmojiSelect = (emoji) => {
-    this.props.addReaction({...this.props.message}, emoji.colons)
+    this.props.addReaction({ ...this.props.message }, emoji.colons)
     this.togglePicker()
   }
 
@@ -62,11 +61,11 @@ class Message extends Component {
         </div>
         {
           this.state.showPicker &&
-            <Picker
-              showPreview={false}
-              style={pickerStyles}
-              onSelect={this.handleEmojiSelect}
-            />
+          <Picker
+            showPreview={false}
+            style={pickerStyles}
+            onSelect={this.handleEmojiSelect}
+          />
         }
       </div>
     )

@@ -25,12 +25,10 @@ class Announcement extends Component {
   addAnnouncement = (body) => {
     const announcements = [...this.state.announcements]
     announcements.push({
-      t: moment().get('year')+" "+ (moment().get('month')+1) +"/"+ moment().get('date'),
-      // user: this.props.user,
+      t: moment().get('year') + " " + (moment().get('month') + 1) + "/" + moment().get('date'),
       body,
     })
     this.setState({ announcements })
-    // window.alert('Announcement Added Successfully')
   }
 
   deleteAnnouncement = (t) => {
@@ -45,7 +43,7 @@ class Announcement extends Component {
       <div className="Announcements">
         <h4>announcements</h4>
         <Route exact path="/Announcement"
-          render={prop=>(
+          render={prop => (
             <NavLink to="Announcement/new">
               <button type='button' title='show/hide the form'>
                 <i className="fas fa-plus"></i>
@@ -58,9 +56,9 @@ class Announcement extends Component {
           ann={this.state.announcements}
           deleteAnnouncement={this.deleteAnnouncement}
         />
-        
+
         <Route path="/Announcement/new"
-          render={props=>(
+          render={props => (
             <AnnouncementForm addAnnouncement={this.addAnnouncement} {...props} />
           )}
         />

@@ -15,30 +15,30 @@ class TeamPage extends Component {
         })
     }
 
-    
 
-    getUserArray(){
-        var users=[]
-        for (var user in this.state.users){
-            users.push(this.state.users[user])          
+
+    getUserArray() {
+        var users = []
+        for (var user in this.state.users) {
+            users.push(this.state.users[user])
         }
         return users
     }
 
-    handleChangeLevel=(uid,level)=>{
-        var newUsers=this.state.users;
+    handleChangeLevel = (uid, level) => {
+        var newUsers = this.state.users;
         console.log(newUsers)
-        for (var user in newUsers){
-            
-           if(newUsers[user].uid==uid){
-               console.log('changing')
-               newUsers[user].level=level
+        for (var user in newUsers) {
+
+            if (newUsers[user].uid == uid) {
+                console.log('changing')
+                newUsers[user].level = level
                 // user.level=level
-           }
+            }
 
         }
 
-        this.setState({users:newUsers})
+        this.setState({ users: newUsers })
         // console.log(this.state.users)
         return
     }
@@ -49,35 +49,35 @@ class TeamPage extends Component {
                 <h1>This is the team description</h1>
                 <hr />
 
-                 <h3>Manager:</h3>
+                <h3>Manager:</h3>
                 {
                     this.getUserArray()
                         .filter(member => member.level == 'admin')
                         .map(member => (
-                            <Member member={member} handleChangeLevel={this.handleChangeLevel}/>
+                            <Member member={member} handleChangeLevel={this.handleChangeLevel} />
                         ))
                 }
-            <br />
+                <br />
 
-            <h3>Member:</h3>
+                <h3>Member:</h3>
                 {
                     this.getUserArray()
                         .filter(member => member.level == 'member')
                         .map(member => (
-                            <Member member={member} handleChangeLevel={this.handleChangeLevel}/>
+                            <Member member={member} handleChangeLevel={this.handleChangeLevel} />
                         ))
                 }
-            <br />
+                <br />
 
-            <h3>Player:</h3>
+                <h3>Player:</h3>
                 {
                     this.getUserArray()
                         .filter(member => member.level == 'player')
                         .map(member => (
-                            <Member member={member} handleChangeLevel={this.handleChangeLevel}/>
+                            <Member member={member} handleChangeLevel={this.handleChangeLevel} />
                         ))
                 }
-            <br />
+                <br />
 
             </div>
         )

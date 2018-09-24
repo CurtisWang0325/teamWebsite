@@ -13,7 +13,6 @@ import ScheduleR from './ScheduleFolder/ScheduleR'
 import Account from './Account'
 import base from './base'
 import AnnouncementR from './AnnouncementFolder/AnnouncementR';
-// import { FirebaseDatabase } from '@firebase/database-types';
 import TeamPage from './TeamFolder/TeamPage'
 import TeamPageR from './TeamFolder/TeamPageR'
 
@@ -23,32 +22,12 @@ class App extends Component {
   state = {
     user: {},
     rebaseBinding: null,
-
   }
-  
+
   componentDidMount() {
-    // if(this.signedIn()){
-    //   var user=this.state.user
-    //   if(!user.name){user.name=user.googleName}
-    //   if(!user.level){user.level='player'}
-    //   if(!user.IGN){user.IGN='Not set yet'}
-    //   if(!user.position){user.position='Not set yet'}
-    //   if(!user.year){user.year='0'}
-    //   if(!user.aboutMe){user.aboutMe='Not set yet'}
-    //   this.setState({user})
-    // }
-    // const user = JSON.parse(localStorage.getItem('user'))
-    // if (user) {
-    //   // this.setState({ user })
-    //   console.log("going to sync")
-      
-  
-    // }
-
-
     auth.onAuthStateChanged(
       user => {
-        
+
         if (user) {
           // we signed in
           this.handleAuth(user)
@@ -57,9 +36,8 @@ class App extends Component {
           this.handleUnauth()
         }
       }
-      // this.setState
     )
-    
+
   }
 
 
@@ -68,51 +46,25 @@ class App extends Component {
   }
 
   handleAuth = (oauthUser) => {
-    
-
-    // const user = {
-    //   uid: oauthUser.uid,
-    //   googleName: oauthUser.displayName,
-    //   email: oauthUser.email,
-    //   // photoUrl: oauthUser.photoURL,
-    //   // IGN: '',
-    //   // name: '',
-    // }
-    
-    // const userRef=base.database().ref(`users/${user.uid}`)
-    // userRef.once("value")
-    // .then(function(snapshot){
-    //   this.name = snapshot.child("name").val()
-    // })
-    // console.log(this.name)
     console.log(oauthUser.uid)
-    const rebaseBinding  = base.syncState(`users/${oauthUser.uid}`, {
+    const rebaseBinding = base.syncState(`users/${oauthUser.uid}`, {
       context: this,
       state: 'user',
-      defaultValue: 
+      defaultValue:
         {
-          uid:oauthUser.uid,
-          name:oauthUser.displayName,
-          IGN:'Not set yet',
-          position:'Not set yet',
-          year:'0',
-          aboutMe:'Not set yet',
-          level:'player',
+          uid: oauthUser.uid,
+          name: oauthUser.displayName,
+          IGN: 'Not set yet',
+          position: 'Not set yet',
+          year: '0',
+          aboutMe: 'Not set yet',
+          level: 'player',
         },
     })
-    // if(!user.name){user.name=user.googleName}
-    // if(!user.level){user.level='player'}
-    // if(!user.IGN){user.IGN='Not set yet'}
-    // if(!user.position){user.position='Not set yet'}
-    // if(!user.year){user.year='0'}
-    // if(!user.aboutMe){user.aboutMe='Not set yet'}
-
     this.setState({ rebaseBinding })
-    // localStorage.setItem('user', JSON.stringify(user))
   }
 
   handleUnauth = () => {
-    // localStorage.removeItem('user')
     base.removeBinding(this.state.rebaseBinding)
     this.setState({ user: {} })
   }
@@ -126,10 +78,10 @@ class App extends Component {
   }
 
   changeAccountInfo = (newUser) => {
-    this.setState({ user:newUser})
+    this.setState({ user: newUser })
   }
 
-  
+
 
   render() {
     return (
@@ -152,13 +104,13 @@ class App extends Component {
               />
             )}
           />
-          <Route path="/Announcement" 
+          <Route path="/Announcement"
             render={prop => (
-              this.state.user.level=='admin'?
-              <Announcement/>
-              :
-              <AnnouncementR/>
-            )} 
+              this.state.user.level == 'admin' ?
+                <Announcement />
+                :
+                <AnnouncementR />
+            )}
           />
           <Route path="/Forum"
             render={prop => (
@@ -170,25 +122,25 @@ class App extends Component {
           />
           <Route path="/Schedule"
             render={prop => (
-              this.state.user.level=='admin'?
-              <Schedule
-                user={this.state.user}
-              />
-              :
-              <ScheduleR
-                user={this.state.user}
-              />
-            )} 
+              this.state.user.level == 'admin' ?
+                <Schedule
+                  user={this.state.user}
+                />
+                :
+                <ScheduleR
+                  user={this.state.user}
+                />
+            )}
           />
           <Route path="/TeamPage"
             render={prop => (
-              this.state.user.level=='admin'?
-              <TeamPage
-              />
-              :
-              <TeamPageR
-              />
-            )} 
+              this.state.user.level == 'admin' ?
+                <TeamPage
+                />
+                :
+                <TeamPageR
+                />
+            )}
           />
           <Route
             render={() => (

@@ -4,7 +4,7 @@ import Main from './Main'
 
 
 class Forum extends Component {
-    
+
 
     render() {
         return (
@@ -12,12 +12,10 @@ class Forum extends Component {
                 <Route
                     path="/Forum/:roomName"
                     render={navProps => (
-                        
                         <Main
-                        user={this.props.user}
-                        {...navProps}
+                            user={this.props.user}
+                            {...navProps}
                         />
-                        
                     )}
                 />
             </div>

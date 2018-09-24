@@ -8,7 +8,7 @@ import RoomForm from './RoomForm'
 class RoomList extends Component {
   render() {
     const rooms = this.props.rooms
-    const user=this.props.user
+    const user = this.props.user
     return (
       <Switch>
         <Route
@@ -36,7 +36,7 @@ class RoomList extends Component {
 
                   {/* only admin (lv3) can use the new room button */}
                   {
-                    user.level=='admin'
+                    user.level == 'admin'
                     &&
                     <Link
                       className={css(styles.button)}
@@ -76,7 +76,7 @@ const styles = StyleSheet.create({
 
   list: {
     listStyle: 'none',
-    backgroundColor:'rgb(51, 51, 68)',
+    backgroundColor: 'rgb(51, 51, 68)',
     marginLeft: 0,
     paddingLeft: 0,
   },

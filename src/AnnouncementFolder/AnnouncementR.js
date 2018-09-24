@@ -1,9 +1,6 @@
 import React, { Component } from 'react'
 import AnnouncementListsR from './AnnouncementListsR'
-// import AnnouncementForm from './AnnouncementForm'
 import base from '../base'
-// import { NavLink, Route } from 'react-router-dom'
-
 
 class AnnouncementR extends Component {
   constructor() {
@@ -11,7 +8,6 @@ class AnnouncementR extends Component {
 
     this.state = {
       announcements: [],
-     // form: false,
     }
   }
 
@@ -28,7 +24,7 @@ class AnnouncementR extends Component {
 
       <div className="Announcements">
         <h4>announcements</h4>
-        
+
         <AnnouncementListsR
           ann={this.state.announcements}
         />

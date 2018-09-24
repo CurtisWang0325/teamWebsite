@@ -14,15 +14,14 @@ class EventList extends Component {
                 {
                     this.props.events
                         .map(a => (
-                            <Event 
+                            <Event
                                 user={this.props.user}
                                 status={a.status}
                                 txt={a.body}
                                 eventTime={a.eventTime}
-                                deleteEvent={this.props.deleteEvent} 
+                                deleteEvent={this.props.deleteEvent}
                                 level={a.level}
-                                index={this.findEventIndex(a.key)} 
-                                // players={this.props.players}
+                                index={this.findEventIndex(a.key)}
                             />
                         ))
                 }

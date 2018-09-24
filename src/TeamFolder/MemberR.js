@@ -14,7 +14,7 @@ class MemberR extends Component {
                 <p>{user.aboutMe}</p>
                 <hr />
 
-                
+
             </div>
 
         )

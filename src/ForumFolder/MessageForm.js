@@ -8,10 +8,10 @@ class MessageForm extends Component {
 
   handleSubmit = (ev) => {
     ev.preventDefault();
-    (this.props.user.level=='admin'||this.props.user.level=='member'||this.props.user.level=='player')?
-    this.props.addMessage(this.state.body)
-    :
-    window.alert("Sign in to chat! ")
+    (this.props.user.level == 'admin' || this.props.user.level == 'member' || this.props.user.level == 'player') ?
+      this.props.addMessage(this.state.body)
+      :
+      window.alert("Sign in to chat! ")
     this.setState({ body: '' })
   }
 

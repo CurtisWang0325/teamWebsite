@@ -6,7 +6,7 @@ const ChatHeader = ({ user, room, removeRoom }) => {
       removeRoom(room)
     }
   }
-  
+
 
   return (
     <div className="ChatHeader" style={styles.header}>
@@ -19,8 +19,8 @@ const ChatHeader = ({ user, room, removeRoom }) => {
         </p>
       </div>
       {
-        user.level=='admin'
-        &&      
+        user.level == 'admin'
+        &&
         <button
           style={styles.button}
           onClick={handleClick}

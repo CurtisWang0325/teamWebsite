@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-// import moment from 'moment'
 
 class AnnouncementForm extends Component {
 
@@ -7,7 +6,6 @@ class AnnouncementForm extends Component {
     super()
     this.state = {
       body: '',
-      // time:'',
     }
   }
 
@@ -16,15 +14,13 @@ class AnnouncementForm extends Component {
     ev.preventDefault()
     this.props.addAnnouncement(this.state.body)
     this.setState(
-      { body: '',
-        // time: moment.now().toString,
-        // time:'111',
-        // format('D MMM @ h:mm a'),
+      {
+        body: '',
       }
-    
+
     )
     this.props.history.push('/Announcement')
-    
+
   }
 
   handleChange = (ev) => {
@@ -33,25 +29,25 @@ class AnnouncementForm extends Component {
 
   render() {
     return (
-        <form
-          onSubmit={this.handleSubmit}
+      <form
+        onSubmit={this.handleSubmit}
+      >
+
+        <input
+          type="text"
+          name="body"
+          placeholder="Type a new annoucement..."
+          value={this.state.body}
+          onChange={this.handleChange}
+          autoFocus
+        />
+
+        <button type="submit"
         >
+          <i className="far fa-paper-plane" title="Send"></i>
+        </button>
 
-          <input
-            type="text"
-            name="body"
-            placeholder="Type a new annoucement..."
-            value={this.state.body}
-            onChange={this.handleChange}
-            autoFocus
-          />
-
-          <button type="submit"
-          >
-            <i className="far fa-paper-plane" title="Send"></i>
-          </button>
-          
-        </form>
+      </form>
     )
   }
 }

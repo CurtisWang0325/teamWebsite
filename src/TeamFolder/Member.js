@@ -7,17 +7,17 @@ class Member extends Component {
     //         level: this.props.member.level,
     //     }
     // }
-    state={
-        level:this.props.member.level,
+    state = {
+        level: this.props.member.level,
     }
 
     handleChange = (ev) => {
         this.setState({ [ev.target.name]: ev.target.value });
     }
 
-    handleSubmit=(ev)=>{
+    handleSubmit = (ev) => {
         console.log('submit')
-        this.props.handleChangeLevel(this.props.member.uid,this.state.level)
+        this.props.handleChangeLevel(this.props.member.uid, this.state.level)
     }
     render() {
         const user = this.props.member
@@ -42,7 +42,7 @@ class Member extends Component {
                     <option value="member">MEMBER</option>
                     <option value="admin">ADMIN</option>
                 </select>
-                
+
                 <button type='button' onClick={this.handleSubmit}>
                     Save
                 </button>

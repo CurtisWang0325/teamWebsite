@@ -1,8 +1,8 @@
 import React from 'react'
-import {StyleSheet, css} from 'aphrodite'
-import {NavLink} from 'react-router-dom'
+import { StyleSheet, css } from 'aphrodite'
+import { NavLink } from 'react-router-dom'
 
-const RoomLink = ({room}) => {
+const RoomLink = ({ room }) => {
     return (
         <li className={css(styles.item)}>
             <NavLink

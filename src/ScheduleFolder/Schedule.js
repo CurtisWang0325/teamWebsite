@@ -26,7 +26,6 @@ class Schedule extends Component {
     const events = [...this.state.events]
     events.push(newEvent)
     this.setState({ events })
-    // window.alert('Announcement Added Successfully')
   }
 
   deleteEvent = (index) => {
@@ -40,19 +39,19 @@ class Schedule extends Component {
 
       <div className="Schedule">
         <h4>Events</h4>
-        <hr/>
+        <hr />
         <h2>
           Sign up the event 2 days before the event time!
-          <br/>
+          <br />
           You can only sign up for one position!
-          <br/>
+          <br />
           Please be on time if the event is confirmed!
-          <br/>
+          <br />
           The event will be cancelled due to the lack of members or other reasons!
         </h2>
-        <hr/>
+        <hr />
         <Route exact path="/Schedule"
-          render={prop=>(
+          render={prop => (
             <NavLink to="Schedule/new">
               <button type='button' title='add an event'>
                 <i className="fas fa-plus"></i>
@@ -66,9 +65,9 @@ class Schedule extends Component {
           events={this.state.events}
           deleteEvent={this.deleteEvent}
         />
-        
+
         <Route path="/Schedule/new"
-          render={props=>(
+          render={props => (
             <EventForm addEvent={this.addEvent} {...props} />
           )}
         />

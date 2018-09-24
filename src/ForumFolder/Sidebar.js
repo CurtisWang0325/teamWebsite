@@ -35,7 +35,7 @@ const styles = {
     fontSize: '1.8rem',
     marginTop: 0,
     padding: '0 1rem',
-    borderBottom:'1px solid white',
+    borderBottom: '1px solid white',
   },
 }
 

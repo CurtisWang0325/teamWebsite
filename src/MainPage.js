@@ -1,9 +1,6 @@
 import React, { Component } from 'react'
-// import Forum from './Forum'
-// import Schedule from './Schedule'
 import { NavLink } from 'react-router-dom'
-//import Announcement from './Announcement'
-//import Heading from './Heading'
+
 require('./css/MainPage.css')
 
 class MainPage extends Component {
@@ -13,8 +10,8 @@ class MainPage extends Component {
 
                 <NavLink to="/Forum/general" className="link" id="to_forum">
                     <div className="unhover">
-                    <h3>Forum</h3>
-                    <p></p>
+                        <h3>Forum</h3>
+                        <p></p>
                     </div>
                     <div className="hover">
                         <h2>Chat and share anything in the forum!</h2>
@@ -40,7 +37,7 @@ class MainPage extends Component {
                     <div className="hover">
                         <h2>
                             Sign up for matches!
-                            <br/>
+                            <br />
                             Have fun and practice together
                         </h2>
                     </div>

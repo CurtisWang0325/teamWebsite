@@ -21,6 +21,4 @@ class AnnR extends Component {
 
 
 
-
-
 export default AnnR

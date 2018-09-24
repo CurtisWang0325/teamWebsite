@@ -37,12 +37,10 @@ class Event extends Component {
     base.syncState(`events/${this.props.index}/players`,{
       context:this,
       state:'players',
-      // asArray:true,
     })
     base.syncState(`events/${this.props.index}/status`,{
       context:this,
       state:'status',
-      // asArray:true,
     })
    
   }
