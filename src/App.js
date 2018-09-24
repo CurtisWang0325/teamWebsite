@@ -59,6 +59,7 @@ class App extends Component {
           year: '0',
           aboutMe: 'Not set yet',
           level: 'player',
+          email: oauthUser.email
         },
     })
     this.setState({ rebaseBinding })

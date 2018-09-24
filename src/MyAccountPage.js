@@ -10,6 +10,7 @@ class MyAccountPage extends Component {
         tempYear: "",
         tempAboutMe: "",
         tempLevel: "",
+        tempEmail:"",
     }
 
 
@@ -25,6 +26,7 @@ class MyAccountPage extends Component {
         user.year = this.state.tempYear || user.year
         user.aboutMe = this.state.tempAboutMe || user.aboutMe
         user.level = this.state.tempLevel || user.level
+        user.email = this.state.tempEmail || user.email
         this.props.changeAccountInfo(user)
     }
 
@@ -45,6 +47,10 @@ class MyAccountPage extends Component {
                             <div className="block">
                                 <h1>IGN: </h1>
                                 <p>{`${this.props.user.IGN}`}</p>
+                            </div>
+                            <div className="block">
+                                <h1>Email: </h1>
+                                <p>{`${this.props.user.email}`}</p>
                             </div>
                             <div className="block">
                                 <h1>Position: </h1>
@@ -102,6 +108,17 @@ class MyAccountPage extends Component {
                                         name="tempIGN"
                                         placeholder={`${this.props.user.IGN}`}
                                         value={this.state.tempIGN}
+                                        onChange={this.handleChange}
+                                    />
+                                </div>
+                                <div className="block">
+                                    <h1>Email: </h1>
+                                    <input
+                                        className="input"
+                                        type="email"
+                                        name="tempEmail"
+                                        placeholder={`${this.props.user.email}`}
+                                        value={this.state.tempEmail}
                                         onChange={this.handleChange}
                                     />
                                 </div>
