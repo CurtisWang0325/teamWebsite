@@ -56,10 +56,9 @@ class Event extends Component {
     return (
 
       <span>
-        <h2>
-          {/* Title/Description*/}
+        <h3>
           {this.props.txt}
-        </h2>
+        </h3>
         <h4>
           Time:{this.props.eventTime}
         </h4>

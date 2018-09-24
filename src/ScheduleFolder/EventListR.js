@@ -10,9 +10,45 @@ class EventListR extends Component {
     render() {
 
         return (
+        
+
             <div>
+                <h2>Available</h2>
                 {
                     this.props.events
+                        .filter(event=>event.status==='opened')
+                        .map(a => (
+                            <EventR
+                                user={this.props.user}
+                                status={a.status}
+                                txt={a.body}
+                                eventTime={a.eventTime}
+                                level={a.level}
+                                index={this.findEventIndex(a.key)}
+                            />
+                        ))
+                }
+
+                <h2>Confirmed</h2>
+                {
+                    this.props.events
+                        .filter(event=>event.status==='confirmed')
+                        .map(a => (
+                            <EventR
+                                user={this.props.user}
+                                status={a.status}
+                                txt={a.body}
+                                eventTime={a.eventTime}
+                                level={a.level}
+                                index={this.findEventIndex(a.key)}
+                            />
+                        ))
+                }
+
+                <h2>Unavailable</h2>
+                {
+                    this.props.events
+                        .filter(event=>event.status==='closed'||event.status==='cancelled')
                         .map(a => (
                             <EventR
                                 user={this.props.user}

@@ -11,22 +11,59 @@ class EventList extends Component {
 
         return (
             <div>
-                {
-                    this.props.events
-                        .map(a => (
-                            <Event
-                                user={this.props.user}
-                                status={a.status}
-                                txt={a.body}
-                                eventTime={a.eventTime}
-                                deleteEvent={this.props.deleteEvent}
-                                level={a.level}
-                                index={this.findEventIndex(a.key)}
-                            />
-                        ))
-                }
+            <h2>Available</h2>
+            {
+                this.props.events
+                    .filter(event=>event.status==='opened')
+                    .map(a => (
+                        <Event
+                            user={this.props.user}
+                            status={a.status}
+                            txt={a.body}
+                            eventTime={a.eventTime}
+                            deleteEvent={this.props.deleteEvent}
+                            level={a.level}
+                            index={this.findEventIndex(a.key)}
+                        />
+                    ))
+            }
 
-            </div>
+            <h2>Confirmed</h2>
+            {
+                this.props.events
+                    .filter(event=>event.status==='confirmed')
+                    .map(a => (
+                        <Event
+                            user={this.props.user}
+                            status={a.status}
+                            txt={a.body}
+                            eventTime={a.eventTime}
+                            deleteEvent={this.props.deleteEvent}
+                            level={a.level}
+                            index={this.findEventIndex(a.key)}
+                        />
+                    ))
+            }
+
+            <h2>Unavailable</h2>
+            {
+                this.props.events
+                    .filter(event=>event.status==='closed'||event.status==='cancelled')
+                    .map(a => (
+                        <Event
+                            user={this.props.user}
+                            status={a.status}
+                            txt={a.body}
+                            eventTime={a.eventTime}
+                            deleteEvent={this.props.deleteEvent}
+                            level={a.level}
+                            index={this.findEventIndex(a.key)}
+                        />
+                    ))
+            }
+
+        </div>
+     
         )
     }
 
