@@ -11,6 +11,7 @@ class Schedule extends Component {
 
     this.state = {
       events: [],
+      showIns: false,
     }
   }
 
@@ -34,22 +35,37 @@ class Schedule extends Component {
     this.setState({ events })
   }
 
+  showOrHideIns = () => {
+    this.setState({ showIns: !this.state.showIns })
+  }
+
   render() {
     return (
 
       <div className="Schedule">
-        <h4>Events</h4>
-        <hr />
-        <h2>
-          Sign up the event 2 days before the event time!
-          <br />
-          You can only sign up for one position!
-          <br />
-          Please be on time if the event is confirmed!
-          <br />
-          The event will be cancelled due to the lack of members or other reasons!
-        </h2>
-        <hr />
+        <h1>EVENT SCHEDULE</h1>
+
+        <button type='button' onClick={this.showOrHideIns}>
+          Show/Hide
+        </button>
+        {
+          this.state.showIns ?
+            <span>
+              <h2>
+                Sign up the event 2 days before the event time!
+                <br />
+                You can only sign up for one position!
+                <br />
+                Please be on time if the event is confirmed!
+                <br />
+                The event might be cancelled, check out accordingly!
+              </h2>
+              <hr />
+            </span>
+            :
+            null
+        }
+
         <Route exact path="/Schedule"
           render={prop => (
             <NavLink to="Schedule/new">

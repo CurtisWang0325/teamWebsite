@@ -10,6 +10,7 @@ class ScheduleR extends Component {
 
     this.state = {
       events: [],
+      showIns: false,
     }
   }
 
@@ -21,12 +22,36 @@ class ScheduleR extends Component {
     })
   }
 
+  showOrHideIns = () => {
+    this.setState({ showIns: !this.state.showIns })
+  }
+
   render() {
     return (
 
       <div className="Schedule">
-        <h4>Events</h4>
+        <h1>EVENT SCHEDULE</h1>
 
+        <button type='button' onClick={this.showOrHideIns}>
+          Show/Hide
+        </button>
+        {
+          this.state.showIns ?
+            <span>
+              <h2>
+                Sign up the event 2 days before the event time!
+                <br />
+                You can only sign up for one position!
+                <br />
+                Please be on time if the event is confirmed!
+                <br />
+                The event might be cancelled, check out accordingly!
+              </h2>
+              <hr />
+            </span>
+            :
+            null
+        }
 
         <EventListR
           user={this.props.user}

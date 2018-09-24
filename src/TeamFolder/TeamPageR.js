@@ -32,25 +32,25 @@ class TeamPageR extends Component {
     render() {
         return (
             <div>
+                <h1>TEAM INFO</h1>
 
                 <button type='button' onClick={this.showOrHideIns}>
                     Show/Hide
                 </button>
-
                 {
                     this.state.showIns ?
                         <span>
-                            <h4>This page shows the information about LOL team mebers in Rose-Hulman</h4>
-                            <h4>If you want to be part of the team, contact Manager wangc6@rose-hulman.edu</h4>
+                            <h4>
+                                This page shows the information about LOL team mebers in Rose-Hulman
+                                <br/>
+                                If you want to be part of the team, contact Manager wangc6@rose-hulman.edu
+                            </h4>
                             <hr />
                         </span>
                         :
                         null
                 }
-                {/* <h1>This is the team description</h1>
-                <hr /> */}
-
-
+                
                 <h3>Manager:</h3>
                 {
                     this.getUserArray()
