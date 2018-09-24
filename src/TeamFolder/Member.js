@@ -1,10 +1,25 @@
 import React, { Component } from 'react'
 
 class Member extends Component {
+    // constructor() {
+    //     super()
+    //     this.state = {
+    //         level: this.props.member.level,
+    //     }
+    // }
+    state={
+        level:this.props.member.level,
+    }
 
+    handleChange = (ev) => {
+        this.setState({ [ev.target.name]: ev.target.value });
+    }
 
-  render() {
-      const user=this.props.member
+    handleSubmit(){
+        this.props.handleChangeLevel(this.state.level,this.props.member.uid)
+    }
+    render() {
+        const user = this.props.member
         return (
             <div>
                 <h1>
@@ -14,12 +29,26 @@ class Member extends Component {
                 <h4>Position: {user.position}</h4>
                 <h4>Level: {user.level}</h4>
                 <p>{user.aboutMe}</p>
-                <hr/>
+                <hr />
+
+                <select
+                    name="level"
+                    value={this.state.level}
+                    onChange={this.handleChange}
+                >
+                    <option value="visitor">VISITOR</option>
+                    <option value="player">PLAYER</option>
+                    <option value="member">MEMBER</option>
+                    <option value="admin">ADMIN</option>
+                </select>
+                
+                <button type='button' onClick={this.handleSubmit}>
+                    Save
+                </button>
             </div>
 
-
         )
-  }
+    }
 
 }
 

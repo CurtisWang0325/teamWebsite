@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
 import base from '../base'
-import Member from './Member'
+import MemberR from './MemberR'
 
 class TeamPageR extends Component {
     state = {
-        users: [],
+        users: {},
     }
   
 
@@ -12,8 +12,15 @@ class TeamPageR extends Component {
     base.syncState('users', {
       context: this,
       state: 'users',
-      asArray: true,
     })
+  }
+
+  getUserArray(){
+      var users=[]
+      for (var user in this.state.users){
+          users.push(this.state.users[user])          
+      }
+      return users
   }
 
 
@@ -24,25 +31,26 @@ class TeamPageR extends Component {
             <hr/>
         
             
-            <h3>Admin:</h3>
-            {
-                this.state.users
-                    .filter(member=>member.level=='admin')
-                    .map(member => (
-                        <Member member={member}/>
-                    ))
-            }
-            <br/>
+            <h3>Manager:</h3>
+                {
+                    this.getUserArray()
+                        .filter(member => member.level == 'admin')
+                        .map(member => (
+                            <MemberR member={member}/>
+                        ))
+                }
+            <br />
 
             <h3>Member:</h3>
-            {
-                this.state.users
-                    .filter(member=>member.level=='member')
-                    .map(member => (
-                        <Member member={member}/>
-                    ))
-            }
-            <br/>
+                {
+                    this.getUserArray()
+                        .filter(member => member.level == 'member')
+                        .map(member => (
+                            <MemberR member={member}/>
+                        ))
+                }
+            <br />
+
 
 
 

@@ -184,11 +184,9 @@ class App extends Component {
             render={prop => (
               this.state.user.level=='admin'?
               <TeamPage
-                user={this.state.user}
               />
               :
               <TeamPageR
-                user={this.state.user}
               />
             )} 
           />
