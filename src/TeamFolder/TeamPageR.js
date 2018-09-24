@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import base from '../base'
 import Member from './Member'
 
-class TeamPage extends Component {
+class TeamPageR extends Component {
     state = {
         users: [],
     }
@@ -23,6 +23,7 @@ class TeamPage extends Component {
             <h1>This is the team description</h1>
             <hr/>
         
+            
             <h3>Admin:</h3>
             {
                 this.state.users
@@ -43,19 +44,11 @@ class TeamPage extends Component {
             }
             <br/>
 
-            <h3>Player:</h3>
-            {
-                this.state.users
-                    .filter(member=>member.level=='player')
-                    .map(member => (
-                        <Member member={member}/>
-                    ))
-            }
-            <br/>
+
 
         </div>
     )
   }
 }
 
-export default TeamPage
+export default TeamPageR

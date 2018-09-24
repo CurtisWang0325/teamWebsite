@@ -15,6 +15,7 @@ import base from './base'
 import AnnouncementR from './AnnouncementFolder/AnnouncementR';
 // import { FirebaseDatabase } from '@firebase/database-types';
 import TeamPage from './TeamFolder/TeamPage'
+import TeamPageR from './TeamFolder/TeamPageR'
 
 
 
@@ -166,7 +167,7 @@ class App extends Component {
                 user={this.state.user}
               />
               :
-              <TeamPage
+              <TeamPageR
                 user={this.state.user}
               />
             )} 
