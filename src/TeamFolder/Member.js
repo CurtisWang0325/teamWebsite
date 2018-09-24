@@ -28,6 +28,7 @@ class Member extends Component {
                 </h1>
                 <h4>IGN: {user.IGN}</h4>
                 <h4>Position: {user.position}</h4>
+                <h4>Year: {user.year}</h4>
                 <p>Email:{user.email}</p>
                 <p>{user.aboutMe}</p>
                 <hr />
