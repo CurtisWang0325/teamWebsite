@@ -37,7 +37,6 @@ class Member extends Component {
                     value={this.state.level}
                     onChange={this.handleChange}
                 >
-                    <option value="visitor">VISITOR</option>
                     <option value="player">PLAYER</option>
                     <option value="member">MEMBER</option>
                     <option value="admin">ADMIN</option>

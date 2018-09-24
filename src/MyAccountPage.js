@@ -83,7 +83,6 @@ class MyAccountPage extends Component {
                                         value={this.state.tempLevel}
                                         onChange={this.handleChange}
                                     >
-                                        <option value="visitor">VISITOR</option>
                                         <option value="player">PLAYER</option>
                                         <option value="member">MEMBER</option>
                                         <option value="admin">ADMIN</option>
