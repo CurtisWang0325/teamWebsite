@@ -23,8 +23,7 @@ class AnnouncementR extends Component {
     return (
 
       <div className="Announcements">
-        <h4>announcements</h4>
-
+        <h1>ANNOUCNEMENTS</h1>
         <AnnouncementListsR
           ann={this.state.announcements}
         />

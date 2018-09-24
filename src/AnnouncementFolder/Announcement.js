@@ -24,7 +24,7 @@ class Announcement extends Component {
 
   addAnnouncement = (body) => {
     const announcements = [...this.state.announcements]
-    announcements.push({
+    announcements.unshift({
       t: moment().get('year') + " " + (moment().get('month') + 1) + "/" + moment().get('date'),
       body,
     })
@@ -41,7 +41,7 @@ class Announcement extends Component {
     return (
 
       <div className="Announcements">
-        <h4>announcements</h4>
+        <h1>ANNOUCNEMENTS</h1>
         <Route exact path="/Announcement"
           render={prop => (
             <NavLink to="Announcement/new">
