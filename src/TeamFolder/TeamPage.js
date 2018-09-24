@@ -5,6 +5,7 @@ import Member from './Member'
 class TeamPage extends Component {
     state = {
         users: {},
+        showIns: false,
     }
 
 
@@ -25,21 +26,19 @@ class TeamPage extends Component {
         return users
     }
 
+    showOrHideIns = () => {
+        this.setState({ showIns: !this.state.showIns })
+    }
+
     handleChangeLevel = (uid, level) => {
         var newUsers = this.state.users;
-        console.log(newUsers)
         for (var user in newUsers) {
-
             if (newUsers[user].uid == uid) {
-                console.log('changing')
                 newUsers[user].level = level
-                // user.level=level
             }
 
         }
-
         this.setState({ users: newUsers })
-        // console.log(this.state.users)
         return
     }
 
@@ -47,6 +46,23 @@ class TeamPage extends Component {
         return (
             <div>
                 <h1>TEAM INFO</h1>
+                
+                <button type='button' onClick={this.showOrHideIns} title='show/hide the instruction'>
+                    Show/Hide
+                </button>
+                {
+                    this.state.showIns ?
+                        <span>
+                            <h4>
+                                This page shows the information about LOL team mebers in Rose-Hulman
+                                <br/>
+                                If you want to be part of the team, contact Manager wangc6@rose-hulman.edu
+                            </h4>
+                            <hr />
+                        </span>
+                        :
+                        null
+                }                
 
                 <h3>Manager:</h3>
                 {

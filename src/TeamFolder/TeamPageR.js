@@ -34,7 +34,7 @@ class TeamPageR extends Component {
             <div>
                 <h1>TEAM INFO</h1>
 
-                <button type='button' onClick={this.showOrHideIns}>
+                <button type='button' onClick={this.showOrHideIns} title='show/hide the instruction'>
                     Show/Hide
                 </button>
                 {

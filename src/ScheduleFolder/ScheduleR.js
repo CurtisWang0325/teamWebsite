@@ -32,7 +32,7 @@ class ScheduleR extends Component {
       <div className="Schedule">
         <h1>EVENT SCHEDULE</h1>
 
-        <button type='button' onClick={this.showOrHideIns}>
+        <button type='button' onClick={this.showOrHideIns} title='show/hide the instruction'>
           Show/Hide
         </button>
         {
