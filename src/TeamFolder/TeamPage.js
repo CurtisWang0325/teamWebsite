@@ -46,9 +46,6 @@ class TeamPage extends Component {
     render() {
         return (
             <div>
-                <h1>This is the team description</h1>
-                <hr />
-
                 <h3>Manager:</h3>
                 {
                     this.getUserArray()

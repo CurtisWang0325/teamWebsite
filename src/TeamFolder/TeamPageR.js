@@ -5,6 +5,7 @@ import MemberR from './MemberR'
 class TeamPageR extends Component {
     state = {
         users: {},
+        showIns: false,
     }
 
 
@@ -23,12 +24,31 @@ class TeamPageR extends Component {
         return users
     }
 
+    showOrHideIns = () => {
+        this.setState({ showIns: !this.state.showIns })
+    }
+
 
     render() {
         return (
             <div>
-                <h1>This is the team description</h1>
-                <hr />
+
+                <button type='button' onClick={this.showOrHideIns}>
+                    Show/Hide
+                </button>
+
+                {
+                    this.state.showIns ?
+                        <span>
+                            <h4>This page shows the information about LOL team mebers in Rose-Hulman</h4>
+                            <h4>If you want to be part of the team, contact Manager wangc6@rose-hulman.edu</h4>
+                            <hr />
+                        </span>
+                        :
+                        null
+                }
+                {/* <h1>This is the team description</h1>
+                <hr /> */}
 
 
                 <h3>Manager:</h3>
