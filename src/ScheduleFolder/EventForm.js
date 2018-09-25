@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+require('../css/Schedule.css')
 
 class EventForm extends Component {
 
@@ -40,33 +41,36 @@ class EventForm extends Component {
     return (
       <form
         onSubmit={this.handleSubmit}
+        id="newEvent"
       >
 
         <input
+          className="input"
           type="text"
           name="body"
           placeholder="Enter Event..."
           value={this.state.body}
           onChange={this.handleChange}
           autoFocus
-        />
+        /><hr/>
         <input
+          className="input"
           type="text"
           name="eventTime"
           placeholder="Enter Event Time"
           value={this.state.eventTime}
           onChange={this.handleChange}
-        />
+        /><hr/>
         <select
           name="status"
           value={this.state.status}
           onChange={this.handleChange}
-        >
+        ><hr/>
           <option value="opened">OPENED</option>
           <option value="closed">CLOSED</option>
           <option value="cancelled">CANCELLED</option>
           <option value="confirmed">CONFIRMED</option>
-        </select>
+        </select><hr/>
         <select
           name="level"
           value={this.state.level}
@@ -76,7 +80,7 @@ class EventForm extends Component {
           <option value="member">MEMBER</option>
           <option value="admin">ADMIN</option>
         </select>
-
+        <hr/>
         <button type="submit"
         >
           <i className="far fa-paper-plane" title="Send"></i>

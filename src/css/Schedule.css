@@ -57,7 +57,7 @@ body{
     vertical-align: bottom;
 }
 
-.playerLists  button {
+.playerLists  button,#newEvent button{
     width: 200px;
     height: 25px;
     border-width: 0px;
@@ -83,4 +83,36 @@ body{
 .scheduleTitle{
     display: inline-block;
     padding-right: 15px;
+}
+
+.input {
+    width: 200px;
+    margin: 0 20px;
+    padding-left: 5px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 12px;
+    border: 1px solid #c9cacb;
+}
+
+select{
+    margin: 0 20px;
+    background:#fafdfe;
+    height:28px;
+    width:180px;
+    line-height:28px;
+    border:1px solid #9bc0dd;
+    -moz-border-radius:2px;
+    -webkit-border-radius:2px;
+    border-radius:2px;
+}
+
+#newEvent{
+    margin-top: 20px;
+}
+
+#newEvent *:not(hr){
+    margin: 10px 0;
+    text-align: center;
+    display: inline-block;
 }

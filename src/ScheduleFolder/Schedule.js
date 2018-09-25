@@ -75,17 +75,15 @@ class Schedule extends Component {
                       null
               }
         </div>
-
+         <Route path="/Schedule/new"
+                 render={props => (
+                     <EventForm addEvent={this.addEvent} {...props} />
+                 )}
+         />
         <EventList
           user={this.props.user}
           events={this.state.events}
           deleteEvent={this.deleteEvent}
-        />
-
-        <Route path="/Schedule/new"
-          render={props => (
-            <EventForm addEvent={this.addEvent} {...props} />
-          )}
         />
 
       </div>
