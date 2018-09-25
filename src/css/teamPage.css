@@ -1,0 +1,54 @@
+#teamInfo{
+    margin:20px auto;
+    width:60%;
+    color: #000;
+}
+
+#teamInfoTitle *:not(h4){
+    display: inline-block;
+    padding-right: 10px;
+}
+
+.team_block{
+    height: 300px;
+}
+
+#members{
+    margin-top: 20px;
+    background-color: #FFFFFF;
+    width: 100%;
+    border-radius: 8px;
+    padding: 10px 4%;
+}
+
+.member{
+    margin:10px 4%;
+    width: 25%;
+    height: 250px;
+    border-radius: 3px;
+    padding: 10px 10px;
+    float: left;
+    background-color: #1E90FF;
+}
+
+.member > select{
+    width: 80%;
+    margin: 5px 0;
+}
+
+.member > p{
+    margin: 5px 0;
+}
+
+.member > button{
+    width: 60%;
+    border-width: 0px;
+    border-radius: 3px;
+    background: white;
+    cursor: pointer;
+    outline: none;
+    font-family: Microsoft YaHei;;
+    color: black;
+    font-size: 15px;
+    margin-top: 5px;
+}

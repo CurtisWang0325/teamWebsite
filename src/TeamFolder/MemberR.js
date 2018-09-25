@@ -1,20 +1,19 @@
 import React, { Component } from 'react'
-
+require("../css/teamPage.css")
 class MemberR extends Component {
     render() {
         const user = this.props.member
         return (
-            <div>
+            <div className="member">
                 <h1>
                     {user.name}
                 </h1>
-                <h4>IGN: {user.IGN}</h4>
-                <h4>Position: {user.position}</h4>
+                <p>IGN: {user.IGN}</p>
+                <p>Position: {user.position}</p>
+                <p>Year: {user.year}</p>
                 <p>Email:{user.email}</p>
                 <p>{user.aboutMe}</p>
                 <hr />
-
-
             </div>
 
         )

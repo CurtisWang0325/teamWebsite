@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import base from '../base'
 import Member from './Member'
+require("../css/teamPage.css")
+
 
 class TeamPage extends Component {
     state = {
@@ -44,26 +46,29 @@ class TeamPage extends Component {
 
     render() {
         return (
-            <div>
-                <h1>TEAM INFO</h1>
-                
-                <button type='button' onClick={this.showOrHideIns} title='show/hide the instruction'>
-                    Show/Hide
-                </button>
-                {
-                    this.state.showIns ?
-                        <span>
+            <div id="teamInfo">
+                <div id="teamInfoTitle">
+                    <h1>TEAM INFO</h1>
+                    <div onClick={this.showOrHideIns}>
+                        <i className={"fa fa-question-circle fa-2x"}>
+                        </i>
+                    </div>
+                    {
+                        this.state.showIns ?
                             <h4>
-                                This page shows the information about LOL team mebers in Rose-Hulman
-                                <br/>
-                                If you want to be part of the team, contact Manager wangc6@rose-hulman.edu
+                                <h4>
+                                    This page shows the information about LOL team mebers in Rose-Hulman
+                                    <br/>
+                                    If you want to be part of the team, contact Manager wangc6@rose-hulman.edu
+                                </h4>
+                                <hr />
                             </h4>
-                            <hr />
-                        </span>
-                        :
-                        null
-                }                
-
+                            :
+                            null
+                    }
+                </div>
+                <div id="members">
+                <div className="team_block">
                 <h3>Manager:</h3>
                 {
                     this.getUserArray()
@@ -73,7 +78,8 @@ class TeamPage extends Component {
                         ))
                 }
                 <br />
-
+                </div>
+                <div className="team_block">
                 <h3>Member:</h3>
                 {
                     this.getUserArray()
@@ -83,7 +89,8 @@ class TeamPage extends Component {
                         ))
                 }
                 <br />
-
+                </div>
+                <div className="team_block">
                 <h3>Player:</h3>
                 {
                     this.getUserArray()
@@ -93,7 +100,8 @@ class TeamPage extends Component {
                         ))
                 }
                 <br />
-
+                </div>
+                </div>
             </div>
         )
     }
