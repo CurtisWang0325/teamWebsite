@@ -31,6 +31,7 @@ class AnnouncementForm extends Component {
     return (
       <form
         onSubmit={this.handleSubmit}
+        id="newAnn"
       >
 
         <input

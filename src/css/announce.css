@@ -1,0 +1,44 @@
+.Announcements{
+    color: black;
+    width: 50%;
+    margin: 50px auto;
+}
+
+.annList{
+    margin-top: 20px;
+}
+
+.ann{
+    height: auto;
+    margin-top: 20px;
+    width: 80%;
+    border-radius: 10px;
+    background-color: #9bc0dd;
+    padding: 10px 20px;
+    -webkit-box-shadow: -1px 3px 13px 0px rgba(0,0,0,1);
+    -moz-box-shadow: -1px 3px 13px 0px rgba(0,0,0,1);
+    box-shadow: -1px 3px 13px 0px rgba(0,0,0,1);
+}
+
+#newAnn input {
+    width: 200px;
+    padding-right: 15px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 12px;
+    border: 1px solid #c9cacb;
+}
+
+#newAnn button{
+    width: 50px;
+    height: 30px;
+    border-width: 0px;
+    border-radius: 3px;
+    background: #1E90FF;
+    cursor: pointer;
+    outline: none;
+    font-family: Microsoft YaHei;;
+    color: white;
+    font-size: 15px;
+    margin-top: 5px;
+}

@@ -5,6 +5,8 @@ import base from '../base'
 import { NavLink, Route } from 'react-router-dom'
 import moment from 'moment'
 
+
+
 class Announcement extends Component {
   constructor() {
     super()
@@ -46,10 +48,15 @@ class Announcement extends Component {
           render={prop => (
             <NavLink to="Announcement/new">
               <button type='button' title='show/hide the form'>
-                <i className="fas fa-plus"></i>
+                <i className="fas fa-plus fa-2x"></i>
               </button>
             </NavLink>
           )}
+        />
+        <Route path="/Announcement/new"
+                 render={props => (
+                     <AnnouncementForm addAnnouncement={this.addAnnouncement} {...props} />
+                 )}
         />
 
         <AnnouncementLists
@@ -57,11 +64,6 @@ class Announcement extends Component {
           deleteAnnouncement={this.deleteAnnouncement}
         />
 
-        <Route path="/Announcement/new"
-          render={props => (
-            <AnnouncementForm addAnnouncement={this.addAnnouncement} {...props} />
-          )}
-        />
 
       </div>
     )

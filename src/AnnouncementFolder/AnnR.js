@@ -1,18 +1,18 @@
 import React, { Component } from 'react'
-
+require("../css/announce.css")
 
 class AnnR extends Component {
   render() {
     return (
 
-      <span>
-        <h3>
-          {this.props.txt}
-        </h3>
+      <div className="ann">
         <p>
           {this.props.t}
         </p>
-      </span>
+        <h3>
+          {this.props.txt}
+        </h3>
+      </div>
 
     )
   }

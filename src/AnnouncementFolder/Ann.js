@@ -10,19 +10,19 @@ class Ann extends Component {
   render() {
     return (
 
-      <span>
-        <h3>
-          {this.props.txt}
-        </h3>
+      <div className="ann">
+
         <p>
           {this.props.t}
         </p>
-
+        <h3>
+              {this.props.txt}
+        </h3>
         <button type='button' onClick={this.handleDelete}>
           <i className="fas fa-minus" title='delete'></i>
         </button>
         <hr />
-      </span>
+      </div>
 
     )
   }

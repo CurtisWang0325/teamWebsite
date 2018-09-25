@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
 import AnnR from './AnnR'
-
+require("../css/announce.css")
 class AnnouncementListsR extends Component {
     render() {
 
         return (
-            <div>
+            <div className="annList">
                 {
                     this.props.ann
                         .map(a => (
