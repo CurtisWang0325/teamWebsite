@@ -55,40 +55,40 @@ class Event extends Component {
   render() {
     return (
 
-      <span>
-        <h3>
-          {this.props.txt}
-        </h3>
-        <h4>
-          Time:{this.props.eventTime}
-        </h4>
-        <h4>Status:{this.props.status}</h4>
-        <h4>Level:{this.props.level}</h4>
+        <div className="events">
+            <h2 className="eventName">
+                {/* Title/Description*/}
+                {this.props.txt}
+            </h2>
+            <div className="removeEvent" onClick={this.handleDelete}>
+                <i className="fas fa-trash fa-2x" title='delete'></i>
+            </div>
+            <h4>
+                Time:{this.props.eventTime}
+            </h4>
+            <h4>Status:{this.props.status}</h4>
+            <div className="editLevel">
+                <h4>Level:{this.props.level}</h4>
 
-        {/* StatusEditor */}
+                {/* StatusEditor */}
 
-        <select
-          name="status"
-          value={this.state.status}
-          onChange={this.handleChangeStatus}
-        >
-          <option value="opened">OPENED</option>
-          <option value="closed">CLOSED</option>
-          <option value="cancelled">CANCELLED</option>
-          <option value="confirmed">CONFIRMED</option>
-        </select>
-
-        <PlayerList
-          user={this.props.user}
-          handleAddPlayer={this.handleAddPlayer}
-          players={this.state.players}
-        />
-
-        <button type='button' onClick={this.handleDelete}>
-          <i className="fas fa-minus" title='delete'></i>
-        </button>
-        <hr />
-      </span>
+                <select
+                    name="status"
+                    value={this.state.status}
+                    onChange={this.handleChangeStatus}
+                >
+                    <option value="opened">OPENED</option>
+                    <option value="closed">CLOSED</option>
+                    <option value="cancelled">CANCELLED</option>
+                    <option value="confirmed">CONFIRMED</option>
+                </select>
+            </div>
+            <PlayerList
+                user={this.props.user}
+                handleAddPlayer={this.handleAddPlayer}
+                players={this.state.players}
+            />
+        </div>
 
     )
   }

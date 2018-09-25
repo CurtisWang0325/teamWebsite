@@ -1,0 +1,86 @@
+body{
+    overflow: auto;
+}
+
+.eventList > h2{
+    margin: 15px 0 ;
+}
+
+.Schedule{
+    color: black;
+    width: 50%;
+    margin: 50px auto;
+}
+
+.events{
+    height: 450px;
+    margin-top: 20px;
+    width: 80%;
+    border-radius: 10px;
+    background-color: #9bc0dd;
+    padding: 10px 20px;
+    -webkit-box-shadow: -1px 3px 13px 0px rgba(0,0,0,1);
+    -moz-box-shadow: -1px 3px 13px 0px rgba(0,0,0,1);
+    box-shadow: -1px 3px 13px 0px rgba(0,0,0,1);
+}
+
+.playerLists ul{
+    background-color: #9bc0dd;
+}
+
+.events > h2{
+    font-size: 40px;
+    line-height: 60px;
+    font-family: "Microsoft YaHei";
+}
+
+.events > h4{
+    font-size: 20px;
+    line-height: 30px;
+    font-family: "Microsoft YaHei";
+}
+
+.editLevel > h4{
+    font-size: 20px;
+    line-height: 30px;
+    font-family: "Microsoft YaHei";
+    display: inline-block;
+    vertical-align: bottom;
+}
+
+.eventName,.removeEvent{
+    padding-right: 15px;
+    display: inline-block;
+}
+
+.editLevel,.editLevel select{
+    vertical-align: bottom;
+}
+
+.playerLists  button {
+    width: 200px;
+    height: 25px;
+    border-width: 0px;
+    border-radius: 3px;
+    background: #1E90FF;
+    cursor: pointer;
+    outline: none;
+    font-family: Microsoft YaHei;;
+    color: white;
+    font-size: 15px;
+    margin-top: 5px;
+}
+
+.playerLists h4{
+    margin-top: 5px;
+    background-color: #9bc0dd;
+}
+
+.player{
+    margin: 5px 0;
+}
+
+.scheduleTitle{
+    display: inline-block;
+    padding-right: 15px;
+}

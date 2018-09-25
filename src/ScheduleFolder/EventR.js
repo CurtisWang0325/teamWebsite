@@ -50,25 +50,21 @@ class Event extends Component {
   render() {
     return (
 
-      <span>
-        <h3>
-          {this.props.txt}
-        </h3>
-        <h4>
-          Time:{this.props.eventTime}
-        </h4>
-        <h4>Status:{this.props.status}</h4>
-        <h4>Level:{this.props.level}</h4>
-
-        <PlayerList
-          user={this.props.user}
-          handleAddPlayer={this.handleAddPlayer}
-
-          players={this.state.players}
-        />
-
-        <hr />
-      </span>
+        <div className="events">
+          <h2 className="eventName">
+              {/* Title/Description*/}
+              {this.props.txt}
+          </h2>
+          <h4>
+            Time:{this.props.eventTime}
+          </h4>
+          <h4>Status:{this.props.status}</h4>
+          <PlayerList
+              user={this.props.user}
+              handleAddPlayer={this.handleAddPlayer}
+              players={this.state.players}
+          />
+        </div>
 
     )
   }

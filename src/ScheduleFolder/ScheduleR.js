@@ -29,15 +29,17 @@ class ScheduleR extends Component {
   render() {
     return (
 
-      <div className="Schedule">
-        <h1>EVENT SCHEDULE</h1>
+        <div className="Schedule">
+            <h1 className="scheduleTitle">Recent Event</h1>
 
-        <button type='button' onClick={this.showOrHideIns} title='show/hide the instruction'>
-          Show/Hide
-        </button>
-        {
-          this.state.showIns ?
-            <span>
+            <div id="instruction">
+                <div id="instruction_btn" onClick={this.showOrHideIns}>
+                    <i className={"fa fa-question-circle fa-2x"}>
+                    </i>
+                </div>
+                {
+                    this.state.showIns ?
+                        <span>
               <h2>
                 Sign up the event 2 days before the event time!
                 <br />
@@ -49,9 +51,10 @@ class ScheduleR extends Component {
               </h2>
               <hr />
             </span>
-            :
-            null
-        }
+                        :
+                        null
+                }
+            </div>
 
         <EventListR
           user={this.props.user}

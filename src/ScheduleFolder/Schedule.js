@@ -3,7 +3,7 @@ import EventList from './EventList'
 import EventForm from './EventForm'
 import base from '../base'
 import { NavLink, Route } from 'react-router-dom'
-
+require('../css/Schedule.css')
 
 class Schedule extends Component {
   constructor() {
@@ -41,16 +41,25 @@ class Schedule extends Component {
 
   render() {
     return (
-
       <div className="Schedule">
-        <h1>EVENT SCHEDULE</h1>
-
-        <button type='button' onClick={this.showOrHideIns} title='show/hide the instruction'>
-          Show/Hide
-        </button>
-        {
-          this.state.showIns ?
-            <span>
+         <h1 className="scheduleTitle">Recent Event</h1>
+         <Route exact path="/Schedule"
+                 render={prop => (
+                     <NavLink to="Schedule/new">
+                         <button type='button' title='add an event'>
+                             <i className="fas fa-plus fa-2x"></i>
+                         </button>
+                     </NavLink>
+                 )}
+         />
+         <div id="instruction">
+              <div id="instruction_btn" onClick={this.showOrHideIns}>
+                  <i className={"fa fa-question-circle fa-2x"}>
+                  </i>
+              </div>
+              {
+                  this.state.showIns ?
+                      <span>
               <h2>
                 Sign up the event 2 days before the event time!
                 <br />
@@ -62,19 +71,10 @@ class Schedule extends Component {
               </h2>
               <hr />
             </span>
-            :
-            null
-        }
-
-        <Route exact path="/Schedule"
-          render={prop => (
-            <NavLink to="Schedule/new">
-              <button type='button' title='add an event'>
-                <i className="fas fa-plus"></i>
-              </button>
-            </NavLink>
-          )}
-        />
+                      :
+                      null
+              }
+        </div>
 
         <EventList
           user={this.props.user}

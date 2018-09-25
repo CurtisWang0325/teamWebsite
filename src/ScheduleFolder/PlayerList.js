@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Player from './Player'
-
+require('../css/Schedule.css')
 class PlayerList extends Component {
 
     handleClick = (ev) => {
@@ -10,7 +10,7 @@ class PlayerList extends Component {
     render() {
 
         return (
-            <div>
+            <div className="playerLists">
                 <ul>
                     <li>
                         <h4>TOP:</h4>

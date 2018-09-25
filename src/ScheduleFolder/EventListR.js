@@ -12,7 +12,7 @@ class EventListR extends Component {
         return (
         
 
-            <div>
+            <div className="eventList">
                 <h2>Available</h2>
                 {
                     this.props.events

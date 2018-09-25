@@ -4,6 +4,7 @@ import base from '../base'
 import Sidebar from './Sidebar'
 import Chat from './Chat'
 
+
 class Main extends Component {
   constructor() {
     super()
@@ -111,7 +112,7 @@ class Main extends Component {
 const styles = {
   display: 'flex',
   alignItems: 'stretch',
-  height: '100vh',
+  height: '82.2vh',
 }
 
 export default Main
