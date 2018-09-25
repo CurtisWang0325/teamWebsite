@@ -10,7 +10,6 @@ class MemberR extends Component {
                 </h1>
                 <p>IGN: {user.IGN}</p>
                 <p>Position: {user.position}</p>
-                <p>Year: {user.year}</p>
                 <p>Email:{user.email}</p>
                 <p>{user.aboutMe}</p>
                 <hr />
