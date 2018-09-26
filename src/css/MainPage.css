@@ -65,8 +65,7 @@
 }
 
 .MainPage{
-    height: 82%;
-    //background: black;
+    height: 81%;
 }
 
 #background{
@@ -100,7 +99,7 @@
 }
 
 .MainPage {
-    width: 1920px;
+    width: 100%;
     margin: 0 auto;
 }
 

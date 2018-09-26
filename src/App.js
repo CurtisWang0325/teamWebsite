@@ -95,7 +95,6 @@ class App extends Component {
         />
         <hr />
         <Heading />
-        <hr id="header_baseline" />
         <Switch>
           <Route path="/myAccountPage"
             render={prop => (

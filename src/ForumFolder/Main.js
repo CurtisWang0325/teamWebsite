@@ -112,7 +112,7 @@ class Main extends Component {
 const styles = {
   display: 'flex',
   alignItems: 'stretch',
-  height: '82.2vh',
+  height: '81vh',
 }
 
 export default Main

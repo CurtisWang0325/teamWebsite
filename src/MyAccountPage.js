@@ -32,42 +32,44 @@ class MyAccountPage extends Component {
 
     render() {
         return (
-            <span>
+            <span id="account_page">
                 <Route exact path="/MyAccountPage"
                     render={prop => (
-                        <div id="container">
-                            <div className="block">
-                                <h1>Level: </h1>
-                                <p>{`${this.props.user.level}`}</p>
-                            </div>
-                            <div className="block">
-                                <h1>Name: </h1>
-                                <p>{`${this.props.user.name}`}</p>
-                            </div>
-                            <div className="block">
-                                <h1>IGN: </h1>
-                                <p>{`${this.props.user.IGN}`}</p>
-                            </div>
-                            <div className="block">
-                                <h1>Email: </h1>
-                                <p>{`${this.props.user.email}`}</p>
-                            </div>
-                            <div className="block">
-                                <h1>Position: </h1>
-                                <p>{`${this.props.user.position}`}</p>
-                            </div>
-                            <div className="block">
-                                <h1>Year: </h1>
-                                <p>{`${this.props.user.year}`}</p>
-                            </div>
-                            <div className="block">
-                                <h1>About Me: </h1>
-                                <p>{`${this.props.user.aboutMe}`}</p>
-                            </div>
-                            <div className="block">
-                                <NavLink to="/MyAccountPage/editMode">
-                                    <button>Edit</button>
-                                </NavLink>
+                        <div id="account_page_bgi">
+                            <div id="container">
+                                <div className="block">
+                                    <h1>Level: </h1>
+                                    <p>{`${this.props.user.level}`}</p>
+                                </div>
+                                <div className="block">
+                                    <h1>Name: </h1>
+                                    <p>{`${this.props.user.name}`}</p>
+                                </div>
+                                <div className="block">
+                                    <h1>IGN: </h1>
+                                    <p>{`${this.props.user.IGN}`}</p>
+                                </div>
+                                <div className="block">
+                                    <h1>Email: </h1>
+                                    <p>{`${this.props.user.email}`}</p>
+                                </div>
+                                <div className="block">
+                                    <h1>Position: </h1>
+                                    <p>{`${this.props.user.position}`}</p>
+                                </div>
+                                <div className="block">
+                                    <h1>Year: </h1>
+                                    <p>{`${this.props.user.year}`}</p>
+                                </div>
+                                <div className="block">
+                                    <h1>About Me: </h1>
+                                    <p>{`${this.props.user.aboutMe}`}</p>
+                                </div>
+                                <div className="block">
+                                    <NavLink to="/MyAccountPage/editMode">
+                                        <button>Edit</button>
+                                    </NavLink>
+                                </div>
                             </div>
                         </div>
                     )}
@@ -75,93 +77,95 @@ class MyAccountPage extends Component {
                 <Route path="/MyAccountPage/editMode"
                     render={prop => (
                         <form onSubmit={(ev) => ev.preventDefault()}>
-                            <div id="container">
-                                <div className="block">
-                                    <h1>Level: </h1>
-                                    <select
-                                        name="tempLevel"
-                                        value={this.state.tempLevel}
-                                        onChange={this.handleChange}
-                                    >
-                                        <option value="player">PLAYER</option>
-                                        <option value="member">MEMBER</option>
-                                        <option value="admin">ADMIN</option>
-                                    </select>
-                                </div>
-                                <div className="block">
-                                    <h1>Name: </h1>
-                                    <input
-                                        type="text"
-                                        className="input"
-                                        name="tempName"
-                                        placeholder={`${this.props.user.name}`}
-                                        value={this.state.tempName}
-                                        onChange={this.handleChange}
-                                    />
-                                </div>
-                                <div className="block">
-                                    <h1>IGN: </h1>
-                                    <input
-                                        className="input"
-                                        type="text"
-                                        name="tempIGN"
-                                        placeholder={`${this.props.user.IGN}`}
-                                        value={this.state.tempIGN}
-                                        onChange={this.handleChange}
-                                    />
-                                </div>
-                                <div className="block">
-                                    <h1>Email: </h1>
-                                    <input
-                                        className="input"
-                                        type="email"
-                                        name="tempEmail"
-                                        placeholder={`${this.props.user.email}`}
-                                        value={this.state.tempEmail}
-                                        onChange={this.handleChange}
-                                    />
-                                </div>
-                                <div className="block">
-                                    <h1>Position: </h1>
-                                    <input
-                                        type="text"
-                                        className="input"
-                                        name="tempPosition"
-                                        placeholder={`${this.props.user.position}`}
-                                        value={this.state.tempPosition}
-                                        onChange={this.handleChange}
-                                    />
-                                </div>
-                                <div className="block">
-                                    <h1>Year: </h1>
-                                    <input
-                                        type="number"
-                                        className="input"
-                                        min="1"
-                                        max="6"
-                                        name="tempYear"
-                                        placeholder={`${this.props.user.year}`}
-                                        value={this.state.tempYear}
-                                        onChange={this.handleChange}
-                                    />
-                                </div>
-                                <div className="textarea_block">
-                                    <h1>About Me: </h1>
-                                    <hr />
-                                    <textarea
-                                        name="tempAboutMe"
-                                        rows="5"
-                                        cols="50"
-                                        placeholder={`${this.props.user.aboutMe}`}
-                                        value={this.state.tempAboutMe}
-                                        onChange={this.handleChange}
-                                    />
-                                </div>
-                                <div className="block">
-                                    <NavLink to="/MyAccountPage">
-                                        <button type="button" onClick={this.handleSubmit}>Save Change</button>
-                                    </NavLink>
-                                </div>
+                            <div id="account_page_bgi">
+                                <div id="container">
+                                    <div className="block">
+                                        <h1>Level: </h1>
+                                        <select
+                                            name="tempLevel"
+                                            value={this.state.tempLevel}
+                                            onChange={this.handleChange}
+                                        >
+                                            <option value="player">PLAYER</option>
+                                            <option value="member">MEMBER</option>
+                                            <option value="admin">ADMIN</option>
+                                        </select>
+                                    </div>
+                                    <div className="block">
+                                        <h1>Name: </h1>
+                                        <input
+                                            type="text"
+                                            className="input"
+                                            name="tempName"
+                                            placeholder={`${this.props.user.name}`}
+                                            value={this.state.tempName}
+                                            onChange={this.handleChange}
+                                        />
+                                    </div>
+                                    <div className="block">
+                                        <h1>IGN: </h1>
+                                        <input
+                                            className="input"
+                                            type="text"
+                                            name="tempIGN"
+                                            placeholder={`${this.props.user.IGN}`}
+                                            value={this.state.tempIGN}
+                                            onChange={this.handleChange}
+                                        />
+                                    </div>
+                                    <div className="block">
+                                        <h1>Email: </h1>
+                                        <input
+                                            className="input"
+                                            type="email"
+                                            name="tempEmail"
+                                            placeholder={`${this.props.user.email}`}
+                                            value={this.state.tempEmail}
+                                            onChange={this.handleChange}
+                                        />
+                                    </div>
+                                    <div className="block">
+                                        <h1>Position: </h1>
+                                        <input
+                                            type="text"
+                                            className="input"
+                                            name="tempPosition"
+                                            placeholder={`${this.props.user.position}`}
+                                            value={this.state.tempPosition}
+                                            onChange={this.handleChange}
+                                        />
+                                    </div>
+                                    <div className="block">
+                                        <h1>Year: </h1>
+                                        <input
+                                            type="number"
+                                            className="input"
+                                            min="1"
+                                            max="6"
+                                            name="tempYear"
+                                            placeholder={`${this.props.user.year}`}
+                                            value={this.state.tempYear}
+                                            onChange={this.handleChange}
+                                        />
+                                    </div>
+                                    <div className="textarea_block">
+                                        <h1>About Me: </h1>
+                                        <hr />
+                                        <textarea
+                                            name="tempAboutMe"
+                                            rows="5"
+                                            cols="50"
+                                            placeholder={`${this.props.user.aboutMe}`}
+                                            value={this.state.tempAboutMe}
+                                            onChange={this.handleChange}
+                                        />
+                                    </div>
+                                    <div className="block">
+                                        <NavLink to="/MyAccountPage">
+                                            <button type="button" onClick={this.handleSubmit}>Save Change</button>
+                                        </NavLink>
+                                    </div>
+                            </div>
                             </div>
                         </form>
                     )}
