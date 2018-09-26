@@ -74,17 +74,6 @@ class TeamPageR extends Component {
                         }
                         <br />
                     </div>
-                    <div className="team_block">
-                        <h3>Player:</h3>
-                        {
-                            this.getUserArray()
-                                .filter(member => member.level == 'player')
-                                .map(member => (
-                                    <MemberR member={member} handleChangeLevel={this.handleChangeLevel} />
-                                ))
-                        }
-                        <br />
-                    </div>
                 </div>
             </div>
         )

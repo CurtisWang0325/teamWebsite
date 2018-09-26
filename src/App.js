@@ -62,6 +62,7 @@ class App extends Component {
           IGN: 'Not set yet',
           position: 'Not set yet',
           year: '0',
+          rank: 'Not set yet',
           aboutMe: 'Not set yet',
           level: 'player',
           email: oauthUser.email

@@ -11,6 +11,7 @@ class MyAccountPage extends Component {
         tempAboutMe: "",
         tempLevel: "",
         tempEmail:"",
+        tempRank:"",
     }
 
 
@@ -24,6 +25,7 @@ class MyAccountPage extends Component {
         user.IGN = this.state.tempIGN || user.IGN
         user.position = this.state.tempPosition || user.position
         user.year = this.state.tempYear || user.year
+        user.rank = this.state.tempRank || user.rank
         user.aboutMe = this.state.tempAboutMe || user.aboutMe
         user.level = this.state.tempLevel || user.level
         user.email = this.state.tempEmail || user.email
@@ -60,6 +62,10 @@ class MyAccountPage extends Component {
                                 <div className="block">
                                     <h1>Year: </h1>
                                     <p>{`${this.props.user.year}`}</p>
+                                </div>
+                                <div className="block">
+                                    <h1>Rank: </h1>
+                                    <p>{`${this.props.user.rank}`}</p>
                                 </div>
                                 <div className="block">
                                     <h1>About Me: </h1>
@@ -145,6 +151,17 @@ class MyAccountPage extends Component {
                                             name="tempYear"
                                             placeholder={`${this.props.user.year}`}
                                             value={this.state.tempYear}
+                                            onChange={this.handleChange}
+                                        />
+                                    </div>
+                                    <div className="block">
+                                        <h1>Highset Rank: </h1>
+                                        <input
+                                            type="text"
+                                            className="input"
+                                            name="tempRank"
+                                            placeholder={`${this.props.user.rank}`}
+                                            value={this.state.tempRank}
                                             onChange={this.handleChange}
                                         />
                                     </div>
