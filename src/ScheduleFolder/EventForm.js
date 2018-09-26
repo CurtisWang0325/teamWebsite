@@ -51,7 +51,8 @@ class EventForm extends Component {
           placeholder="Enter Event..."
           value={this.state.body}
           onChange={this.handleChange}
-          autoFocus
+          autoFocus='true'
+          maxLength='30'
         /><hr/>
         <input
           className="input"
@@ -67,7 +68,7 @@ class EventForm extends Component {
           onChange={this.handleChange}
         ><hr/>
           <option value="opened">OPENED</option>
-          <option value="closed">CLOSED</option>
+          <option value="over">OVER</option>
           <option value="cancelled">CANCELLED</option>
           <option value="confirmed">CONFIRMED</option>
         </select><hr/>

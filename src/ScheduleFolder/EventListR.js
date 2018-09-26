@@ -48,7 +48,7 @@ class EventListR extends Component {
                 <h2>Unavailable</h2>
                 {
                     this.props.events
-                        .filter(event=>event.status==='closed'||event.status==='cancelled')
+                        .filter(event=>event.status==='over'||event.status==='cancelled')
                         .map(a => (
                             <EventR
                                 user={this.props.user}

@@ -34,10 +34,11 @@ class AnnouncementForm extends Component {
         id="newAnn"
       >
 
-        <input
-          type="text"
+        <textarea
           name="body"
           placeholder="Type a new annoucement..."
+          rows='3'
+          cols='50'
           value={this.state.body}
           onChange={this.handleChange}
           autoFocus

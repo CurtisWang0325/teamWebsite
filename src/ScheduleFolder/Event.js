@@ -78,7 +78,7 @@ class Event extends Component {
                     onChange={this.handleChangeStatus}
                 >
                     <option value="opened">OPENED</option>
-                    <option value="closed">CLOSED</option>
+                    <option value="over">OVER</option>
                     <option value="cancelled">CANCELLED</option>
                     <option value="confirmed">CONFIRMED</option>
                 </select>
