@@ -22,6 +22,11 @@ class App extends Component {
   state = {
     user: {},
     rebaseBinding: null,
+    showIns: false,
+  }
+
+  showOrHideIns = () => {
+    this.setState({ showIns: !this.state.showIns })
   }
 
   componentDidMount() {
@@ -86,7 +91,28 @@ class App extends Component {
 
   render() {
     return (
+
       <div className="App">
+        <div onClick={this.showOrHideIns}>
+          <i className={"fa fa-question-circle fa-2x"}>
+          </i>
+        </div>
+        {
+          this.state.showIns ?
+            <p>
+              * Hi, I'm Curtis, a Rose-Hulman LOL major student
+                <br/>
+              * My email is wangc6@rose-hulman.edu
+              <br/>
+              * You can also text me 812-223-2488 
+                <br />
+              * Feel free to contact me and talk about anything
+                <br />
+              * Thank you for visiting the website and have fun
+            </p>
+            :
+            null
+        }
         <Account
           user={this.state.user}
           signOut={this.signOut}

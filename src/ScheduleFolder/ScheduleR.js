@@ -29,32 +29,31 @@ class ScheduleR extends Component {
   render() {
     return (
 
-        <div className="Schedule">
-            <h1 className="scheduleTitle">Recent Event</h1>
+      <div className="Schedule">
+        <h1 className="scheduleTitle">Recent Event</h1>
 
-            <div id="instruction">
-                <div id="instruction_btn" onClick={this.showOrHideIns}>
-                    <i className={"fa fa-question-circle fa-2x"}>
-                    </i>
-                </div>
-                {
-                    this.state.showIns ?
-                        <span>
-              <h2>
-                Sign up the event 2 days before the event time!
-                <br />
-                You can only sign up for one position!
-                <br />
-                Please be on time if the event is confirmed!
-                <br />
-                The event might be cancelled, check out accordingly!
-              </h2>
-              <hr />
-            </span>
-                        :
-                        null
-                }
-            </div>
+        <div id="instruction">
+          <div id="instruction_btn" onClick={this.showOrHideIns}>
+            <i className={"fa fa-question-circle fa-2x"}>
+            </i>
+          </div>
+          {
+            this.state.showIns ?
+              <span>
+                <p>
+                  * Sign up the event 2 days before the event time
+                  <br />
+                  * Add "Curtisy" and be prepared before the scheduled time
+                  <br />
+                  * Attend confirmed events and ignore cancelled ones
+                  <br />
+                  * Contact the manager ASAP if you can't attend the signed-up event
+                </p>
+              </span>
+              :
+              null
+          }
+        </div>
 
         <EventListR
           user={this.props.user}

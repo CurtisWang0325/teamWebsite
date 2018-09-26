@@ -40,14 +40,13 @@ class TeamPageR extends Component {
                     </div>
                     {
                         this.state.showIns ?
-                            <h4>
-                                <h4>
-                                    This page shows the information about LOL team mebers in Rose-Hulman
-                                    <br/>
-                                    If you want to be part of the team, contact Manager wangc6@rose-hulman.edu
-                                </h4>
-                                <hr />
-                            </h4>
+                            <p>
+                                * This page shows the information about LOL team mebers in Rose-Hulman
+                                <br />
+                                * If you want to be part of the team, contact Manager wangc6@rose-hulman.edu
+                                <br />
+                                * Make sure your information is correct, especially if you want to join the team
+                            </p>
                             :
                             null
                     }
