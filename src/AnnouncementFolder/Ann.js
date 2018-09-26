@@ -4,7 +4,7 @@ import Moment from 'moment'
 class Ann extends Component {
   handleDelete = (ev) => {
     ev.preventDefault()
-    this.props.deleteAnnouncement(this.props.t)
+    this.props.deleteAnnouncement(this.props.createTime)
   }
 
   render() {
