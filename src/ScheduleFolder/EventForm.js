@@ -24,7 +24,7 @@ class EventForm extends Component {
         eventTime: '',
         players: {},
         key: '',
-        status: '',
+        status: 'opened',
         level: '',
       }
     )
@@ -62,7 +62,7 @@ class EventForm extends Component {
           value={this.state.eventTime}
           onChange={this.handleChange}
         /><hr/>
-        <select
+        {/* <select
           name="status"
           value={this.state.status}
           onChange={this.handleChange}
@@ -71,7 +71,7 @@ class EventForm extends Component {
           <option value="over">OVER</option>
           <option value="cancelled">CANCELLED</option>
           <option value="confirmed">CONFIRMED</option>
-        </select><hr/>
+        </select><hr/> */}
         <select
           name="level"
           value={this.state.level}
@@ -79,7 +79,6 @@ class EventForm extends Component {
         >
           <option value="player">PLAYER</option>
           <option value="member">MEMBER</option>
-          <option value="admin">ADMIN</option>
         </select>
         <hr/>
         <button type="submit"
