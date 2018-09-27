@@ -44,31 +44,32 @@ class Announcement extends Component {
 
   render() {
     return (
+        <div id="ann_bai">
+            <div className="Announcements">
+                <h1>ANNOUCNEMENTS</h1>
+                <Route exact path="/Announcement"
+                       render={prop => (
+                           <NavLink to="Announcement/new">
+                               <button type='button' title='show/hide the form'>
+                                   <i className="fas fa-plus fa-2x"></i>
+                               </button>
+                           </NavLink>
+                       )}
+                />
+                <Route path="/Announcement/new"
+                       render={props => (
+                           <AnnouncementForm addAnnouncement={this.addAnnouncement} {...props} />
+                       )}
+                />
 
-      <div className="Announcements">
-        <h1>ANNOUCNEMENTS</h1>
-        <Route exact path="/Announcement"
-          render={prop => (
-            <NavLink to="Announcement/new">
-              <button type='button' title='show/hide the form'>
-                <i className="fas fa-plus fa-2x"></i>
-              </button>
-            </NavLink>
-          )}
-        />
-        <Route path="/Announcement/new"
-                 render={props => (
-                     <AnnouncementForm addAnnouncement={this.addAnnouncement} {...props} />
-                 )}
-        />
-
-        <AnnouncementLists
-          ann={this.state.announcements}
-          deleteAnnouncement={this.deleteAnnouncement}
-        />
+                <AnnouncementLists
+                    ann={this.state.announcements}
+                    deleteAnnouncement={this.deleteAnnouncement}
+                />
 
 
-      </div>
+            </div>
+        </div>
     )
   }
 }

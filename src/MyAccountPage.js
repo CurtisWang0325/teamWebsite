@@ -67,7 +67,7 @@ class MyAccountPage extends Component {
                                     <h1>Rank: </h1>
                                     <p>{`${this.props.user.rank}`}</p>
                                 </div>
-                                <div className="block">
+                                <div className="block about_block">
                                     <h1>About Me: </h1>
                                     <p>{`${this.props.user.aboutMe}`}</p>
                                 </div>

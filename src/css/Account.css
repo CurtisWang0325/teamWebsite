@@ -4,9 +4,9 @@
 }
 
 #title{
-    width: 350px;
-    margin-top: 30px;
-    margin-left: 100px;
+    width: 20%;
+    margin-top: 1%;
+    margin-left: 8%;
 }
 
 body{
@@ -64,5 +64,19 @@ body{
     background: #bb3828;
 }
 
+#contact_container{
+    overflow: hidden;
+    max-height: 80%;
+    display: inline-block;
+    color: #000;
+    width: 40%;
+}
 
+#contact_container div{
+    display: inline-block;
+    margin-left: 3%;
+}
 
+#contact_content{
+    height: 80%;
+}

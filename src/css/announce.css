@@ -1,7 +1,16 @@
 .Announcements{
     color: black;
     width: 50%;
-    margin: 50px auto;
+    margin: 0 auto;
+
+}
+
+#ann_bai{
+    background: url("../img/annun.jpg") repeat-y;
+    height: auto;
+    min-height: 81%;
+    width: 100%;
+    padding: 30px 20px;
 }
 
 .annList{
@@ -12,12 +21,7 @@
     height: auto;
     margin-top: 20px;
     width: 80%;
-    border-radius: 10px;
-    background-color: #9bc0dd;
     padding: 10px 20px;
-    -webkit-box-shadow: -1px 3px 13px 0px rgba(0,0,0,1);
-    -moz-box-shadow: -1px 3px 13px 0px rgba(0,0,0,1);
-    box-shadow: -1px 3px 13px 0px rgba(0,0,0,1);
 }
 
 #newAnn input {

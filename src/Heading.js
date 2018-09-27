@@ -10,52 +10,32 @@ class Heading extends Component {
             <div className="nav">
                 <ul>
                     <li>
-                        <NavLink to="" className="tooltip rotate">
+                        <NavLink to="">
                             Home
-                            <span className="tooltip-content">
-                                <i className="fa fa-home fa-2x">
-                                </i>
-                            </span>
                         </NavLink>
                     </li>
                     |
                     <li>
-                        <NavLink to="/Announcement" className="tooltip rotate">
+                        <NavLink to="/Announcement">
                             Announcement
-                            <span className="tooltip-content">
-                                <i className="fa fa-podcast fa-2x">
-                                </i>
-                            </span>
                         </NavLink>
                     </li>
                     |
                     <li>
-                        <NavLink to="/Forum/general" className="tooltip rotate">
+                        <NavLink to="/Forum/general">
                             Forum
-                            <span className="tooltip-content">
-                                <i className="fa fa-comments fa-2x">
-                                </i>
-                            </span>
                         </NavLink>
                     </li>
                     |
                     <li>
-                        <NavLink to="/Schedule" className="tooltip rotate">
+                        <NavLink to="/Schedule">
                             Schedule
-                            <span className="tooltip-content">
-                                <i className="fa fa-calendar fa-2x">
-                                </i>
-                            </span>
                         </NavLink>
                     </li>
                     |
                     <li>
-                        <NavLink to="/TeamPage" className="tooltip rotate">
+                        <NavLink to="/TeamPage">
                             Team
-                            <span className="tooltip-content">
-                                <i className="fa fa-users fa-2x">
-                                </i>
-                            </span>
                         </NavLink>
                     </li>
                 </ul>

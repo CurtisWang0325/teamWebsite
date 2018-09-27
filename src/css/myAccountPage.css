@@ -2,7 +2,8 @@
     width: 100%;
     height: 100%;
     padding-top: 60px;
-    background: url("../img/myaccount.jpg");
+    background: url("../img/myaccount.jpg") center no-repeat;
+    background-size: 100% 100%;
 }
 
 #account_page form{
@@ -58,7 +59,7 @@ select{
     padding: 20px 0 50px 40px;
     width:20%;
     margin:0 auto;
-    height: 650px;
+    height: 80%;
     background-color: #010a13;
     border-radius: 15px;
     -webkit-box-shadow: 10px 10px 77px 0px rgba(0,0,0,1);
@@ -76,9 +77,9 @@ hr{
 
 .block{
     vertical-align: bottom;
-    height: 50px;
+    height: 30px;
     margin-top: 10px;
-    line-height: 50px;
+    line-height: 30px;
 }
 
 .textarea_block{
@@ -97,8 +98,8 @@ textarea{
 }
 
 .block button {
-    width: 270px;
-    height: 40px;
+    width: 150px;
+    height: 30px;
     border-width: 0px;
     border-radius: 3px;
     background: #1E90FF;
@@ -111,4 +112,19 @@ textarea{
 
 .block button:hover {
     background: #5599FF;
+}
+
+.about_block{
+    max-height: 30%;
+    height: auto;
+    overflow: hidden;
+}
+
+.about_block p{
+    display: block;
+    width: 80%;
+    word-wrap: break-word;
+    overflow: hidden;
+    word-break: break-all;
+    line-height: 14px !important;
 }

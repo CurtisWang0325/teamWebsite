@@ -21,14 +21,15 @@ class AnnouncementR extends Component {
 
   render() {
     return (
+        <div id="ann_bai">
+          <div className="Announcements">
+            <h1>ANNOUCNEMENTS</h1>
+            <AnnouncementListsR
+                ann={this.state.announcements}
+            />
 
-      <div className="Announcements">
-        <h1>ANNOUCNEMENTS</h1>
-        <AnnouncementListsR
-          ann={this.state.announcements}
-        />
-
-      </div>
+          </div>
+        </div>
     )
   }
 }
