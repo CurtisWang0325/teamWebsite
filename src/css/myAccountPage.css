@@ -121,10 +121,12 @@ textarea{
 }
 
 .about_block p{
-    display: block;
+    height: 10vh;
+    overflow: auto;
+    display: block !important;
     width: 80%;
     word-wrap: break-word;
-    overflow: hidden;
+    padding-right: 5px;
     word-break: break-all;
     line-height: 14px !important;
 }

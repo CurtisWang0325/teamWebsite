@@ -1,20 +1,23 @@
 .Announcements{
     color: black;
     width: 50%;
+    height: 100%;
     margin: 0 auto;
 
 }
 
 #ann_bai{
-    background: url("../img/annun.jpg") repeat-y;
+    background: url("../img/annun.jpg") no-repeat ;
     background-size: 100% auto;
-    height: auto;
-    min-height: 81%;
+    height: 81%;
     width: 100%;
     padding: 30px 20px;
+    overflow: hidden;
 }
 
 .annList{
+    height: 80%;
+    overflow: auto;
     margin-top: 20px;
 }
 
