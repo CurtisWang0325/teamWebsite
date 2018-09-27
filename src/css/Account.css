@@ -3,80 +3,74 @@
     margin: 0;
 }
 
-#title{
-    width: 20%;
-    margin-top: 1%;
-    margin-left: 8%;
-}
 
-body{
-    background: #999;
+body,html{
+    background: #121212;
+    height: 100%;
 }
 
 #top_bar{
-    background: #FFFFFF;
-    height: 13%;
+    height: 6%;
     width: 100%;
 }
 
-#icon{
-    height: 30px;
-    width: 30px;
-    display: inline-block;
-}
-
-.clear{clear:both;}/* clear float */
-
-.google {
-    border-radius: 5px;
-    background: #cf4332;
-    float: right;
-    margin-top: 50px;
-    margin-right: 30px;
-    height: 52px;
-    width: 300px;
-    transition: all 0.5s ease-out;
-    -webkit-transition: all 0.3s ease-out;
-    -moz-transition: all 0.3s ease-out;
-    -ms-transition: all 0.3s ease-out;
-    -o-transition: all 0.3s ease-out;
-}
-
-
-.google lable{
-    border-left: 1px solid rgba(155, 38, 23, 0.46);
-    color: #fff;
-    padding: 14px 10px;
-    float: left;
-    font-size: 17px;
-    width: 80%;
-}
-.google a span{
-    background: url("../img/google_icon.png") no-repeat;
-    background-size: 45px 45px;
-    height: 45px;
-    width: 45px;
-    display: inline-block;
-    float: left;
-    margin: 3px 0px 0px 2px;
-}
-.google:hover{
-    background: #bb3828;
-}
-
-#contact_container{
-    overflow: hidden;
-    max-height: 80%;
-    display: inline-block;
-    color: #000;
+.nav{
+    height: 100%;
     width: 40%;
-}
-
-#contact_container div{
+    margin-left: 30%;
     display: inline-block;
-    margin-left: 3%;
 }
 
-#contact_content{
-    height: 80%;
+.nav ul, .nav li{
+    list-style: none;
+    display: inline-block;
+}
+
+.nav ul{
+    width: 100%;
+    height: 100%;
+}
+
+.nav ul li{
+    width: 20%;
+    height: 100%;
+}
+
+.nav ul li a{
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    padding-top: 15%;
+    font-size: 1vw;
+    vertical-align: middle;
+    text-decoration: none;
+    color: #C9AA71;
+    transition: color 1s cubic-bezier(.06,.81,0,.98);
+}
+
+#login a{
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    padding-top: 12%;
+    font-size: 1vw;
+    vertical-align: middle;
+    text-decoration: none;
+    color: #C9AA71;
+    transition: color 1s cubic-bezier(.06,.81,0,.98);
+}
+
+.nav ul li a:hover,#login:hover > a{
+    color: #F1E6D0;
+}
+
+#login{
+    cursor: pointer;
+    height: 100%;
+    display: inline-block;
+    width: 10%;
+    margin-left: 15%;
+    color: #C9AA71;
 }

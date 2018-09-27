@@ -3,7 +3,6 @@ import React, { Component } from 'react';
 import './css/App.css';
 import MainPage from './MainPage'
 import { auth, googleProvider } from './base'
-import Heading from './Heading'
 import { Route, Switch } from 'react-router-dom'
 import MyAccountPage from './MyAccountPage'
 import Announcement from './AnnouncementFolder/Announcement'
@@ -97,8 +96,6 @@ class App extends Component {
           signIn={this.signIn}
           signedIn={this.signedIn}
         />
-        <hr />
-        <Heading />
         <Switch>
           <Route path="/myAccountPage"
             render={prop => (

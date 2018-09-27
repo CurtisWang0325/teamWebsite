@@ -5,12 +5,12 @@ require('./css/UserInfo.css')
 const SignOut = ({ signOut }) => {
   return (
     <NavLink to="">
-      <div id="sign_out"
+      <p id="sign_out"
         onClick={signOut}
       >
-        signOut  	&nbsp;
+          &nbsp; signOut  	&nbsp;
         <i className="fas fa-sign-out-alt"></i>
-      </div>
+      </p>
     </NavLink>
   )
 }

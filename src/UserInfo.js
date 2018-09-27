@@ -7,16 +7,10 @@ class UserInfo extends Component {
   render() {
     return (
       <div className="UserInfo">
-        <div className="user">
-          <span>
-            Hi! &nbsp;
-            {this.props.user.name || this.props.user.googleName}
-          </span>
-        </div>
-        <NavLink to="/myAccountPage">
-          <div id="to_account">My Account</div> &nbsp;|
-        </NavLink>
-        <SignOut signOut={this.props.signOut} />
+              <NavLink to="/myAccountPage">
+              <p>My Account &nbsp;|</p>
+              </NavLink>
+              <SignOut signOut={this.props.signOut} />
       </div>
     )
   }

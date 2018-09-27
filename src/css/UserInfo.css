@@ -1,27 +1,24 @@
-.UserInfo{
-    color: #000;
-    float: right;
-    margin-top: 50px;
-    margin-right: 30px;
+.UserInfo {
+    cursor: pointer;
+    height: 100%;
+    display: inline-block;
+    width: 15%;
+    margin-left: 15%;
+    color: #C9AA71;
 }
 
-.user span{
-    margin: 0 auto;
+.UserInfo a {
+    display: inline-block;
+    height: 100%;
     text-align: center;
+    padding-top: 8%;
+    font-size: 1vw;
+    vertical-align: middle;
+    text-decoration: none;
+    color: #C9AA71;
+    transition: color 1s cubic-bezier(.06,.81,0,.98);
 }
 
-#to_account{
-    color: #000;
-    display: inline-block;
-}
-
-#sign_out{
-    color: #000;
-    margin-right: 5px;
-    margin-left: 8px;
-    display: inline-block;
-}
-
-#to_account:hover,#sign_out:hover{
-    color: red;
+.UserInfo a:hover{
+    color: #F1E6D0;
 }
