@@ -13,7 +13,6 @@ class AnnR extends Component {
           {this.props.txt}
         </h3>
       </div>
-
     )
   }
 
