@@ -42,18 +42,19 @@
     font-size: 1vw;
 }
 
-#newAnn input {
-    width: 10vw;
+#newAnn textarea {
+    width: 80%;
+    resize: none;
+    height: 20%;
     padding-right: 15px;
-    height: 30px;
-    line-height: 30px;
-    font-size: 12px;
+    font-size: 1vw;
     border: 1px solid #c9cacb;
 }
 
 #newAnn button{
-    width: 50px;
-    height: 30px;
+    display: block;
+    width: 10%;
+    height: 20%;
     border-width: 0px;
     border-radius: 3px;
     background: #1E90FF;
