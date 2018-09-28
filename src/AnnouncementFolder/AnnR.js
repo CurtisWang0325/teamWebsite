@@ -6,12 +6,13 @@ class AnnR extends Component {
     return (
 
       <div className="ann">
-        <p>
-          {this.props.t}
-        </p>
+
         <h3>
           {this.props.txt}
         </h3>
+          <p>
+              {this.props.t}
+          </p>
       </div>
     )
   }
