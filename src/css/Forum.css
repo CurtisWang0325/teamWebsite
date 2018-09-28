@@ -1,5 +1,6 @@
 .Message:nth-of-type(even){
     color: #000;
+    background-color: #FFFFFF;
 }
 
 .Message:nth-of-type(odd){
@@ -7,6 +8,14 @@
     background-color: #E1E4DE;
 }
 
-.body{
+.body {
     margin-top: 1rem;
+}
+
+.MessageList{
+    background: url("../img/forum.jpg") no-repeat;
+}
+
+.MessageList *{
+    opacity:0.9;
 }

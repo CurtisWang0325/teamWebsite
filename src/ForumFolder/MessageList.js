@@ -47,11 +47,12 @@ const styles = {
 
   announcement: {
     padding: '2rem 1rem 1.5rem',
-    color: '#6B6B6B',
+    color: 'white',
   },
 
   h3: {
     fontSize: '1.5rem',
+    color:'white',
   },
 }
 

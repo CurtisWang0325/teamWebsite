@@ -52,7 +52,6 @@ const styles = StyleSheet.create({
     alignItems: 'stretch',
     border: '2px solid #999',
     borderRadius: '0.5rem',
-    margin: '0.25rem',
     padding: 0,
   },
 
