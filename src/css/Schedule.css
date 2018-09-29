@@ -157,3 +157,9 @@ body{
 .editLevel{
     height: 2vh;
 }
+
+.player{
+    display: inline-block;
+    margin-left: 2vw;
+    font-size: 0.7vw;
+}
