@@ -1,6 +1,9 @@
 import React, { Component } from 'react'
 import { NavLink } from 'react-router-dom'
-
+import p1 from './img/icon1.jpg'
+import p2 from './img/icon2.jpg'
+import p3 from './img/icon3.jpg'
+import p4 from './img/icon4.jpg'
 require('./css/MainPage.css')
 
 class MainPage extends Component {
@@ -15,44 +18,36 @@ class MainPage extends Component {
     render() {
         return (
             <div className="MainPage">
-                <NavLink to="/Forum/general" className="link" id="to_forum">
-                    <div className="unhover">
-                        <h3>Forum</h3>
-                        <p></p>
+                <div id="left">
+                    <p id="mainPageTitle">
+                        This is the title
+                    </p>
+                    <p id="mainPageContent">
+                        this is content this is content this is content this is content this is content this is content
+                    </p>
+                </div>
+                <div id="right">
+                    <div className="pics">
+                        <img src={p1}/>
+                        <NavLink to="">title navlink</NavLink>
+                        <p>content</p>
                     </div>
-                    <div className="hover">
-                        <h2>Chat and share anything in the forum!</h2>
+                    <div className="pics">
+                        <img src={p2}/>
+                        <NavLink to="">title navlink</NavLink>
+                        <p>content</p>
                     </div>
-                </NavLink>
-
-                {/* <Forum/> */}
-                <NavLink to="/Announcement" id="to_ann" className="link">
-                    <div className="unhover">
-                        <h3>Announcement</h3>
-                        <p></p>
+                    <div className="pics">
+                        <img src={p3}/>
+                        <NavLink to="">title navlink</NavLink>
+                        <p>content</p>
                     </div>
-                    <div className="hover">
-                        <h2>Check important information here!</h2>
+                    <div className="pics">
+                        <img src={p4}/>
+                        <NavLink to="">title navlink</NavLink>
+                        <p>content</p>
                     </div>
-                </NavLink>
-                {/* <Announcement/> */}
-                <NavLink to="/Schedule" className="link" id="to_schedule">
-                    <div className="unhover">
-                        <h3>Schedule</h3>
-                        {/* <p>schdule a match with other team</p> */}
-                    </div>
-                    <div className="hover">
-                        <h2>
-                            Sign up for matches!
-                            <br />
-                            Have fun and practice together
-                        </h2>
-                    </div>
-                </NavLink>
-                {/* <Schedule/> */}
-
-                <div id="background"></div>
-
+                </div>
             </div>
 
         )

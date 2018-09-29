@@ -1,116 +1,72 @@
-#to_forum:hover ~ #background{
-    transition: all 1s linear;
-    -moz-transition:all 1s linear; /* Firefox 4 */
-    -webkit-transition:all 1s linear; /* Safari 和 Chrome */
-    -o-transition:all 1s linear; /* Opera */
-    visibility: visible;
-    opacity: 1;
-    background: url(".././img/icon1.jpg");
-}
-
-#to_forum:after ~ #background{
-    visibility: hidden;
-    opacity: 0;
-}
-
-#to_forum{
-    background: url(".././img/small_icon1.png");
-}
-#to_forum:hover{
-    background:white;
-}
-
-#to_ann:hover ~ #background{
-    transition: all 1s linear;
-    -moz-transition:all 1s linear; /* Firefox 4 */
-    -webkit-transition:all 1s linear; /* Safari 和 Chrome */
-    -o-transition:all 1s linear; /* Opera */
-    visibility: visible;
-    opacity: 1;
-    background: url(".././img/icon2.jpg");
-}
-
-#to_ann:after ~ #background{
-    visibility: hidden;
-    opacity: 0;
-}
-
-#to_ann{
-    background: url(".././img/small_icon2.png");
-}
-#to_ann:hover{
-    background:white;
-}
-
-#to_schedule:hover ~ #background{
-    transition: all 1s linear;
-    -moz-transition:all 1s linear; /* Firefox 4 */
-    -webkit-transition:all 1s linear; /* Safari 和 Chrome */
-    -o-transition:all 1s linear; /* Opera */
-    visibility: visible;
-    opacity: 1;
-    background: url(".././img/icon3.jpg");
-}
-
-#to_schedule:after ~ #background{
-    visibility: hidden;
-    opacity: 0;
-}
-
-#to_schedule{
-    background: url(".././img/small_icon3.png");
-}
-#to_schedule:hover{
-    background:white;
-}
 
 .MainPage{
-    height: 81%;
+    background: url("../img/mainpage.jpg") no-repeat fixed;
+    background-size: cover;
+    height: 94%;
+    width: 100%;
+    overflow: hidden;
 }
 
-#background{
-    visibility: hidden;
-    opacity: 0;
-    background: black;
+#left{
+    box-sizing: border-box;
+    color: #C9AA71;
     height: 100%;
+    width: 60%;
+    display: inline-block;
+    vertical-align: top;
+    padding-left: 10%;
+    padding-top: 10%;
+}
+
+#right{
+    box-sizing: border-box;
+    height: 100%;
+    width: 40%;
+    padding: 5% 5%;
+    display: inline-block;
+}
+
+#mainPageTitle{
+    font-size: 3vw;
+}
+
+#mainPageContent{
+    font-size: 1.5vw;
+    width: 50%;
+}
+
+.pics{
+    background-color: antiquewhite;
+    box-sizing: border-box;
+    border: 1px blanchedalmond solid;
+    height: 46%;
+    width: 46%;
+    margin:1%;
+    display: inline-block;
+}
+
+.pics img{
+    box-sizing: border-box;
+    height: 50%;
     width: 100%;
 }
 
-.link{
-    border-radius: 5px;
-    position: absolute;
-    top: 230px;
-    z-index: 10000;
-    height: 400px;
-    width: 300px;
-    background: #FFFFFF;
-}
-
-#to_forum{
-    left: 480px;
-}
-
-#to_ann{
-    left: 810px;
-}
-
-#to_schedule{
-    left: 1140px;
-}
-
-.MainPage {
+.pics a{
+    text-decoration: underline;
+    color: #000;
+    font-size: 1.2vw;
+    padding-left: 5%;
+    padding-top: 2vh;
+    box-sizing: border-box;
+    height: 6%;
     width: 100%;
-    margin: 0 auto;
 }
 
-.unhover{
-    height: 300px;
-    width: 200px;
-    margin: 50px auto;
-    text-align: center;
-    color: #EDFFD5;
-}
-
-.hover{
-    display: none;
+.pics p{
+    color: #000;
+    font-size: 1vw;
+    padding-left: 5%;
+    box-sizing: border-box;
+    height: 44%;
+    width: 100%;
 }
