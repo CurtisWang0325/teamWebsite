@@ -2,117 +2,158 @@ body{
     overflow: auto;
 }
 
-.eventList > h2{
-    margin: 15px 0 ;
-}
-
 .Schedule{
-    color: black;
-    width: 50%;
-    margin: 50px auto;
-}
-
-.events{
-    height: 450px;
-    margin-top: 20px;
-    width: 80%;
-    border-radius: 10px;
-    background-color: #9bc0dd;
-    padding: 10px 20px;
-    -webkit-box-shadow: -1px 3px 13px 0px rgba(0,0,0,1);
-    -moz-box-shadow: -1px 3px 13px 0px rgba(0,0,0,1);
-    box-shadow: -1px 3px 13px 0px rgba(0,0,0,1);
-}
-
-.playerLists ul{
-    background-color: #9bc0dd;
-}
-
-.events > h2{
-    font-size: 40px;
-    line-height: 60px;
-    font-family: "Microsoft YaHei";
-}
-
-.events > h4{
-    font-size: 20px;
-    line-height: 30px;
-    font-family: "Microsoft YaHei";
-}
-
-.editLevel > h4{
-    font-size: 20px;
-    line-height: 30px;
-    font-family: "Microsoft YaHei";
-    display: inline-block;
-    vertical-align: bottom;
-}
-
-.eventName,.removeEvent{
-    padding-right: 15px;
-    display: inline-block;
-}
-
-.editLevel,.editLevel select{
-    vertical-align: bottom;
-}
-
-.playerLists  button,#newEvent button{
-    width: 200px;
-    height: 25px;
-    border-width: 0px;
-    border-radius: 3px;
-    background: #1E90FF;
-    cursor: pointer;
-    outline: none;
-    font-family: Microsoft YaHei;;
-    color: white;
-    font-size: 15px;
-    margin-top: 5px;
-}
-
-.playerLists h4{
-    margin-top: 5px;
-    background-color: #9bc0dd;
-}
-
-.player{
-    margin: 5px 0;
+    height: 94%;
+    width: 100%;
+    overflow: hidden;
 }
 
 .scheduleTitle{
     display: inline-block;
-    padding-right: 15px;
+    padding-left: 10%;
+    height: 6%;
+    width: 15%;
+    color: navajowhite;
+    font-size: 2vw;
 }
-
-.input {
-    width: 200px;
-    margin: 0 20px;
-    padding-left: 5px;
-    height: 30px;
-    line-height: 30px;
-    font-size: 12px;
-    border: 1px solid #c9cacb;
-}
-
-select{
-    margin: 0 20px;
-    background:#fafdfe;
-    height:28px;
-    width:180px;
-    line-height:28px;
-    border:1px solid #9bc0dd;
-    -moz-border-radius:2px;
-    -webkit-border-radius:2px;
-    border-radius:2px;
-}
-
-#newEvent{
-    margin-top: 20px;
-}
-
-#newEvent *:not(hr){
-    margin: 10px 0;
-    text-align: center;
+#toNew{
     display: inline-block;
+}
+
+.eventList{
+    width: 100%;
+    height: 94%;
+}
+
+.closedEvents{
+    display: inline-block;
+    height: 50%;
+    width: 50%;
+    color: navajowhite;
+    background: url("../img/closed.jpg");
+    background-size: cover;
+    overflow: hidden;
+}
+
+.confirmedEvents{
+    display: inline-block;
+    height: 50%;
+    width: 50%;
+    color: navajowhite;
+    background: url("../img/confirmed.jpg");
+    background-size: cover;
+    overflow: hidden;
+}
+
+.openEvents{
+    height: 50%;
+    width: 100%;
+    overflow: hidden;
+    color: navajowhite;
+    background: url("../img/open.jpg");
+    background-size: cover;
+}
+
+.eventBlock > h2{
+    height: 4%;
+    font-size: 1vw;
+    margin-left: 2vw;
+    display: block;
+}
+
+.eventsContainer{
+    height: 80%;
+    width: 80%;
+    margin: 4% auto;
+    box-sizing: border-box;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap
+}
+
+.openEvents > .eventsContainer{
+    margin: 2% auto !important;
+}
+
+.events{
+    height: 95%;
+    width: 45%;
+    margin-left: 5%;
+    overflow: hidden;
+    display: inline-block;
+    background-color: #121212;
+    box-sizing: border-box;
+    border-radius: 2%;
+    padding: 1% 2%;
+}
+
+.openEvents > .eventsContainer > .events{
+    width: 22.5% !important;
+    margin-left: 2.5% !important;
+    border: 1px solid greenyellow;
+}
+
+.closedEvents > .eventsContainer > .events{
+    border: 1px solid red;
+}
+
+.confirmedEvents > .eventsContainer > .events{
+    border: 1px solid deepskyblue;
+}
+
+.eventName{
+    box-sizing: border-box;
+    display: inline-block;
+    font-size: 1.5vw;
+    height: 10%;
+}
+
+.removeEvent{
+    vertical-align: bottom;
+    box-sizing: border-box;
+    display: inline-block;
+    height: 10%;
+    overflow: hidden;
+    width: 10%;
+    margin-left: 10%;
+}
+
+.events h4{
+    margin-top: 1vh;
+    font-size: 0.7vw;
+    height: 2vh;
+}
+
+.editLevel *{
+    display: inline-block;
+}
+
+.editLevel select{
+    height: 2vh;
+    width: 50%;
+    font-size: 0.5vw;
+}
+
+.playerLists ul, .playerLists li{
+    list-style: none;
+}
+
+.playerLists li{
+    margin-top: 0.5vh;
+    height: 3vh;
+}
+
+.playerLists h4, .playerLists button{
+    display: inline-block;
+}
+
+.playerLists button{
+    margin-left: 2vw;
+    width: 25%;
+    height: 2vh;
+    font-size: 1vh;
+}
+
+.editLevel{
+    height: 2vh;
 }

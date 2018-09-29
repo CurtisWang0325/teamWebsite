@@ -43,42 +43,22 @@ class Schedule extends Component {
     return (
       <div className="Schedule">
         <h1 className="scheduleTitle">Recent Event</h1>
-        <Route exact path="/Schedule"
-          render={prop => (
-            <NavLink to="Schedule/new">
+
+           <Route exact path="/Schedule"
+           render={prop => (
+            <NavLink to="Schedule/new" id="toNew">
               <button type='button' title='add an event'>
                 <i className="fas fa-plus fa-2x"></i>
               </button>
             </NavLink>
           )}
-        />
-        <div id="instruction">
-          <div id="instruction_btn" onClick={this.showOrHideIns}>
-            <i className={"fa fa-question-circle fa-2x"}>
-            </i>
-          </div>
-          {
-            this.state.showIns ?
-              <span>
-                <p>
-                  * Sign up the event 2 days before the event time
-                  <br />
-                  * Add "Curtisy" and be prepared before the scheduled time
-                  <br />
-                  * Attend confirmed events and ignore cancelled ones
-                  <br/>
-                  * Contact the manager ASAP if you can't attend the signed-up event
-                </p>
-              </span>
-              :
-              null
-          }
-        </div>
-        <Route path="/Schedule/new"
-          render={props => (
+           />
+           <Route path="/Schedule/new"
+           render={props => (
             <EventForm addEvent={this.addEvent} {...props} />
           )}
-        />
+           />
+
         <EventList
           user={this.props.user}
           events={this.state.events}
