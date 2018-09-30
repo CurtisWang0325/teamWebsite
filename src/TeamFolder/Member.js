@@ -1,12 +1,7 @@
 import React, { Component } from 'react'
 require("../css/teamPage.css")
 class Member extends Component {
-    // constructor() {
-    //     super()
-    //     this.state = {
-    //         level: this.props.member.level,
-    //     }
-    // }
+
     state = {
         level: this.props.member.level,
     }
@@ -16,7 +11,6 @@ class Member extends Component {
     }
 
     handleSubmit = (ev) => {
-        console.log('submit')
         this.props.handleChangeLevel(this.props.member.uid, this.state.level)
     }
     render() {

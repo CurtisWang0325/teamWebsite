@@ -9,7 +9,7 @@ class AnnouncementLists extends Component {
                 {
                     this.props.ann
                         .map(a => (
-                            <Ann t={a.t} txt={a.body} deleteAnnouncement={this.props.deleteAnnouncement} createTime={a.createTime} />
+                            <Ann key={a.key} t={a.t} txt={a.body} deleteAnnouncement={this.props.deleteAnnouncement} createTime={a.createTime} />
                         ))
                 }
 

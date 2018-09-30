@@ -4,7 +4,7 @@ import Event from './Event'
 class EventList extends Component {
 
     findEventIndex = (key) => {
-        const index = this.props.events.findIndex(evt => evt.key == key);
+        const index = this.props.events.findIndex(evt => evt.key === key);
         return index
     }
     render() {
@@ -26,6 +26,7 @@ class EventList extends Component {
                                         deleteEvent={this.props.deleteEvent}
                                         level={a.level}
                                         index={this.findEventIndex(a.key)}
+                                        key={a.key}
                                     />
                                 ))
                         }
@@ -46,6 +47,7 @@ class EventList extends Component {
                                         deleteEvent={this.props.deleteEvent}
                                         level={a.level}
                                         index={this.findEventIndex(a.key)}
+                                        key={a.key}
                                     />
                                 ))
                         }
@@ -66,6 +68,7 @@ class EventList extends Component {
                                         deleteEvent={this.props.deleteEvent}
                                         level={a.level}
                                         index={this.findEventIndex(a.key)}
+                                        key={a.key}
                                     />
                                 ))
                         }

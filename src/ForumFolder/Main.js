@@ -65,8 +65,6 @@ class Main extends Component {
   removeRoom = (room) => {
     const rooms = { ...this.state.rooms }
     rooms[room.name] = null
-    // delete rooms[room.name]
-
     this.setState(
       { rooms },
       this.loadValidRoom,
@@ -75,10 +73,7 @@ class Main extends Component {
 
   addRoom = (room) => {
     const rooms = { ...this.state.rooms }
-    const { user } = this.props
-
     room.displayName = room.name
-
     rooms[room.name] = room
     this.setState({ rooms })
   }

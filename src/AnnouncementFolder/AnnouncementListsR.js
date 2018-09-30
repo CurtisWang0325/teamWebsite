@@ -9,7 +9,7 @@ class AnnouncementListsR extends Component {
                 {
                     this.props.ann
                         .map(a => (
-                            <AnnR t={a.t} txt={a.body} />
+                            <AnnR t={a.t} txt={a.body} key={a.key}/>
                         ))
                 }
 

@@ -56,9 +56,9 @@ class TeamPageR extends Component {
                         <h3>Manager:</h3>
                         {
                             this.getUserArray()
-                                .filter(member => member.level == 'admin')
+                                .filter(member => member.level === 'admin')
                                 .map(member => (
-                                    <MemberR member={member} handleChangeLevel={this.handleChangeLevel} />
+                                    <MemberR key={member.key} member={member} handleChangeLevel={this.handleChangeLevel} />
                                 ))
                         }
                         <br />
@@ -67,9 +67,9 @@ class TeamPageR extends Component {
                         <h3>Member:</h3>
                         {
                             this.getUserArray()
-                                .filter(member => member.level == 'member')
+                                .filter(member => member.level === 'member')
                                 .map(member => (
-                                    <MemberR member={member} handleChangeLevel={this.handleChangeLevel} />
+                                    <MemberR key={member.key} member={member} handleChangeLevel={this.handleChangeLevel} />
                                 ))
                         }
                         <br />

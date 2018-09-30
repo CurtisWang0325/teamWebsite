@@ -36,7 +36,7 @@ class RoomList extends Component {
 
                   {/* only admin (lv3) can use the new room button */}
                   {
-                    user.level == 'admin'
+                    user.level === 'admin'
                     &&
                     <Link
                       className={css(styles.button)}

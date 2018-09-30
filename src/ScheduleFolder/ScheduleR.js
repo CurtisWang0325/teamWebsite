@@ -1,8 +1,6 @@
 import React, { Component } from 'react'
 import EventListR from './EventListR'
 import base from '../base'
-import { NavLink, Route } from 'react-router-dom'
-
 
 class ScheduleR extends Component {
   constructor() {

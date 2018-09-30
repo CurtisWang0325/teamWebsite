@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-//import logo from './logo.svg';
 import './css/App.css';
 import MainPage from './MainPage'
 import { auth, googleProvider } from './base'
@@ -47,7 +46,6 @@ class App extends Component {
   }
 
   handleAuth = (oauthUser) => {
-    console.log(oauthUser.uid)
     const rebaseBinding = base.syncState(`users/${oauthUser.uid}`, {
       context: this,
       state: 'user',
@@ -107,7 +105,7 @@ class App extends Component {
           />
           <Route path="/Announcement"
             render={prop => (
-              this.state.user.level == 'admin' ?
+              this.state.user.level === 'admin' ?
                 <Announcement />
                 :
                 <AnnouncementR />
@@ -123,7 +121,7 @@ class App extends Component {
           />
           <Route path="/Schedule"
             render={prop => (
-              this.state.user.level == 'admin' ?
+              this.state.user.level === 'admin' ?
                 <Schedule
                   user={this.state.user}
                 />
@@ -135,7 +133,7 @@ class App extends Component {
           />
           <Route path="/TeamPage"
             render={prop => (
-              this.state.user.level == 'admin' ?
+              this.state.user.level === 'admin' ?
                 <TeamPage
                 />
                 :

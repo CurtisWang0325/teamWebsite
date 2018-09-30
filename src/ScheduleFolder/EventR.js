@@ -11,15 +11,15 @@ class Event extends Component {
 
 
   handleAddPlayer = (pos, user) => {
-    if (this.state.status != 'opened') {
+    if (this.state.status !== 'opened') {
       window.alert("This event is unavailable now!")
       return
     }
-    if (this.props.level == 'player' && !(user.level == 'member' || user.level == 'admin' || user.level == 'player')) {
+    if (this.props.level === 'player' && !(user.level === 'member' || user.level === 'admin' || user.level === 'player')) {
       window.alert("You have to sign in to register for this event")
       return
     }
-    if (this.props.level == 'member' && !(user.level == 'member' || user.level == 'admin')) {
+    if (this.props.level === 'member' && !(user.level === 'member' || user.level === 'admin')) {
       window.alert("You have to be a team member for this event! ")
       return
     }
@@ -50,21 +50,20 @@ class Event extends Component {
   render() {
     return (
 
-        <div className="events">
-          <h2 className="eventName">
-              {/* Title/Description*/}
-              {this.props.txt}
-          </h2>
-          <h4>
-            Time:{this.props.eventTime}
-          </h4>
-          <h4>Status:{this.props.status}</h4>
-          <PlayerList
-              user={this.props.user}
-              handleAddPlayer={this.handleAddPlayer}
-              players={this.state.players}
-          />
-        </div>
+      <div className="events">
+        <h2 className="eventName">
+          {this.props.txt}
+        </h2>
+        <h4>
+          Time:{this.props.eventTime}
+        </h4>
+        <h4>Status:{this.props.status}</h4>
+        <PlayerList
+          user={this.props.user}
+          handleAddPlayer={this.handleAddPlayer}
+          players={this.state.players}
+        />
+      </div>
 
     )
   }

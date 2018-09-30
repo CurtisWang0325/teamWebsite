@@ -62,16 +62,6 @@ class EventForm extends Component {
           value={this.state.eventTime}
           onChange={this.handleChange}
         /><hr/>
-        {/* <select
-          name="status"
-          value={this.state.status}
-          onChange={this.handleChange}
-        ><hr/>
-          <option value="opened">OPENED</option>
-          <option value="over">OVER</option>
-          <option value="cancelled">CANCELLED</option>
-          <option value="confirmed">CONFIRMED</option>
-        </select><hr/> */}
         <select
           name="level"
           value={this.state.level}

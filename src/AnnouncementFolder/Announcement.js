@@ -29,6 +29,7 @@ class Announcement extends Component {
     announcements.unshift({
       t: moment().get('year') + " " + (moment().get('month') + 1) + "/" + moment().get('date'),
       body,
+      key:Date.now(),
       createTime: Date.now(),
     })
     this.setState({ announcements })
@@ -36,8 +37,6 @@ class Announcement extends Component {
 
   deleteAnnouncement = (createTime) => {
     const announcements = [...this.state.announcements]
-    console.log(createTime)
-    console.log(announcements.findIndex((a) => a.createTime === createTime))
     announcements.splice(announcements.findIndex((a) => a.createTime === createTime), 1)
     this.setState({ announcements })
   }

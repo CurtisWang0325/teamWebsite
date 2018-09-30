@@ -19,7 +19,7 @@ const ChatHeader = ({ user, room, removeRoom }) => {
         </p>
       </div>
       {
-        user.level == 'admin'
+        user.level === 'admin'
         &&
         <button
           style={styles.button}

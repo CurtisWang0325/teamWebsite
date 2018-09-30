@@ -35,7 +35,7 @@ class TeamPage extends Component {
     handleChangeLevel = (uid, level) => {
         var newUsers = this.state.users;
         for (var user in newUsers) {
-            if (newUsers[user].uid == uid) {
+            if (newUsers[user].uid === uid) {
                 newUsers[user].level = level
             }
 
@@ -71,7 +71,7 @@ class TeamPage extends Component {
                         <h3>Manager:</h3>
                         {
                             this.getUserArray()
-                                .filter(member => member.level == 'admin')
+                                .filter(member => member.level === 'admin')
                                 .map(member => (
                                     <Member member={member} handleChangeLevel={this.handleChangeLevel} />
                                 ))
@@ -82,7 +82,7 @@ class TeamPage extends Component {
                         <h3>Member:</h3>
                         {
                             this.getUserArray()
-                                .filter(member => member.level == 'member')
+                                .filter(member => member.level === 'member')
                                 .map(member => (
                                     <Member member={member} handleChangeLevel={this.handleChangeLevel} />
                                 ))
@@ -93,7 +93,7 @@ class TeamPage extends Component {
                         <h3>Player:</h3>
                         {
                             this.getUserArray()
-                                .filter(member => member.level == 'player')
+                                .filter(member => member.level === 'player')
                                 .map(member => (
                                     <Member member={member} handleChangeLevel={this.handleChangeLevel} />
                                 ))

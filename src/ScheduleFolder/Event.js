@@ -15,15 +15,15 @@ class Event extends Component {
   }
 
   handleAddPlayer = (pos, user) => {
-    if (this.state.status != 'opened') {
+    if (this.state.status !== 'opened') {
       window.alert("This event is unavailable now!")
       return
     }
-    if (this.props.level == 'player' && !(user.level == 'member' || user.level == 'admin' || user.level == 'player')) {
+    if (this.props.level === 'player' && !(user.level === 'member' || user.level === 'admin' || user.level === 'player')) {
       window.alert("You have to sign in to register for this event")
       return
     }
-    if (this.props.level == 'member' && !(user.level == 'member' || user.level == 'admin')) {
+    if (this.props.level === 'member' && !(user.level === 'member' || user.level === 'admin')) {
       window.alert("You have to be a team member for this event! ")
       return
     }

@@ -31,22 +31,22 @@ class MainPage extends Component {
                 </div>
                 <div id="right">
                     <div className="pics">
-                        <img src={p1}/>
+                        <img alt="" src={p1}/>
                         <NavLink to="/Announcement">Announcement</NavLink>
                         <p>View important information here!</p>
                     </div>
                     <div className="pics">
-                        <img src={p2}/>
+                        <img alt="" src={p2}/>
                         <NavLink to="/Forum/general">Forum</NavLink>
                         <p>Chat in the forum with friends in Rose</p>
                     </div>
                     <div className="pics">
-                        <img src={p3}/>
+                        <img alt="" src={p3}/>
                         <NavLink to="/Schedule">Schedule</NavLink>
                         <p>Sign up for try-out events and fun games</p>
                     </div>
                     <div className="pics">
-                        <img src={p4}/>
+                        <img alt="" src={p4}/>
                         <NavLink to="/TeamPage">Team</NavLink>
                         <p>See who is playing tournaments for the school</p>
                     </div>

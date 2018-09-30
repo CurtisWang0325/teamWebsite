@@ -57,7 +57,7 @@ class Chat extends Component {
 
   addReaction = (message, emoji) => {
 
-    if (this.props.user.level == 'admin' || this.props.user.level == 'member' || this.props.user.level == 'player') {
+    if (this.props.user.level === 'admin' || this.props.user.level === 'member' || this.props.user.level === 'player') {
       message.reactions = message.reactions || {}
       message.reactions[emoji] = message.reactions[emoji] || []
 
@@ -75,7 +75,6 @@ class Chat extends Component {
   }
 
   render() {
-    const user = this.props.user
     return (
       <div className="Chat" style={styles}>
         <ChatHeader
