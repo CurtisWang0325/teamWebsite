@@ -8,6 +8,13 @@ class Event extends Component {
     status: 'open',
     //status: passed, confirmed, opened, cancelled
   }
+  getPlayerArray() {
+    var playerArray = []
+    for (var pos in this.state.players) {
+        playerArray.push(this.state.players[pos])
+    }
+    return playerArray
+  }
 
 
   handleAddPlayer = (pos, user) => {
@@ -21,6 +28,10 @@ class Event extends Component {
     }
     if (this.props.level === 'member' && !(user.level === 'member' || user.level === 'admin')) {
       window.alert("You have to be a team member for this event! ")
+      return
+    }
+    if (this.getPlayerArray().findIndex(p=>p.IGN===user.IGN)===-1){
+      window.alert("You have signed up for another position")
       return
     }
     var result = window.confirm(`Join event: ${this.props.txt} at ${this.props.eventTime}?`)
@@ -55,9 +66,9 @@ class Event extends Component {
           {this.props.txt}
         </h2>
         <h4>
-          Time:{this.props.eventTime}
+          Time:  {this.props.eventTime}
         </h4>
-        <h4>Status:{this.props.status}</h4>
+        <h4>Status:  {this.props.status}      Level:  {this.props.level}</h4>
         <PlayerList
           user={this.props.user}
           handleAddPlayer={this.handleAddPlayer}

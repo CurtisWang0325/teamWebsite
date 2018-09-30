@@ -13,6 +13,14 @@ class Event extends Component {
     ev.preventDefault()
     this.props.deleteEvent(this.props.index)
   }
+  
+  getPlayerArray() {
+    var playerArray = []
+    for (var pos in this.state.players) {
+        playerArray.push(this.state.players[pos])
+    }
+    return playerArray
+  }
 
   handleAddPlayer = (pos, user) => {
     if (this.state.status !== 'opened') {
@@ -25,6 +33,10 @@ class Event extends Component {
     }
     if (this.props.level === 'member' && !(user.level === 'member' || user.level === 'admin')) {
       window.alert("You have to be a team member for this event! ")
+      return
+    }
+    if (this.getPlayerArray().findIndex(p=>p.IGN===user.IGN)===-1){
+      window.alert("You have signed up for another position")
       return
     }
     var result = window.confirm(`Join event: ${this.props.txt} at ${this.props.eventTime}?`)
@@ -55,40 +67,39 @@ class Event extends Component {
   render() {
     return (
 
-        <div className="events">
-            <h2 className="eventName">
-                {/* Title/Description*/}
-                {this.props.txt}
-            </h2>
-            <div className="removeEvent" onClick={this.handleDelete}>
-                <i className="fas fa-trash fa-2x" title='delete'></i>
-            </div>
-            <h4>
-                Time:{this.props.eventTime}
-            </h4>
-            <h4>Status:{this.props.status}</h4>
-            <div className="editLevel">
-                <h4>Level:{this.props.level}</h4>
-
-                {/* StatusEditor */}
-
-                <select
-                    name="status"
-                    value={this.state.status}
-                    onChange={this.handleChangeStatus}
-                >
-                    <option value="opened">OPENED</option>
-                    <option value="over">OVER</option>
-                    <option value="cancelled">CANCELLED</option>
-                    <option value="confirmed">CONFIRMED</option>
-                </select>
-            </div>
-            <PlayerList
-                user={this.props.user}
-                handleAddPlayer={this.handleAddPlayer}
-                players={this.state.players}
-            />
+      <div className="events">
+        <h2 className="eventName">
+          {/* Title/Description*/}
+          {this.props.txt}
+        </h2>
+        <div className="removeEvent" onClick={this.handleDelete}>
+          <i className="fas fa-trash fa-2x" title='delete'></i>
         </div>
+        <h4>
+          Time:  {this.props.eventTime}
+        </h4>
+        
+        <div className="editStatus">
+          <h4>Level: {this.props.level} Status:{this.props.Status}
+          
+          <select
+            name="status"
+            value={this.state.status}
+            onChange={this.handleChangeStatus}
+          >
+            <option value="opened">OPENED</option>
+            <option value="over">OVER</option>
+            <option value="cancelled">CANCELLED</option>
+            <option value="confirmed">CONFIRMED</option>
+          </select>
+          </h4>
+        </div>
+        <PlayerList
+          user={this.props.user}
+          handleAddPlayer={this.handleAddPlayer}
+          players={this.state.players}
+        />
+      </div>
 
     )
   }

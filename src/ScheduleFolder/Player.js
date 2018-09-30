@@ -5,8 +5,7 @@ class Player extends Component {
         const player=this.props.player
         return (
             <div className="player">
-                {player.name}
-                {player.IGN}
+                {`${player.name}        ${player.IGN}`}
             </div>
         )
     }

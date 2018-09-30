@@ -85,6 +85,7 @@ body{
     box-sizing: border-box;
     border-radius: 2%;
     padding: 1% 2%;
+    white-space: pre;
 }
 
 .openEvents > .eventsContainer > .events{
@@ -124,14 +125,15 @@ body{
     height: 2vh;
 }
 
-.editLevel *{
+.editStatus *{
     display: inline-block;
 }
 
-.editLevel select{
+.editStatus select{
     height: 2vh;
-    width: 50%;
+    width: 30%;
     font-size: 0.5vw;
+    /* position: relative */
 }
 
 .playerLists ul, .playerLists li{
@@ -154,12 +156,13 @@ body{
     font-size: 1vh;
 }
 
-.editLevel{
+.editStatus{
     height: 2vh;
 }
 
 .player{
     display: inline-block;
-    margin-left: 2vw;
+    margin-left: 1vw;
     font-size: 0.7vw;
+    white-space: pre;
 }

@@ -5,6 +5,7 @@
     height: 94%;
     width: 100%;
     overflow: hidden;
+    /* white-space: pre; */
 }
 
 #left{

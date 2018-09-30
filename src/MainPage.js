@@ -33,6 +33,7 @@ class MainPage extends Component {
                     <div className="pics">
                         <img alt="" src={p1}/>
                         <NavLink to="/Announcement">Announcement</NavLink>
+                        <hr/>
                         <p>View important information here!</p>
                     </div>
                     <div className="pics">

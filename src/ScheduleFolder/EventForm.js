@@ -9,7 +9,7 @@ class EventForm extends Component {
       body: '',
       eventTime: '',
       players: {},
-      level: '',
+      level: 'player',
       status: 'opened',
     }
   }
@@ -25,7 +25,7 @@ class EventForm extends Component {
         players: {},
         key: '',
         status: 'opened',
-        level: '',
+        level: 'player',
       }
     )
     this.props.history.push('/Schedule')
