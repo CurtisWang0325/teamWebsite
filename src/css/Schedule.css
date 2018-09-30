@@ -164,5 +164,7 @@ body{
     display: inline-block;
     margin-left: 1vw;
     font-size: 0.7vw;
-    white-space: pre;
+    width: 25%;
+    /* overflow: hidden; */
+    white-space: pre;   
 }
