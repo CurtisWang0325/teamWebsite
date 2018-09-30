@@ -10,8 +10,8 @@ class MyAccountPage extends Component {
         tempYear: "",
         tempAboutMe: "",
         tempLevel: "",
-        tempEmail:"",
-        tempRank:"",
+        tempEmail: "",
+        tempRank: "",
     }
 
 
@@ -40,35 +40,35 @@ class MyAccountPage extends Component {
                         <div id="account_page_bgi">
                             <div id="container">
                                 <div className="block">
-                                    <h1>Level: </h1>
-                                    <p>{`${this.props.user.level}`}</p>
-                                </div>
-                                <div className="block">
-                                    <h1>Name: </h1>
+                                    <h1>Name:    </h1>
                                     <p>{`${this.props.user.name}`}</p>
                                 </div>
                                 <div className="block">
-                                    <h1>IGN: </h1>
+                                    <h1>IGN:    </h1>
                                     <p>{`${this.props.user.IGN}`}</p>
                                 </div>
                                 <div className="block">
-                                    <h1>Email: </h1>
+                                    <h1>Email:    </h1>
                                     <p>{`${this.props.user.email}`}</p>
                                 </div>
                                 <div className="block">
-                                    <h1>Position: </h1>
+                                    <h1>Position:    </h1>
                                     <p>{`${this.props.user.position}`}</p>
                                 </div>
                                 <div className="block">
-                                    <h1>Year: </h1>
+                                    <h1>Year:    </h1>
                                     <p>{`${this.props.user.year}`}</p>
                                 </div>
                                 <div className="block">
-                                    <h1>Rank: </h1>
+                                    <h1>Rank:    </h1>
                                     <p>{`${this.props.user.rank}`}</p>
                                 </div>
+                                <div className="block">
+                                    <h1>Level:    </h1>
+                                    <p>{`${this.props.user.level}`}</p>
+                                </div>
                                 <div className="block about_block">
-                                    <h1>About Me: </h1>
+                                    <h1>About Me:    </h1>
                                     <p>{`${this.props.user.aboutMe}`}</p>
                                 </div>
                                 <div className="block">
@@ -85,7 +85,7 @@ class MyAccountPage extends Component {
                         <form onSubmit={(ev) => ev.preventDefault()}>
                             <div id="account_page_bgi">
                                 <div id="container">
-                                    <div className="block">
+                                    {/* <div className="block">
                                         <h1>Level: </h1>
                                         <select
                                             name="tempLevel"
@@ -96,7 +96,7 @@ class MyAccountPage extends Component {
                                             <option value="member">MEMBER</option>
                                             <option value="admin">ADMIN</option>
                                         </select>
-                                    </div>
+                                    </div> */}
                                     <div className="block">
                                         <h1>Name: </h1>
                                         <input
@@ -172,6 +172,7 @@ class MyAccountPage extends Component {
                                             name="tempAboutMe"
                                             rows="5"
                                             cols="50"
+                                            maxLength='100'
                                             placeholder={`${this.props.user.aboutMe}`}
                                             value={this.state.tempAboutMe}
                                             onChange={this.handleChange}
@@ -182,7 +183,7 @@ class MyAccountPage extends Component {
                                             <button type="button" onClick={this.handleSubmit}>Save Change</button>
                                         </NavLink>
                                     </div>
-                            </div>
+                                </div>
                             </div>
                         </form>
                     )}
