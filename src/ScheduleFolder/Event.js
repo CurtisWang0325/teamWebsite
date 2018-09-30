@@ -23,6 +23,10 @@ class Event extends Component {
   }
 
   handleAddPlayer = (pos, user) => {
+    if (user.IGN==='Not set yet'){
+      window.alert("Set your IGN in my accountpage before signing up")
+      return
+    }
     if (this.state.status !== 'opened') {
       window.alert("This event is unavailable now!")
       return
