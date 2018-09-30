@@ -155,7 +155,7 @@ class MyAccountPage extends Component {
                                         />
                                     </div>
                                     <div className="block">
-                                        <h1>Highset Rank: </h1>
+                                        <h1>Rank: </h1>
                                         <input
                                             type="text"
                                             className="input"

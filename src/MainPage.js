@@ -20,32 +20,35 @@ class MainPage extends Component {
             <div className="MainPage">
                 <div id="left">
                     <p id="mainPageTitle">
-                        This is the title
+                        Rose-Hulman Institute of Technology 
+                        <br/>
+                        League of Legends
                     </p>
                     <p id="mainPageContent">
-                        this is content this is content this is content this is content this is content this is content
+                    <br/>
+                        Thanks for visiting the website. This website has just been published. If you have any questions, feel free to contact the manager wangc6@rose-hulman.edu
                     </p>
                 </div>
                 <div id="right">
                     <div className="pics">
                         <img src={p1}/>
-                        <NavLink to="">title navlink</NavLink>
-                        <p>content</p>
+                        <NavLink to="/Announcement">Announcement</NavLink>
+                        <p>View important information here!</p>
                     </div>
                     <div className="pics">
                         <img src={p2}/>
-                        <NavLink to="">title navlink</NavLink>
-                        <p>content</p>
+                        <NavLink to="/Forum/general">Forum</NavLink>
+                        <p>Chat in the forum with friends in Rose</p>
                     </div>
                     <div className="pics">
                         <img src={p3}/>
-                        <NavLink to="">title navlink</NavLink>
-                        <p>content</p>
+                        <NavLink to="/Schedule">Schedule</NavLink>
+                        <p>Sign up for try-out events and fun games</p>
                     </div>
                     <div className="pics">
                         <img src={p4}/>
-                        <NavLink to="">title navlink</NavLink>
-                        <p>content</p>
+                        <NavLink to="/TeamPage">Team</NavLink>
+                        <p>See who is playing tournaments for the school</p>
                     </div>
                 </div>
             </div>
