@@ -11,7 +11,7 @@ class Event extends Component {
   getPlayerArray() {
     var playerArray = []
     for (var pos in this.state.players) {
-        playerArray.push(this.state.players[pos])
+      playerArray.push(this.state.players[pos].user)
     }
     return playerArray
   }
@@ -30,7 +30,7 @@ class Event extends Component {
       window.alert("You have to be a team member for this event! ")
       return
     }
-    if (this.getPlayerArray().findIndex(p=>p.IGN===user.IGN)===-1){
+    if (this.getPlayerArray().findIndex(p=>p.IGN===user.IGN)!==-1){
       window.alert("You have signed up for another position")
       return
     }
