@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import UserInfo from './UserInfo'
 import { NavLink } from 'react-router-dom'
+import title from './img/title.png'
 require('./css/Account.css')
 
 class Account extends Component {
@@ -14,7 +15,7 @@ class Account extends Component {
     render() {
         return (
             <div id="top_bar">
-
+                <img src={title}/>
                 <div className="nav">
                     <ul>
                         <li>

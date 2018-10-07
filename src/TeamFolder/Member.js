@@ -25,7 +25,7 @@ class Member extends Component {
                 <p>Year: {user.year}</p>
                 <p>Rank: {user.rank}</p>
                 <p>Email:{user.email}</p>
-                <p>{user.aboutMe}</p>
+                <p className="aboutMe">{user.aboutMe}</p>
                 <hr />
 
                 <select

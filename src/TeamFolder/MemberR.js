@@ -12,7 +12,7 @@ class MemberR extends Component {
                 <p>Position: {user.position}</p>
                 <p>Rank:{user.rank}</p>
                 <p>Email:{user.email}</p>
-                <p>{user.aboutMe}</p>
+                <p className="aboutMe">{user.aboutMe}</p>
                 <hr />
             </div>
 
