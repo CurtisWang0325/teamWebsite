@@ -1,6 +1,6 @@
 
 .MainPage{
-    background: url("../img/mainPage.jpg") no-repeat fixed;
+    background: url("../img/mainpage.jpg") no-repeat fixed;
     background-size: cover;
     height: 94%;
     width: 100%;
@@ -39,7 +39,7 @@
 .pics{
     background-color: antiquewhite;
     box-sizing: border-box;
-    border: 1px blanchedalmond solid;
+    border: 2px blanchedalmond solid;
     height: 46%;
     width: 46%;
     margin:1%;
@@ -67,6 +67,7 @@
     color: #000;
     font-size: 1vw;
     padding-left: 5%;
+    padding-top: 3%;
     box-sizing: border-box;
     height: 44%;
     width: 100%;

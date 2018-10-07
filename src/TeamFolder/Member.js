@@ -22,8 +22,8 @@ class Member extends Component {
                 </h1>
                 <p>IGN: {user.IGN}</p>
                 <p>Position: {user.position}</p>
-                <p>Year: {user.year}</p>
                 <p>Rank: {user.rank}</p>
+                <p>Year: {user.year}</p>
                 <p>Email:{user.email}</p>
                 <p className="aboutMe">{user.aboutMe}</p>
                 <hr />
