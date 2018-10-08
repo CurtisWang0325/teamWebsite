@@ -15,7 +15,9 @@ class Account extends Component {
     render() {
         return (
             <div id="top_bar">
-                <img src={title}/>
+                <NavLink to = "/">
+                    <img src={title}/>
+                </NavLink>
                 <div className="nav">
                     <ul>
                         <li>
