@@ -20,13 +20,15 @@ class MainPage extends Component {
             <div className="MainPage">
                 <div id="left">
                     <p id="mainPageTitle">
-                        Rose-Hulman Institute of Technology 
+                        ROSE-HULMAN INSTITUTE OF TECHNOLOGY
                         <br/>
-                        League of Legends
+                        LEAGUE OF LEGENDS
                     </p>
                     <p id="mainPageContent">
                     <br/>
-                        Thanks for visiting the website. This website has just been published. If you have any questions, feel free to contact the manager wangc6@rose-hulman.edu
+                        Get hype for the upcoming CSL and NACG tournaments!
+                        <br/>
+                        Feel free to contact the manager wangc6@rose-hulman.edu
                     </p>
                 </div>
                 <div id="right">

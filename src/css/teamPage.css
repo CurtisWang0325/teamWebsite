@@ -11,8 +11,9 @@
     height: 10%;
     width: 100%;
     box-sizing: border-box;
+    text-shadow: 1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
     padding-top: 2vh;
-    font-size: 1vw;
+    font-size: 1.5 vw;
     padding-left: 10%;
 }
 
@@ -33,7 +34,7 @@
 
 .team_block > h3{
     color: #C9AA71;
-    font-size: 1vw;
+    font-size: 2vw;
 }
 
 .members_list{
@@ -44,10 +45,10 @@
 }
 
 .member{
-    height: 40%;
+    height: 35%;
     margin-top: 2vh;
     width: 100%;
-    background-color: #E1E4DE;
+    background-color: black;
     border-radius: 10px;
     border: 2px solid #C9AA71;
     padding: 2% 5%;
@@ -58,20 +59,23 @@
 
 .member h1{
     overflow: hidden;
-    font-size: 1.8vw;
+    font-size: 1.6vw;
+    color:white;
     height: 15%;
 }
 
 .member p{
     height: 8%;
-    margin-top: 2%;
-    font-size: 1vw;
+    margin-top: 3%;
+    color:white;
+    font-size: 0.8vw;
 }
 
 .member .aboutMe{
     height: auto;
     max-height: 40%;
     overflow-x: hidden;
+    color:white;
     overflow-y:auto;
 }
 
@@ -79,14 +83,14 @@
     margin: 1% 0;
     padding: 0;
     width: 10vw;
-    height: 3vh;
-    font-size: 1vw;
+    height: 2vh;
+    font-size: 0.7vw;
 }
 
 .member button{
     margin: 1% 0;
     padding: 0;
     width: 4vw;
-    height: 3vh;
-    font-size: 1vw;
+    height: 2vh;
+    font-size: 0.7vw;
 }

@@ -52,7 +52,7 @@ class TeamPage extends Component {
                 </div>
                 <div id="members">
                     <div className="team_block">
-                        <h3>Manager:</h3>
+                        <h3>Manager</h3>
                         <div className="members_list">
                             {
                                 this.getUserArray()
@@ -64,7 +64,7 @@ class TeamPage extends Component {
                         </div>
                     </div>
                     <div className="team_block">
-                        <h3>Member:</h3>
+                        <h3>Member</h3>
                         <div className="members_list">
                             {
                                 this.getUserArray()
@@ -76,7 +76,7 @@ class TeamPage extends Component {
                         </div>
                     </div>
                     <div className="team_block">
-                        <h3>Player:</h3>
+                        <h3>Player</h3>
                         <div className="members_list">
                             {
                                 this.getUserArray()

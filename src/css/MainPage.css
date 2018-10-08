@@ -29,11 +29,14 @@
 
 #mainPageTitle{
     font-size: 3vw;
+    text-shadow: 2px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
 #mainPageContent{
     font-size: 1.5vw;
     width: 50%;
+    text-shadow: 1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+
 }
 
 .pics{
