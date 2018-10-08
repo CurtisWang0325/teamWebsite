@@ -146,8 +146,6 @@ class MyAccountPage extends Component {
                                         <input
                                             type="number"
                                             className="input"
-                                            min="1"
-                                            max="6"
                                             name="tempYear"
                                             placeholder={`${this.props.user.year}`}
                                             value={this.state.tempYear}
