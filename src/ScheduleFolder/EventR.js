@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
-import PlayerList from './PlayerList'
+import PlayerListR from './PlayerListR'
 import base from '../base'
 
-class Event extends Component {
+class EventR extends Component {
   state = {
     players: {},
     status: 'open',
@@ -73,7 +73,7 @@ class Event extends Component {
           Time:  {this.props.eventTime}
         </h4>
         <h4>Status:  {this.props.status}      Level:  {this.props.level}</h4>
-        <PlayerList
+        <PlayerListR
           user={this.props.user}
           handleAddPlayer={this.handleAddPlayer}
           players={this.state.players}
@@ -89,4 +89,4 @@ class Event extends Component {
 
 
 
-export default Event
+export default EventR
