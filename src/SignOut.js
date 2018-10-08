@@ -8,7 +8,7 @@ const SignOut = ({ signOut }) => {
       <p id="sign_out"
         onClick={signOut}
       >
-          &nbsp; signOut  	&nbsp;
+          &nbsp; sign out  	&nbsp;
         <i className="fas fa-sign-out-alt"></i>
       </p>
     </NavLink>

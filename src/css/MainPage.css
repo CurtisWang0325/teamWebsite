@@ -1,6 +1,6 @@
 
 .MainPage{
-    background: url("../img/mainpage.jpg") no-repeat fixed;
+    background: url("../img/mainPage.jpg") fixed no-repeat;
     background-size: cover;
     height: 94%;
     width: 100%;
