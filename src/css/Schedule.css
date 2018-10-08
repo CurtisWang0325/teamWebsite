@@ -151,8 +151,15 @@ body{
 
 .playerLists button{
     margin-left: 2vw;
-    width: 25%;
+    width: 20%;
     height: 2vh;
+    font-size: 1vh;
+}
+
+.playerLists .delete{
+    width: 5%;
+    margin-left: 48%;
+    opacity: 0.3;
     font-size: 1vh;
 }
 
@@ -165,6 +172,5 @@ body{
     margin-left: 1vw;
     font-size: 0.7vw;
     width: 25%;
-    /* overflow: hidden; */
     white-space: pre;   
 }

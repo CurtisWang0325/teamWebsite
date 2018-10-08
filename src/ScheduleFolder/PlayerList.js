@@ -7,6 +7,10 @@ class PlayerList extends Component {
         this.props.handleAddPlayer(ev.target.name, this.props.user)
     }
 
+    handleDelete = (ev) => {
+        this.props.handleDeletePlayer(ev.target.name)
+    }
+
     render() {
 
         return (
@@ -21,6 +25,9 @@ class PlayerList extends Component {
                                 SIGN UP
                         </button>
                         }
+                        <button className='delete' name='top' type='button' onClick={this.handleDelete}>
+                            X
+                        </button>
                     </li>
                     <li>
                         <h4>JUN:</h4>
@@ -31,6 +38,9 @@ class PlayerList extends Component {
                                 SIGN UP
                         </button>
                         }
+                        <button className='delete' name='jun' type='button' onClick={this.handleDelete}>
+                            X
+                        </button>
                     </li>
                     <li>
                         <h4>MID:</h4>
@@ -41,6 +51,9 @@ class PlayerList extends Component {
                                 SIGN UP
                         </button>
                         }
+                        <button className='delete' name='mid' type='button' onClick={this.handleDelete}>
+                            X
+                        </button>
                     </li>
                     <li>
                         <h4>ADC:</h4>
@@ -51,6 +64,9 @@ class PlayerList extends Component {
                                 SIGN UP
                         </button>
                         }
+                        <button className='delete' name='adc' type='button' onClick={this.handleDelete}>
+                            X
+                        </button>
                     </li>
                     <li>
                         <h4>SUP:</h4>
@@ -61,6 +77,9 @@ class PlayerList extends Component {
                                 SIGN UP
                         </button>
                         }
+                        <button className='delete' name='sup' type='button' onClick={this.handleDelete}>
+                            X
+                        </button>
                     </li>
                 </ul>
             </div>

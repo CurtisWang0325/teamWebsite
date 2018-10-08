@@ -13,17 +13,17 @@ class Event extends Component {
     ev.preventDefault()
     this.props.deleteEvent(this.props.index)
   }
-  
+
   getPlayerArray() {
     var playerArray = []
     for (var pos in this.state.players) {
-        playerArray.push(this.state.players[pos].user)
+      playerArray.push(this.state.players[pos].user)
     }
     return playerArray
   }
 
   handleAddPlayer = (pos, user) => {
-    if (user.IGN==='Not set yet'){
+    if (user.IGN === 'Not set yet') {
       window.alert("Set your IGN in my accountpage before signing up")
       return
     }
@@ -39,7 +39,7 @@ class Event extends Component {
       window.alert("You have to be a team member for this event! ")
       return
     }
-    if (this.getPlayerArray().findIndex(p=>p.IGN===user.IGN)!==-1){
+    if (this.getPlayerArray().findIndex(p => p.IGN === user.IGN) !== -1) {
       window.alert("You have signed up for another position")
       return
     }
@@ -49,6 +49,12 @@ class Event extends Component {
     }
     const players = this.state.players
     players[pos] = { user };
+    this.setState({ players })
+  }
+
+  handleDeletePlayer = (pos) => {
+    const players = this.state.players
+    players[pos] = null
     this.setState({ players })
   }
 
@@ -82,26 +88,27 @@ class Event extends Component {
         <h4>
           Time:  {this.props.eventTime}
         </h4>
-        
+
         <div className="editStatus">
           <h4>Level: {this.props.level} Status:{this.props.Status}
-          
-          <select
-            name="status"
-            value={this.state.status}
-            onChange={this.handleChangeStatus}
-          >
-            <option value="opened">OPENED</option>
-            <option value="over">OVER</option>
-            <option value="cancelled">CANCELLED</option>
-            <option value="confirmed">CONFIRMED</option>
-          </select>
+
+            <select
+              name="status"
+              value={this.state.status}
+              onChange={this.handleChangeStatus}
+            >
+              <option value="opened">OPENED</option>
+              <option value="over">OVER</option>
+              <option value="cancelled">CANCELLED</option>
+              <option value="confirmed">CONFIRMED</option>
+            </select>
           </h4>
         </div>
         <PlayerList
           user={this.props.user}
           handleAddPlayer={this.handleAddPlayer}
           players={this.state.players}
+          handleDeletePlayer={this.handleDeletePlayer}
         />
       </div>
 
